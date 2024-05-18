@@ -6,7 +6,7 @@ Video para seguimiento con laravel:  https://youtu.be/3e1IsZJuYAw?si=pUzQNNp4SLv
 Pagina oficial laravel: https://laravel.com/docs/11.x
 
 
-Para abrir la pagina: http://localhost/KipiluWebRepository/kipilu-web-ver03/public/index.php
+Para abrir la pagina: http://localhost/KipiluWebRepository/kipilu-web-ver03/public/views/index.php
 
 
 # Comandos para crear proyecto
