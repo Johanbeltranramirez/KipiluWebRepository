@@ -31,7 +31,7 @@ Para abrir la pagina: http://localhost/KipiluWebRepository/KIPILU/public/index.p
    9. Laravel Create View
    10. Laravel Blade Wrapper
        
-**Link:**https://academy.zataca.es/las-mejores-extensiones-de-vs-code-para-desarrolladores-de-laravel/
+**Link:** https://academy.zataca.es/las-mejores-extensiones-de-vs-code-para-desarrolladores-de-laravel/
 
 
 
