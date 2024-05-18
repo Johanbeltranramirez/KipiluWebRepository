@@ -17,6 +17,20 @@ Para abrir la pagina: http://localhost/KipiluWebRepository/KIPILU/public/index.p
  4. **Inicie el servidor de desarrollo local de Laravel:**
     - cd example-app
     - php artisan serve
+  
+# Extensiones
+
+   1. Laravel Extra Intellisense
+   2. Laravel Goto
+   3. Laravel Snippets
+   4. Laravel Artisan
+   5. Laravel Docs
+   6. Laravel Blade Snippets
+   7. Laravel Blade formatter
+   8. Laravel Blade Spacer
+   9. Laravel Create View
+   10. Laravel Blade Wrapper
+
 
 
 
