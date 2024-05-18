@@ -12,9 +12,9 @@ Para abrir la pagina: http://localhost/KipiluWebRepository/KIPILU/public/index.p
 # Comandos para crear proyecto
 
  1. composer create-project laravel/laravel example-app
- 2. *Instalar globalmente el paquete*: composer global require laravel/installer
- 3. Este comando descarga e instala una nueva instalación de Laravel: laravel new example-app
- 4. Inicie el servidor de desarrollo local de Laravel:
+ 2. **Instalar globalmente el paquete**: composer global require laravel/installer
+ 3. **Este comando descarga e instala una nueva instalación de Laravel:** laravel new example-app
+ 4. **Inicie el servidor de desarrollo local de Laravel:**
     - cd example-app
     - php artisan serve
 
