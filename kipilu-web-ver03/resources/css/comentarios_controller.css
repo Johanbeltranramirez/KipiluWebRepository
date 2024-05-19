@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://images.moqups.com/repo/RcVv9iMoCs1Xou20BhiDQL8vlVPeCyBp/p_fXXmkYw3IQMv2g0y2wz86dk6AAesO5NP/zWiZs3qNuM5h1edOQq3Tq2GH2Ie4Tuep.png?Expires=1695515377&Signature=kz8kPP4jU529LicPivmChlI0PYQ2vkkNHFW8HnL2L1e1OiyDGPeF5K8B-E~B9AAT83jYo8PEl1LmH3uARHxsuMfIxUWSnIJ7-K~~Soi2Wki4RXi9V7VJfoxNdg-AaQ-ArwXmCSxoVRGKCD2mv3bt68mKuLcoBZbR9cxw1IkMpcj34Mlng96K3rfnzvNo94zLkFMAMNESrOZa92zAbDfQmYrCqYfvht3ovpPxqSst67aV~q-cG3EFmsGd4T23W3YZ-S6JrJV9sK9-X2y3pyexKoS4McjHS6oZSvjVXh~e6eKzwy98wnKrfv8LpD6lypxaUAIdtYZf1Rp6OF7Xj7wlQA__&Key-Pair-Id=K1TPUF1X6HKIYU');
+  margin: 0;
+  padding: 0;
+}
+
+.container2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+}
+
+th {
+  background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+
+.eliminar-icon {
+  background-color: #f9a073;
+  color: black;
+  border: 2px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-image: linear-gradient(to right, #fad7c6, #f9a073);
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.eliminar-icon:hover {
+  background-color: #f5c0a5;
+}

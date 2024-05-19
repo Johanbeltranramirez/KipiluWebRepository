@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos para la portada perro*/
+.portadac {
+    position: relative;
+    height: 73vh;
+    background-image: url('https://www.adoptanocompres.org/wp-content/uploads/2022/04/12.-Adopta-requisitos-600x599.png'); 
+    background-size: contain; 
+    background-position: center; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos para la portada gatos*/
+.portadaf {
+    position: relative;
+    height: 73vh;
+    background-image: url('../img/animales/portadaf.jpg'); 
+    background-size: contain;
+    background-position: center; /* Centra la imagen de fondo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.texto h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.opciones h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para el separador */
+.separador {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.linea-roja {
+    border: 1px solid rgb(255, 94, 0);
+}
+
+.titulo-adoptar {
+    font-size: 24px;
+    color: rgb(255, 119, 0);
+    margin: 10px 0;
+}
+
+.texto-pequeno {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos para hacer responsive */
+@media screen and (max-width: 768px) {
+    .contenido {
+        width: 80%;
+    }
+
+    .texto h1 {
+        font-size: 24px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+    .portadaf {
+        height: 73vh; /* Cambiamos la altura a 60vh */
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portada h1 {
+        font-size: 24px;
+    }
+
+    .portada p {
+        font-size: 16px;
+    }
+
+    .titulo-adoptar {
+        font-size: 20px;
+    }
+
+    .texto-pequeno {
+        font-size: 14px;
+    }
+}
+
+

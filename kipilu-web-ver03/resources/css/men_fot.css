@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Estilo para "Hogar de Rescate" */
+.custom-brand {
+  color: #af3a11 !important; 
+  font-family: 'Stardos Stencil', sans-serif !important;
+  font-weight: bold !important;
+  font-style: italic !important; 
+  display: block; 
+}
+
+/* Estilo para el fondo blanco */
+.navbar {
+  background-color: #ffffff;
+}
+
+/* Estilo para el degradado en la parte inferior */
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background :linear-gradient(to right, #e6f1f1, #afedf3cc, #fdea95e7, #f9a073);
+}
+
+/* Estilo para el texto negro con negrilla */
+.navbar-nav .nav-link {
+  color: black !important;
+  font-weight: bold !important; 
+}
+
+/* Estilo para las letras con degradado al pasar el cursor */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background: linear-gradient(to right, #ffffff, rgb(255, 255, 255)); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-menu {
+  background: #fffefb;
+}
+
+/* Estilo para los enlaces de los elementos del menú desplegable */
+.dropdown-menu .dropdown-item {
+  color: black; 
+  font-weight: bold; 
+}
+
+/* Estilo para los enlaces de los elementos del menú desplegable al pasar el cursor */
+.dropdown-menu .dropdown-item:hover {
+  background: linear-gradient(to right, #000000, #847575); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+
+/* Estilos para el footer */
+#contacto {
+  background: linear-gradient(to right, #e6f1f1, #afedf3cc, #fdea95e7, #f9a073);
+  color: #000000;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-us {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 20px;
+}
+
+.contact-us h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.social-media h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.social-media-icon {
+  font-size: 32px;
+  color: #000000;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.line {
+  height: 1px;
+  background-color: #444;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width: 768px) {
+  .contact-us {
+  max-width: 100%;
+  margin-right: 0;
+  }
+  }
