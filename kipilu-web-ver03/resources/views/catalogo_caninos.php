@@ -20,41 +20,38 @@
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu.php'; ?>
 <!--Cierre Nav(navegacion)-->
+<main>
 
-  <main>
+<!--PORTADA-->
   <div class="portadaf">
         <div class="contenido">
-            <div class="texto">
-                <h1>Bienvenido al Catálogo de Caninos</h1>
-                <p>Explora nuestra selección de perros en busca de un hogar.</p>
-            </div>
-            <div class="opciones">
-                <h2>Características:</h2>
-                <ul>
-                    <li>Perros de diferentes razas disponibles</li>
-                    <li>Información detallada sobre cada perro</li>
-                    <li>Opciones de adopción</li>
-                </ul>
-            </div>
         </div>
     </div>
+<!--FIN DE PORTADA-->
 
+<!--LINEA-->
     <section class="separador">
         <hr class="linea-roja">
         <h2 class="titulo-adoptar">ADOPTA, NO COMPRES</h2>
         <p class="texto-pequeno">Busca a tu amigo peludo que está en búsqueda de un hogar</p>
     </section>
+<!--FIN DE LINEA-->
 
+<!--CATALOGO-->
 
-
+<!--FIN DE CATALOGO-->
 
   </main>
 
-<br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
 
 <!--Footer(pie de pag)-->
 <?php include '../reutilize/footer.php'; ?>
-<!--Footer(pie de pag)-->
+<!--FIN DE Footer(pie de pag)-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

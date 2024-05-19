@@ -1,10 +1,42 @@
 .contenido {
-    background :linear-gradient(to right, #c98139, #f13737cc, #eb7754e7, #cf8058);
+    background: url('../../assets/img/catalogos/canino_portada.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 48%;
+    height: 315px;
+    margin: 20px auto 0; /* Baja el contenedor 50px desde la parte superior y lo centra horizontalmente */
 }
+
+.separador {
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.linea-roja {
+    border: 0; /* Elimina el estilo de borde predeterminado */
+    height: 2px; /* Altura de la línea */
+    background-color: red; /* Color rojo para la línea */
+    width: 90%; /* Ancho de la línea */
+    margin: 0 auto 20px; /* Centra la línea horizontalmente y añade un margen inferior */
+}
+
+.titulo-adoptar {
+    font-size: 24px; /* Tamaño de la fuente del título */
+    margin: 10px 0; /* Espaciado superior e inferior del título */
+    color: rgb(255, 119, 0);
+}
+
+.texto-pequeno {
+    font-size: 14px; /* Tamaño de la fuente del texto pequeño */
+    margin-top: 10px; /* Espaciado superior del texto pequeño */
+}
+
+
 .animal-card {
         background-color: purple;
         color: white;
