@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="inicio.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
@@ -26,15 +26,15 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="Tips.php">Tips y recomendaciones</a></li>
-                        <li><a class="dropdown-item" href="catalogoc.php">Catalogo de caninos</a></li>
-                        <li><a class="dropdown-item" href="catalogof.php">Catalogo de felinos</a></li>
+                        <li><a class="dropdown-item" href="catalogo_caninos.php">Catalogo de caninos</a></li>
+                        <li><a class="dropdown-item" href="catalogo_felinos.php">Catalogo de felinos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="donaciones.php">Sobre Donaciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="comentarios.php">Comentarios e Historias</a>
+                    <a class="nav-link" href="comentarios_historias.php">Comentarios e Historias</a>
                 </li>
             </ul>
         </div>

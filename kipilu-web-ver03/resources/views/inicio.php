@@ -177,43 +177,7 @@
 <body>
 
 <!--Nav(navegacion)-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary" >
-    <div class="container-fluid" style="background-color: #ffffff;">
-        <div class="d-flex justify-content-start align-items-center" >
-            <img src="img/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;">
-            <a class="navbar-brand custom-brand" href="index.php">HOGAR DE <br> RESCATE</a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Adopciones
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Tips.php">Tips y recomendaciones</a></li>
-                        <li><a class="dropdown-item" href="catalogoc.php">Catalogo de caninos</a></li>
-                        <li><a class="dropdown-item" href="catalogof.php">Catalogo de felinos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="donaciones.php">Sobre Donaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="comentarios.php">Comentarios e Historias</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php include '../reutilize/menu.php'; ?>
 <!--Cierre Nav(navegacion)-->
 <br>
 <!--main(contenedor)-->
