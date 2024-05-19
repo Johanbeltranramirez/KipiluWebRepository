@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid" style="background-color: #ffffff;">
         <div class="d-flex justify-content-start align-items-center">
-            <a href="index2.php"><img src="../../icon/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;"></a>
+            <a href="index2.php"><img src="../../assets/icon/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;"></a>
             <a class="navbar-brand custom-brand" href="index.php">HOGAR DE <br> RESCATE</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

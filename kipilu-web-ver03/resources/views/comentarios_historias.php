@@ -6,18 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILÚ - Comentarios</title>
-    <!--BOOTSTRAP-->
+    <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/comentarios_historias.css">
-    <!--ICONOS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
-    <script defer src="../js/Comentarios.js"></script>
+
+            <link rel="icon" href="../../assets/icon/logo.ico">
+
+    <!--PROPIO-->
+    <link rel="stylesheet" href="../css/comentarios_historias.css">
+    <!--LLAMAR ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <!--Nav(navegacion)-->
@@ -54,20 +56,7 @@
                     <h2 class="mt-5 text-center">Poste de comentarios</h2>
                     <hr style="border: 1px solid #A52020;">
                     <ul class="list-group Comentaristas-list show-Comentaristas">
-                        <?php
-                        $query = "SELECT * FROM " . $Comentaristas->table_name;
-                        $stmt = $db->prepare($query);
-                        $stmt->execute();
-
-                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<li class='list-group-item'>";
-                            echo "<div class='comment-container'>";
-                            echo "<strong>" . $row['Nombre'] . " " . $row['Apellido'] . "</strong><br>";
-                            echo "<div class='comment-text'>" . $row['Comentario'] . "</div>";
-                            echo "</div>";
-                            echo "</li>";
-                        }
-                        ?>
+                        //*Añadir PDO
                     </ul>
                     <button class="btn btn-primary btn-block show-comments">Mostrar Comentarios</button>
                     <button class="btn btn-primary btn-block hide-comments">Ocultar Comentarios</button>
@@ -147,6 +136,10 @@
 <!--Footer(pie de pag)-->
 <?php include '../reutilize/footer.php'; ?>
 <!--Footer(pie de pag)-->
+
+<script defer src="../js/Mostrar_Comentarios.js"></script>
+
+<script src="path/to/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
