@@ -11,60 +11,10 @@
     <!--MENU-->
     <link rel="stylesheet" href="css/men_fot.css">
     <!--PROPIO-->
-    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="../css/catalogo_caninos.css">
     <!--LLAMAR ICONOS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<style>
-
-  .contenido {
-    background :linear-gradient(to right, #c98139, #f13737cc, #eb7754e7, #cf8058);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-.animal-card {
-        background-color: purple;
-        color: white;
-    }
-    .animal-card .estado-adopt {
-        background-color: orange;
-    }
-    .animal-card .estado-proceso {
-        background-color: yellow;
-    }
-    .card-text .btn {
-        margin-top: 5px;
-    }
-
-    .card {
-        height: 100%;
-    }
-
-    .card .card-img-top {
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .card-title,
-  .card-text,
-  .card-text .btn {
-    margin-bottom: 5px;
-  }
-
-  .card-text .btn {
-    margin-top: auto;
-  }
-
-</style>
 <body>
 
 <!--Nav(navegacion)-->
