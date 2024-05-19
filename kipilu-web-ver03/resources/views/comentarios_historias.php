@@ -20,6 +20,7 @@
     <script defer src="../js/Comentarios.js"></script>
 </head>
 <body>
+    
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu.php'; ?>
 <!--Cierre Nav(navegacion)-->
