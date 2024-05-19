@@ -45,42 +45,7 @@
         <p class="texto-pequeno">Busca a tu amigo peludo que está en búsqueda de un hogar</p>
     </section>
 
-    <div class="container mt-5">
-        <div class="row">
-            <?php while ($fila = $resultado->fetch_assoc()) { ?>
-                <?php if ($fila['Estado_Animal'] != 1) { ?>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="img-container">
-                                <img src="<?php echo $fila['Foto']; ?>" class="card-img-top" alt="<?php echo $fila['Nombre_Animal']; ?>">
-                            </div>
-                            <div class="card-body">
-                                <b><h5 class="card-title">Nombre: <?php echo $fila['Nombre_Animal']; ?></h5></b>
-                                <p class="card-title">Raza: <?php echo $fila['Nombre_Raza']; ?></p>
-                                <p class="card-text">Sexo: <?php echo $fila['Sexo'] == 1 ? 'Hembra' : 'Macho'; ?></p>
-                                <p class="card-text" style="text-align: justify;">Descripción: <?php echo $fila['Descripcion']; ?></p>
-                                <p class="card-text">Estado de adopción:
-                                    <?php
-                                    if ($fila['Estado_Animal'] == 1) {
-                                        echo "Adoptado";
-                                        echo '<button class="btn btn-danger">No se puede adoptar</button>';
-                                    } elseif ($fila['Estado_Animal'] == 2) {
-                                        echo "No adoptado";
-                                        echo "<br>";
-                                        echo '<a href="Formulario_adoptante/formulario_adop.php?animal_id=' . $fila['ID_Animal'] . '&catalogo=caninos" class="btn btn-primary">Formulario de Adopción</a>';
-                                    } elseif ($fila['Estado_Animal'] == 3) {
-                                        echo "En proceso";
-                                        echo '<button class="btn btn-warning">Otra persona en proceso</button>';
-                                    }
-                                    ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-            <?php } ?>
-        </div>
-    </div>
+
 
 
   </main>
