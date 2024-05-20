@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>KIPILU - CRUD ANIMALES Leer Animales</title>
+    <script type="text/javascript">
+        function confirmar() {
+            return confirm('¿Estás seguro? Se eliminarán los datos.');
+        }
+    </script>
+=======
+    <title>KIPILU - CRUD Animales</title>
+>>>>>>> 9c12ae5d98d181688bc2a3b35f6f05ded218454d
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
+    <link rel="icon" href="../../assets/icon/logo.ico">
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -62,7 +72,7 @@
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
             echo '<td>';
             echo '<a href="editar.php?id=' . $animal->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-            echo '<a href="eliminar.php?id=' . $animal->ID_Animal . '" class="btn btn-danger w-100">Eliminar</a>';
+            echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . $animal->ID_Animal . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
         }
