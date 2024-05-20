@@ -1,0 +1,268 @@
+.caja {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url('https://images.moqups.com/repo/RcVv9iMoCs1Xou20BhiDQL8vlVPeCyBp/p_fXXmkYw3IQMv2g0y2wz86dk6AAesO5NP/4dmwef5YJhCLBkGZM1A94huNq7FcFekh.png?Expires=1695493614&Signature=nZwe1cMQrEZEvzUYeuQdwX5tUU6Xp3Jy5~Tna5xaZ4tpuq19TPAw6gRtFHxJEVrR7rJDLOSrUMoLvWosNeLV8GW46O02X7~RiUyonmcc7HmWM67ZCHuqScfVfMqYFO27ZPselxV6sZgHL29zOr527PIzd0DFfTgrjjtmjlHgB6vPO3c238lG7SvKG64jAa7L~UFpGpSho7nl-~5yIlCoGDnZg3mV0P5wnGEv0S44LKztEo-UNezfcP3xWjLNJ49TmLkn~psxgVOjSC~i-UJR8TKYtcMHR9CN7bPTggCC07pJOYQzl~2JJTBBsQsARKVmeqsNR08reep9tozlsAahPA__&Key-Pair-Id=K1TPUF1X6HKIYU');
+}
+
+.rectangulo {
+    background-color: #e61610;
+    color: white;
+    padding: 9px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.rectangulo::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 99%;
+    transform: translateY(-50%);
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-left: 35px solid #e61610;
+}
+
+.contenido-container {
+    display: flex;
+    flex-direction: row;
+    gap: 138px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.texto-izquierdo {
+    flex: 1;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.imagen-derecha {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    max-width: 40%;
+    flex: 1;
+}
+
+.btn-group {
+    margin-top: -10px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 1rem;
+}
+
+.donaciones {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.donacion-titulo {
+    text-align: center;
+    position: relative;
+}
+
+.numero {
+font-size: 60px;
+color: #333;
+}
+
+.donacion-titulo::before,
+.donacion-titulo::after {
+    content: "";
+    display: inline-block;
+    width: 252px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.donacion-titulo::before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.donacion-titulo::after {
+    left: 100%;
+    margin-left: 10px;
+}
+
+.rectangulo-rojo {
+    background-color: white;
+    border: 2px solid white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.imagenes-container {
+display: flex;
+justify-content: center;
+gap: 40px; /* Aumenta la separación entre las imágenes */
+margin-top: 40px;
+}
+
+.imagen {
+display: inline-block;
+position: relative;
+overflow: hidden;
+width: 200px;
+height: auto;
+}
+
+.imagen img {
+max-width: 100%;
+transition: transform 0.3s ease;
+}
+
+.imagen::before {
+content: '';
+position: absolute;
+top: -5px; /* Ajusta la posición del cuadro */
+left: -5px; /* Ajusta la posición del cuadro */
+width: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
+height: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
+border: 5px solid transparent;
+border-image: linear-gradient(45deg, #ff8a00, #e52e71) 1;
+transition: transform 0.3s ease;
+z-index: -1;
+}
+
+.imagen:hover img {
+transform: scale(1.1); /* Aumenta un poco el tamaño de la imagen al hacer hover */
+}
+
+.imagen:hover::before {
+transform: rotate(10deg); /* Rota ligeramente el cuadro al hacer hover */
+}
+
+
+.numero-contacto {
+font-size: 20px;
+color: black; /* Establece el color del texto */
+display: inline-block; /* Para que el fondo se ajuste solo al texto */
+}
+
+.numero-contacto:hover {
+    background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado en hover */
+    -webkit-text-fill-color: transparent;
+}
+
+
+.btn-monetario {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btn-monetario:last-child {
+    margin-top: 0;
+}
+
+.boton {
+    margin-top: 20px;
+}
+
+.list-group {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-group-item {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.list-group-item .ms-2 {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .caja {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rectangulo {
+        width: auto;
+        padding: 15px;
+    }
+
+    .contenido-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagen-derecha {
+        max-width: 100%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .donaciones {
+        padding: 15px;
+    }
+
+    .donacion-titulo::before,
+    .donacion-titulo::after {
+        width: 150px;
+    }
+
+    .imagenes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .imagen {
+        margin-right: 0;
+    }
+
+    .btn-monetario {
+        margin-right: 0;
+    }
+
+    .btn-monetario:last-child {
+        margin-top: 0;
+    }
+}
