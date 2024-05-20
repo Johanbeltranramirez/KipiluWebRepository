@@ -13,25 +13,25 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../inicio.php">Controlador de Administradores</a>
+                    <a class="nav-link active" aria-current="page" href="administradores_controller.php">Controlador de Administradores</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../CRUD_ANIMAL/leer_animal.php" role="button">Controlador de Animales</a>
+                    <a class="nav-link" href="animales_controller.php" role="button">Controlador de Animales</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="../CRUD_Adop/Adoptantes.php" role="button">Controlador de Adoptantes</a>
+                    <a class="nav-link" href="adoptantes_controller.php" role="button">Controlador de Adoptantes</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="../CRUD_FORMULARIO/CRUD_Formulario.php" role="button">Controlador de Formularios</a>
+                    <a class="nav-link" href="formularios_controller.php" role="button">Controlador de Formularios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../CRUD_COMENTARIO/CRUD_Comentarios.php" role="button">Controlador de Comentarios</a>
+                    <a class="nav-link" href="comentarios_controller.php" role="button">Controlador de Comentarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cerrar_sesion.php">Cerrar Sesión</a>
+                    <a class="nav-link" href="../views/cerrar_sesion.php">Cerrar Sesión</a>
                 </li>
             </ul>
         </div>
