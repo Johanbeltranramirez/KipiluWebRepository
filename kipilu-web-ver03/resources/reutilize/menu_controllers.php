@@ -13,22 +13,22 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="administradores_controller.php">Controlador de Administradores</a>
+                    <a class="nav-link active" aria-current="page" href="administradores_controller.php">Gestionar Administradores</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="animales_controller.php" role="button">Controlador de Animales</a>
+                    <a class="nav-link" href="animales_controller.php" role="button">Gestionar  Animales</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="adoptantes_controller.php" role="button">Controlador de Adoptantes</a>
+                    <a class="nav-link" href="adoptantes_controller.php" role="button">Gestionar Adoptantes</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="formularios_controller.php" role="button">Controlador de Formularios</a>
+                    <a class="nav-link" href="formularios_controller.php" role="button">Gestionar Formularios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="comentarios_controller.php" role="button">Controlador de Comentarios</a>
+                    <a class="nav-link" href="comentarios_controller.php" role="button">Gestionar Comentarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../views/cerrar_sesion.php">Cerrar Sesión</a>

@@ -18,7 +18,7 @@
 <!--Cierre Nav(navegacion)-->
 <br>
 <div class="container">
-    <h1 class="text-center">Lista de animales del hogar de rescate</h1>
+    <h1 class="text-center">Lista de animales</h1>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -42,6 +42,7 @@
         echo '<th>Descripción</th>';
         echo '<th>Especie del Animal</th>';
         echo '<th>Estado del Animal</th>';
+        echo '<th>Acciones</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
@@ -56,6 +57,7 @@
             echo '<td><img src="' . $animal->Foto . '" alt="Foto de ' . $animal->Nombre_Animal . '" style="max-width: 100px;"></td>';
             echo '<td>' . $animal->Descripcion . '</td>';
             echo '<td>' . $animal->Especie_Animal . '</td>';
+            echo '<td>' . $animal->Estado_Animal . '</td>';
             echo '<td>' . $animal->Estado_Animal . '</td>';
             echo '</tr>';
         }
