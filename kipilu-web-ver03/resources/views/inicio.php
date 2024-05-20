@@ -12,165 +12,9 @@
     <link rel="stylesheet" href="css/men_fot.css">
     <!--LLAMAR ICONOS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <!-- Enlazar el archivo CSS externo -->
+   <link rel="stylesheet" href="../css/inicio.css">
    
-   <style>
-        .body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .mission {
-         text-align: center;
-         margin-top: 600px; 
-          }
-
-        .mission h5 {
-            font-family: 'Source Sans', sans-serif;
-            color: #444444;
-        }
-
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 2cm; 
-            margin-right: 2cm; 
-            margin-top: 20px; 
-
-        }
-
-        .content-left {
-            flex: 1;
-            margin-bottom: 2px;
-        }
-
-        .content-right {
-            flex: 1;
-        }
-
-        .content-text {
-            text-align: justify; 
-        }
-
-        .content-left {
-            flex: 1;
-            margin-bottom: 20px; 
-            margin-right: 105px; 
-        }
-
-        .content-right {
-            flex: 1;
-            margin-bottom: 20px; 
-            margin-left: 105px; 
-        }
-
-        .red-bullet {
-         color: red;
-         margin-right: 5px; /
-        }
-
-        .highlight {
-            background-color: #d6d6d6;
-            padding: 20px;
-        }
-
-        .image-text {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            text-align: left;
-            margin-left: 2cm; 
-
-        }
-
-        .overlay {
-         position: relative;
-         display: inline-block;
-         width: 100%; 
-         height: 100%; 
-        }
-
-      .overlay img {
-       width: 100%;
-       height: 100%;
-      object-fit: cover;
-      }
-
-      .overlay .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 24px;
-      padding: 300px; 
-      text-align: center;
-      width: 100%; 
-      height: 100%; 
-      }
-
-
-    .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 75%;
-     z-index: -1; 
-    } 
- 
-    .overlay img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover; 
-    }
-    .card {
-    border: 2px solid white; 
-    }
-
-
-
-    @media screen and (max-width: 768px) {
-        .content {
-            flex-direction: column;
-            align-items: center;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        .content-left,
-        .content-right {
-            flex: none;
-            width: 100%;
-            margin-right: 0;
-            margin-left: 0;
-        }
-
-        .overlay .text {
-            font-size: 16px;
-            padding: 160px;
-            text-align: center;
-        }
-        .mission {
-            margin-top: 480px; 
-        }
-
-      
-    }
-
-    @media screen and (max-width: 768px) {
-        .card {
-            margin: 0 auto; /* Centrar horizontalmente */
-            text-align: center; /* Centrar el contenido de la carta */
-            margin-right: 2cm; 
-
-        }
-    }
-
-</style>
 
 
 </head>
@@ -184,7 +28,6 @@
 <main>
 
 <section class="overlay">
-    <img src="images/index1.jpg" class="img-fluid" alt="...">
     <div class="text">
         <p>La adopción de un perro o un gato no sólo puede transformar tu propia vida, sino también la de aquellos que te rodean. Adoptar es una forma maravillosa de dar una segunda oportunidad a un animal sin hogar y a su vez, mejorar su propia calidad de vida.</p>
     </div>
@@ -214,11 +57,11 @@
     <div class="container">
         <div class="row align-items-center">
           
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img src="images/index2.jpg" class="img-thumbnail img-fluid" alt="...">
             </div>
             <div class="col-md-6">
-                <p class="h5" style="font-family: 'Source Sans Pro', sans-serif; color: #444444; font-weight:600;">ACERCA DE NOSOTROS</p>
+                <p class="h5">ACERCA DE NOSOTROS</p>
                 <p style="font-family: 'Source Sans Pro', sans-serif; color: #000; text-align: justify;">
                     En nuestro hogar de rescate para perros y gatos, nos esforzamos por brindar cuidado, atención y amor a los animales que han sido abandonados, maltratados o perdidos. Nos dedicamos a proporcionar un ambiente seguro y cómodo para los animales mientras esperan ser adoptados por una familia amorosa y responsable. Contamos con un equipo de voluntarios capacitados y dedicados que trabajan incansablemente para garantizar la salud y el bienestar de los animales bajo nuestra protección. Además, ofrecemos servicios como atención veterinaria completa y programas de socialización y entrenamiento para ayudar a los animales a recuperarse y prepararse para una nueva vida. En nuestro hogar de rescate, estamos comprometidos con el objetivo de salvar la mayor cantidad posible de vidas animales y fomentar una comunidad de adopción responsable y amorosa.
                 </p>
