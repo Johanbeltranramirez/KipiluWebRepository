@@ -24,6 +24,20 @@
 
 <div class="container">
     <div class="title">Lista de animales</div>
+    <br>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Campo de búsqueda -->
+                <input type="text" class="form-control" placeholder="Buscar por ID" id="inputBusqueda">
+            </div>
+            <div class="col-md-4">
+                <!-- Botón de búsqueda -->
+                <button class="btn btn-primary btn-buscar btn-block">Buscar</button>
+            </div>
+        </div>
+        <br>
+    <a href="crear_animal.php" class="btn btn-success mb-2" >Agregar animal</a>
+    <a href="crear_raza.php" class="btn btn-success mb-2" >Agregar raza</a>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -67,7 +81,7 @@
             echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
             echo '<td>';
-            echo '<a href="editar.php?id=' . $animal->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="editar_animal.php?id=' . $animal->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
             echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . $animal->ID_Animal . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
@@ -80,7 +94,7 @@
     ?>
 
 </div>
-
+<br>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.title{
+.title {
     margin-top: 20px;
     text-align: left;
     font-size: 30px; /* Agrandar el tamaño de la letra */
@@ -29,4 +29,55 @@
 .animal-table td img {
     max-width: 100px;
     border-radius: 10px;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+    .animal-table th,
+    .animal-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .animal-table td img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animal-table th,
+    .animal-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .animal-table td img {
+        max-width: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .animal-table th,
+    .animal-table td {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .animal-table td img {
+        max-width: 40px;
+    }
 }
