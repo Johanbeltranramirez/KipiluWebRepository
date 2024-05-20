@@ -1,5 +1,7 @@
 # KipiluWebRepository
 
+Link al repositorio del Back-end: https://github.com/Johanbeltranramirez/KipiluBackendRepository.git
+
 Video para seguimiento con laravel:  https://youtu.be/3e1IsZJuYAw?si=pUzQNNp4SLvzLTvU
 
 
