@@ -17,7 +17,7 @@
 <!--Cierre Nav(navegacion)-->
 
 <div class="container">
-    <h1 class="text-center">Leer Animales</h1>
+    <h1 class="text-center">Lista de animales</h1>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -46,6 +46,7 @@
         echo '<th>Descripción</th>';
         echo '<th>Especie del Animal</th>';
         echo '<th>Estado del Animal</th>';
+        echo '<th>Acciones</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
@@ -59,6 +60,8 @@
             echo '<td>' . $animal->Descripcion . '</td>';
             echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
+            echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
+
             echo '</tr>';
         }
         echo '</tbody>';
