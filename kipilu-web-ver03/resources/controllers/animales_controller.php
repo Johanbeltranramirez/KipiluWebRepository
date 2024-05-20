@@ -9,16 +9,15 @@
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
 </head>
 <body>
 
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
-<br>
+
 <div class="container">
-    <h1 class="text-center">Lista de animales</h1>
+    <h1 class="text-center">Leer Animales</h1>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -28,6 +27,11 @@
 
     // Obtener los animales
     $animals = $viewModel_Leer->fetchAnimals();
+
+    // Arrays de mapeo para los nombres
+    $especies = [1 => 'Canino', 2 => 'Felino'];
+    $sexos = [1 => 'Hembra', 2 => 'Macho'];
+    $estados = [1 => 'Adoptado', 2 => 'No adoptado', 3 => 'En proceso'];
 
     // Si hay animales, puedes mostrarlos en la vista
     if (!empty($animals)) {
@@ -42,23 +46,19 @@
         echo '<th>Descripción</th>';
         echo '<th>Especie del Animal</th>';
         echo '<th>Estado del Animal</th>';
-        echo '<th>Acciones</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
-
-
         foreach ($animals as $animal) {
             echo '<tr>';
             echo '<td>' . $animal->ID_Animal . '</td>';
             echo '<td>' . $animal->Nombre_Animal . '</td>';
             echo '<td>' . $animal->Raza . '</td>';
-            echo '<td>' . $animal->Sexo . '</td>';
+            echo '<td>' . $sexos[$animal->Sexo] . '</td>';
             echo '<td><img src="' . $animal->Foto . '" alt="Foto de ' . $animal->Nombre_Animal . '" style="max-width: 100px;"></td>';
             echo '<td>' . $animal->Descripcion . '</td>';
-            echo '<td>' . $animal->Especie_Animal . '</td>';
-            echo '<td>' . $animal->Estado_Animal . '</td>';
-            echo '<td>' . $animal->Estado_Animal . '</td>';
+            echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
+            echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
             echo '</tr>';
         }
         echo '</tbody>';
