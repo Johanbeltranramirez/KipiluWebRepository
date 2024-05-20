@@ -10,5 +10,5 @@ class ApiKipilu {
 }
 
 // Crear una instancia de la clase ApiKipilu con la URL base de la API
-$api = new ApiKipilu('http://192.168.128.7:3000/api');
+$api = new ApiKipilu('http://192.168.20.20:3000/api');
 ?>
