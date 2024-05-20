@@ -17,7 +17,7 @@
 <!--Cierre Nav(navegacion)-->
 
 <div class="container">
-    <h1 class="text-center">Lista de animales</h1>
+    <div class="title">Lista de animales</div>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -60,8 +60,10 @@
             echo '<td>' . $animal->Descripcion . '</td>';
             echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
-            echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
-
+            echo '<td>';
+            echo '<a href="editar.php?id=' . $animal->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="eliminar.php?id=' . $animal->ID_Animal . '" class="btn btn-danger w-100">Eliminar</a>';
+            echo '</td>';
             echo '</tr>';
         }
         echo '</tbody>';

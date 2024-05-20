@@ -8,6 +8,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.title{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 30px; /* Agrandar el tamaño de la letra */
+}
+
 .animal-table th,
 .animal-table td {
     padding: 10px;
