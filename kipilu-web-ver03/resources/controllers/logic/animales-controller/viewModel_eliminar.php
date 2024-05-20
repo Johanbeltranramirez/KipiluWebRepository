@@ -19,11 +19,10 @@ class AnimalsViewModel {
                 ]
             ];
             $context = stream_context_create($options);
-            $response = file_get_contents($url, false, $context);
+            $response = @file_get_contents($url, false, $context); 
 
-            // Verificar la respuesta
             if ($response === false) {
-                throw new Exception('Error al eliminar el animal porque esta en un proceso de adopcion');
+                throw new Exception('No se puede eliminar el animal porque está asociado a uno o más formularios..');
             }
 
             $responseData = json_decode($response, true);
@@ -36,7 +35,7 @@ class AnimalsViewModel {
                 return false;
             }
         } catch (Exception $e) {
-            echo "<script language='JavaScript'>alert('" . $e->getMessage() . "');</script>";
+            echo "<script language='JavaScript'>alert('" . $e->getMessage() . "'); location.assign('../../animales_controller.php');</script>";
             return false;
         }
     }
@@ -54,5 +53,4 @@ if (isset($_GET['animalId'])) {
 } else {
     echo "<script language='JavaScript'>alert('ID de animal no proporcionado.'); location.assign('../../animales_controller.php');</script>";
 }
-
 ?>
