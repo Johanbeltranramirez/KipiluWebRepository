@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILU - CRUD ANIMALES Leer Animales</title>
+    <script type="text/javascript">
+        function confirmar() {
+            return confirm('¿Estás seguro? Se eliminarán los datos.');
+        }
+    </script>
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
     <!--BOOSTRAP-->
@@ -17,7 +22,7 @@
 <!--Cierre Nav(navegacion)-->
 
 <div class="container">
-    <h1 class="text-center">Lista de animales</h1>
+    <div class="title">Lista de animales</div>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -60,8 +65,10 @@
             echo '<td>' . $animal->Descripcion . '</td>';
             echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
-            echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
-
+            echo '<td>';
+            echo '<a href="editar.php?id=' . $animal->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . $animal->ID_Animal . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '</td>';
             echo '</tr>';
         }
         echo '</tbody>';
