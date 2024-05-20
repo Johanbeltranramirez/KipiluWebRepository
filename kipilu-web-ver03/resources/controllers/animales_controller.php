@@ -16,7 +16,7 @@
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
-
+<br>
 <div class="container">
     <h1 class="text-center">Lista de animales del hogar de rescate</h1>
 
