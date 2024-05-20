@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - CRUD ANIMALES Crear Animales</title>
+    <title>KIPILU - CRUD ANIMALES Editar Animal</title>
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
     <!--BOOSTRAP-->
