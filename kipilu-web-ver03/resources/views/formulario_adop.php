@@ -16,14 +16,29 @@ if (isset($_GET['animal_id']) && isset($_GET['catalogo'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILÚ - Formulario Adopción</title>
-    <link rel="stylesheet" href="../css/form_adopcion.css">
     <link rel="icon" href="../img/logo.ico">
+    <!--BOOSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+            crossorigin="anonymous">
+    </script>
+    <!--MENU-->
+    <link rel="stylesheet" href="css/men_fot.css">
+    <!--PROPIO-->
+    <link rel="stylesheet" href="../css/form_adopcion.css">
+    <!--LLAMAR ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google ReCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="body">
 
+<body>
     <div class="container">
-            <h2>Bienvenid@</h2>
+            <h2 class="bienvenido">Bienvenid@</h2>
             <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>
             <form action="confirmacion.php" method="POST">
 
@@ -63,17 +78,7 @@ if (isset($_GET['animal_id']) && isset($_GET['catalogo'])) {
 
         </div>
 
-        <script>
-                function validarFormulario() {
-                    var response = grecaptcha.getResponse();
-                    if (response.length === 0) {
-
-                        alert("Por favor, marque la casilla de reCAPTCHA antes de enviar el formulario.");
-                        return false;
-                    }
-                    return true;
-                }
-        </script>
+<script defer src=".../js/Validar_Form.js"></script>
 
 </body>
 </html>
