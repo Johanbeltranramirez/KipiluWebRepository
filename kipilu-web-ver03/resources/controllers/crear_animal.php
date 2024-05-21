@@ -65,7 +65,7 @@
     <form id="animalForm" method="POST" class="custom-form">
         <div class="form-group">
             <label for="Nombre_Animal">Nombre del Animal:</label>
-            <input type="text" name="Nombre_Animal" class="form-control" required maxlength="25">
+            <input type="text" name="Nombre_Animal" class="form-control" required maxlength="20">
         </div>
         <div class="form-group">
             <label for="Razas">Raza:</label>
