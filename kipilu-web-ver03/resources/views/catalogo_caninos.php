@@ -23,10 +23,22 @@
 <main>
 
 <!--PORTADA-->
-<div class="portadaf">
-    <div class="contenido">
+<div class="portadac">
+        <div class="contenido">
+            <div class="texto">
+                <h1>Bienvenido al Catálogo de Caninos</h1>
+                <p>Explora nuestra selección de perros en busca de un hogar.</p>
+            </div>
+            <div class="opciones">
+                <h2>Características:</h2>
+                <ul>
+                    <li>Perros de diferentes razas disponibles</li>
+                    <li>Información detallada sobre cada perro</li>
+                    <li>Opciones de adopción</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 <!--FIN DE PORTADA-->
 
 <!--LINEA-->
@@ -70,7 +82,7 @@
             echo '<p class="card-title"><strong>Raza:</strong> ' . $animal->Raza . '</p>';
             echo '<p class="card-title"><strong>Sexo:</strong> ' . $sexos[$animal->Sexo] . '</p>';
             echo '<p class="card-title"><strong>Estado:</strong> ' . $estados[$animal->Estado_Animal]  . '</p>';
-            echo '<button type="button" class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-descripcion="' . $animal->Descripcion . '">Leer más</button>';
+            echo '<button type="button" class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-descripcion="' . $animal->Descripcion . '">Saber más</button>';
             // Verificar el estado del animal y mostrar el botón correspondiente
             if ($animal->Estado_Animal === 3) {
                 echo '<button type="button" class="btn btn-warning btn-sm w-100 mt-2 disabled">En proceso de adopción</button>';
