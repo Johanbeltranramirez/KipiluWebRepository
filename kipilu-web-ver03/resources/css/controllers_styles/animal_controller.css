@@ -48,7 +48,6 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .title {
-        font-size: 20px; /* Reducir el tamaño de letra del título */
         margin-left: -85px;    
     }
     .form-control{
