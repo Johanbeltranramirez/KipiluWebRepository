@@ -3,24 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>KIPILU - CRUD ANIMALES Leer Animales</title>
     <script type="text/javascript">
         function confirmar() {
             return confirm('¿Estás seguro? Se eliminarán los datos.');
         }
     </script>
-=======
-    <title>KIPILU - CRUD Animales</title>
-    <!--PROPIO-->
-    <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
-    <link rel="icon" href="../../assets/icon/logo.ico">
-    <!--BOOSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</head>
-<body>
->>>>>>> 8c8cf634282649b5205712eab0b3e40b42237ff6
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
     <link rel="icon" href="../../assets/icon/logo.ico">
