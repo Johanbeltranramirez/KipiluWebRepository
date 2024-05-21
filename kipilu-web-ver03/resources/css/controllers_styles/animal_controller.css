@@ -10,8 +10,8 @@
 
 .title {
     margin-top: 10px; /* Reducir el margen superior */
-    text-align: center;
-    font-size: 24px; /* Tamaño de letra del título */
+    text-align: left;
+    font-size: 35px; /* Tamaño de letra del título */
 }
 
 .animal-table th,
