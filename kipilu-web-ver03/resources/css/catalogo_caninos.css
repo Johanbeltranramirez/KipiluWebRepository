@@ -61,12 +61,14 @@
     }
 
     .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-image: url('../../assets/img/catalogos/fondo.png'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* La imagen se adapta al tamaño del contenedor */
+      }
+      
   .card-title,
   .card-text,
   .card-text .btn {
@@ -76,3 +78,4 @@
   .card-text .btn {
     margin-top: auto;
   }
+
