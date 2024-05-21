@@ -22,25 +22,22 @@
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
 
-<div class="container">
+    <div class="container">
     <div class="title">Lista de animales</div>
     <br>
-    <div class="container mt-4">
-        <div class="row justify-content-left">
-            <form action="animales_controller.php" method="GET" class="w-50 w-50-responsive custom-left-margin">
-                <div class="input-group">
-                    <!-- Campo de búsqueda -->
+    <div class="row">
+        <div class="col-md-6">
+            <form action="animales_controller.php" method="GET" class="custom-search-form">
+                <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Buscar por ID" id="animal_id" name="animal_id">
                     <div class="input-group-append">
-                        <!-- Botones de búsqueda y cerrar -->
-                        <button type="submit" class="btn btn-primary btn-buscar">Buscar</button>
-                        <a href="animales_controller.php" class="btn btn-primary btn-cerrar">Cerrar</a>
+                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                        <a href="animales_controller.php" class="btn btn-outline-secondary" type="button">Cerrar búsqueda</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer_id.php';
@@ -78,11 +75,14 @@
 
         } else {
             // No se encontró ningún animal con el ID especificado
-            echo 'Lo sentimos, no se encontró ningún animal con el ID especificado.';
+            echo '<div class="alert alert-danger mt-3" role="alert">';
+            echo 'Lo sentimos, no se encontró ningún animal con el ID especificado, vuelva a intentar.';
+            echo '</div>';
         }
     } 
     
     ?>
+    
 <!--FIN Datos búsqueda-->
     <br>
     <br>

@@ -45,36 +45,7 @@
     font-size: 12px; /* Tamaño de fuente de los botones */
 }
 
-.btn-buscar,
-.btn-cerrar {
-    min-width: 80px; /* Ancho mínimo para los botones */
-    font-size: 14px; /* Tamaño de fuente para los botones */
-}
 
-.btn-cerrar {
-    margin-left: 15px; /* Espacio entre los botones */
-}
-
-@media (max-width: 767.98px) {
-    .w-50-responsive {
-        width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
-    }
-
-    .btn-buscar,
-    .btn-cerrar {
-        width: 100%;
-        margin-top: 5px; /* Espacio entre los botones en dispositivos móviles */
-    }
-
-    .btn-cerrar {
-        margin-left: 0; /* Eliminar margen izquierdo para dispositivos móviles */
-    }
-}
-
-/* Estilo personalizado para ajustar el margen a la izquierda */
-.custom-left-margin {
-    margin-left: -10px; /* Ajustar este valor según sea necesario */
-}
 @media (max-width: 767.98px) {
     .w-50-responsive {
         width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
