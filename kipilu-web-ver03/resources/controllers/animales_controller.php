@@ -75,9 +75,12 @@
     }
     ?>
     <br>
-        <br>
-    <a href="crear_animal.php" class="btn btn-success mb-2" >Agregar animal</a>
-    <a href="crear_raza.php" class="btn btn-success mb-2" >Agregar raza</a>
+    <br>
+    
+     <div class="botones">
+      <a href="crear_animal.php" class="btn btn-success mb-2" >Agregar animal</a>
+      <a href="crear_raza.php" class="btn btn-success mb-2" >Agregar raza</a>
+     </div>
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer.php';
@@ -117,7 +120,7 @@
             echo '<td>' . $animal->Raza . '</td>';
             echo '<td>' . $sexos[$animal->Sexo] . '</td>';
             echo '<td><img src="' . $animal->Foto . '" alt="Foto de ' . $animal->Nombre_Animal . '" style="max-width: 100px;"></td>';
-            echo '<td>' . $animal->Descripcion . '</td>';
+            echo '<td class="descripcion-cell">' . $animal->Descripcion . '</td>';
             echo '<td>' . $especies[$animal->Especie_Animal] . '</td>';
             echo '<td>' . $estados[$animal->Estado_Animal] . '</td>';
             echo '<td>';
