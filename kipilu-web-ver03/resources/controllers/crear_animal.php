@@ -84,7 +84,7 @@
         <div class="form-group">
             <label for="Sexo">Sexo:</label>
             <select name="Sexo" class="form-control" required>
-            <option>Selecciona una sexo</option>
+            <option>Selecciona un sexo</option>
                     <option value="1">Hembra</option>
                     <option value="2">Macho</option>
             </select>
