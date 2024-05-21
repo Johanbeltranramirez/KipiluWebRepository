@@ -10,7 +10,7 @@
 
 .title {
     margin-top: 10px; /* Reducir el margen superior */
-    text-align: left;
+    text-align: center;
     font-size: 24px; /* Tamaño de letra del título */
 }
 
@@ -19,7 +19,7 @@
     padding: 8px; /* Espacio alrededor del contenido */
     border: 1px solid #ccc;
     font-size: 14px; /* Tamaño de fuente de las celdas */
-    text-align: left; /* Alinear contenido a la izquierda */
+    text-align: center; /* Alinear contenido a la izquierda */
 }
 
 .animal-table th {
