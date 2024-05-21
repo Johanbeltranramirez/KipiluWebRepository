@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>KIPILU - CRUD Animales</title>
-=======
-    <title>KIPILU - CRUD ANIMALES Leer Animales</title>
-    <script type="text/javascript">
-        function confirmar() {
-            return confirm('¿Estás seguro? Se eliminarán los datos.');
-        }
-    </script>
->>>>>>> c971c2572b5f56a1be9e518fd548bfb42afd5250
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
     <link rel="icon" href="../../assets/icon/logo.ico">
