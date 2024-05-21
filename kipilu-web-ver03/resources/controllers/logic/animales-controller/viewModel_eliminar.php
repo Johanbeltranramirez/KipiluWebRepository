@@ -6,13 +6,13 @@ class AnimalsViewModel {
     private $api;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.128.3:3000/api/');
+        $this->api = new ApiKipilu('http://192.168.1.9:3000/api/');
     }
 
     public function deleteAnimal($id) {
         try {
             // Hacer una solicitud DELETE a la API para eliminar el animal
-            $url = 'http://192.168.128.3:3000/api/animales/eliminar/' . $id;
+            $url = 'http://192.168.1.9:3000/api/animales/eliminar/' . $id;
             $options = [
                 'http' => [
                     'method' => 'DELETE'
