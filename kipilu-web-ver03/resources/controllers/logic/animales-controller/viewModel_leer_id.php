@@ -22,7 +22,12 @@ class AnimalSearchViewModel {
         try {
             // Hacer una solicitud GET a la API para obtener el animal por su ID
             $url = $this->apiBaseUrl . 'animales/' . $animalId;
-            $response = file_get_contents($url);
+            $response = @file_get_contents($url);
+
+            if ($response === FALSE) {
+                throw new Exception('Failed to fetch data from API.');
+            }
+
             $animalData = json_decode($response, true);
     
             if (isset($animalData['data'])) {
@@ -43,18 +48,20 @@ class AnimalSearchViewModel {
             }
         } catch (Exception $e) {
             // Error genérico en caso de fallo en la solicitud o procesamiento
-            echo 'Lo sentimos, ha ocurrido un error al procesar la solicitud.';
             return null;
         }
     }
-    
-    
 
     // Método para obtener todas las razas
     public function fetchRazas() {
         try {
             // Hacer una solicitud GET a la API para obtener las razas
-            $response = file_get_contents($this->apiBaseUrl . 'razas');
+            $response = @file_get_contents($this->apiBaseUrl . 'razas');
+
+            if ($response === FALSE) {
+                throw new Exception('Failed to fetch data from API.');
+            }
+
             $razasData = json_decode($response, true);
 
             if (isset($razasData['data'])) {
@@ -63,7 +70,6 @@ class AnimalSearchViewModel {
                 return [];
             }
         } catch (Exception $e) {
-            echo 'ERROR: ' . $e->getMessage();
             return [];
         }
     }
