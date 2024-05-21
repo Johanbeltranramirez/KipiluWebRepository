@@ -25,20 +25,22 @@
 <div class="container">
     <div class="title">Lista de animales</div>
     <br>
-<!--Datos búsqueda-->
-<div class="row">
-    <form action="animales_controller.php" method="GET" class="d-flex align-items-center">
-        <div class="col-md-4">
-            <!-- Campo de búsqueda -->
-            <input type="text" class="form-control" placeholder="Buscar por ID" id="animal_id" name="animal_id">
+    <div class="container mt-4">
+        <div class="row justify-content-left">
+            <form action="animales_controller.php" method="GET" class="w-50 w-50-responsive custom-left-margin">
+                <div class="input-group">
+                    <!-- Campo de búsqueda -->
+                    <input type="text" class="form-control" placeholder="Buscar por ID" id="animal_id" name="animal_id">
+                    <div class="input-group-append">
+                        <!-- Botones de búsqueda y cerrar -->
+                        <button type="submit" class="btn btn-primary btn-buscar">Buscar</button>
+                        <a href="animales_controller.php" class="btn btn-primary btn-cerrar">Cerrar</a>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="col-md-3">
-            <!-- Botón de búsqueda -->
-            <button class="btn btn-primary btn-buscar mr-2">Buscar</button>
-            <a href="animales_controller.php" class="btn btn-primary btn-cerrar">Cerrar</a>
-        </div>
-    </form>
-</div>
+    </div>
+
 
     <?php
     require_once 'logic/animales-controller/viewModel_leer_id.php';
