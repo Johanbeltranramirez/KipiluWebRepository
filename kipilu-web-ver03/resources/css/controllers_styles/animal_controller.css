@@ -65,7 +65,7 @@
     .animal-table th,
     .animal-table td {
         font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
-        margin-left: -85px;    
+        margin-left: -100px;    
     }
     .botones {
         margin-left: -85px;    

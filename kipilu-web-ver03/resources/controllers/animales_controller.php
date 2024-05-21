@@ -25,55 +25,63 @@
 <div class="container">
     <div class="title">Lista de animales</div>
     <br>
-        <div class="row">
-            <div class="col-md-4">
-                <!-- Campo de búsqueda -->
-                <input type="text" class="form-control" placeholder="Buscar por ID" id="inputBusqueda">
-            </div>
-            <div class="col-md-4">
-                <!-- Botón de búsqueda -->
-                <button class="btn btn-primary btn-buscar btn-block">Buscar</button>
-            </div>
+<!--Datos búsqueda-->
+<div class="row">
+    <form action="animales_controller.php" method="GET" class="d-flex align-items-center">
+        <div class="col-md-4">
+            <!-- Campo de búsqueda -->
+            <input type="text" class="form-control" placeholder="Buscar por ID" id="animal_id" name="animal_id">
         </div>
-        <?php
-    if (isset($_GET['id']) && !empty($_GET['id'])) {
-        require_once 'logic/animales-controller/viewModel_leer_id.php';
-        // Instancia del ViewModel de los animales
-        $viewModel_Leer_ID = new AnimalsViewModel();
+        <div class="col-md-3">
+            <!-- Botón de búsqueda -->
+            <button class="btn btn-primary btn-buscar mr-2">Buscar</button>
+            <a href="animales_controller.php" class="btn btn-primary btn-cerrar">Cerrar</a>
+        </div>
+    </form>
+</div>
 
-        // Obtener el animal por su ID
-        $animal = $viewModel_Leer_ID->fetchAnimalById($_GET['id']);
+    <?php
+    require_once 'logic/animales-controller/viewModel_leer_id.php';
 
-        // Arrays de mapeo para los nombres
+    if (isset($_GET['animal_id'])) {
+        $animalId = $_GET['animal_id'];
+
+        $viewModel = new AnimalSearchViewModel('http://192.168.128.3:3000/api/');
+        $animalData = $viewModel->fetchAnimal($animalId);
+
+            // Arrays de mapeo para los nombres
         $especies = [1 => 'Canino', 2 => 'Felino'];
         $sexos = [1 => 'Hembra', 2 => 'Macho'];
         $estados = [1 => 'Adoptado', 2 => 'No adoptado', 3 => 'En proceso'];
 
-        // Si se encontró el animal, mostrar los detalles
-        if ($animal) {
-            ?>
-            <div class="animal-details">
-                <div class="animal-info">
-                    <strong>ID_Animal:</strong> <?php echo $animal->ID_Animal; ?><br>
-                    <strong>Nombre del Animal:</strong> <?php echo $animal->Nombre_Animal; ?><br>
-                    <strong>Raza:</strong> <?php echo $animal->Raza; ?><br>
-                    <strong>Sexo:</strong> <?php echo $sexos[$animal->Sexo]; ?><br>
-                    <strong>Foto:</strong> <img src="<?php echo $animal->Foto; ?>" alt="Foto de <?php echo $animal->Nombre_Animal; ?>" style="max-width: 100px;"><br>
-                    <strong>Descripción:</strong> <?php echo $animal->Descripcion; ?><br>
-                    <strong>Especie del Animal:</strong> <?php echo $especies[$animal->Especie_Animal]; ?><br>
-                    <strong>Estado del Animal:</strong> <?php echo $estados[$animal->Estado_Animal]; ?><br>
-                </div>
-                <div class="animal-actions">
-                    <a href="editar_animal.php?id=<?php echo $animal->ID_Animal; ?>" class="btn btn-warning mb-2 w-100">Editar</a>
-                    <a href="logic/animales-controller/viewModel_eliminar.php?animalId=<?php echo $animal->ID_Animal; ?>" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>
-                </div>
-            </div>
-            <?php
+        if ($animalData) {
+            echo '<div class="title">Detalles del animal</div>';
+            echo '<table class="animal-table">';
+            echo '<tr><th>ID</th><th>Nombre</th><th>Raza</th><th>Sexo</th><th>Foto</th><th>Descripción</th><th>Especie</th><th>Estado</th><th>Acciones</th></tr>';
+            echo '<tr>';
+            echo '<td>' . $animalData->ID_Animal . '</td>';
+            echo '<td>' . $animalData->Nombre_Animal . '</td>';
+            echo '<td>' . $animalData->Raza . '</td>';
+            echo '<td>' . $sexos[$animalData->Sexo]. '</td>';
+            echo '<td><img src="' . $animalData->Foto . '" alt="Foto del Animal" style="max-width: 100px; max-height: 100px;"></td>';
+            echo '<td class="descripcion-cell">' . $animalData->Descripcion . '</td>';
+            echo '<td>' . $especies[$animalData->Especie_Animal] . '</td>';
+            echo '<td>' . $estados[$animalData->Estado_Animal] . '</td>';
+            echo '<td>';
+            echo '<a href="editar_animal.php?id=' . $animalData->ID_Animal . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . $animalData->ID_Animal . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '</td>';
+            echo '</tr>';
+            echo '</table>';
+
         } else {
-            echo "<p class='text-center'>No se encontró ningún animal con el ID proporcionado.</p>";
+            // No se encontró ningún animal con el ID especificado
+            echo 'Lo sentimos, no se encontró ningún animal con el ID especificado.';
         }
-    }
+    } 
+    
     ?>
+<!--FIN Datos búsqueda-->
     <br>
     <br>
     

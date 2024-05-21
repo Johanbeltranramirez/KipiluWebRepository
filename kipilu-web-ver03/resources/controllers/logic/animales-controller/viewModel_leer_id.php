@@ -1,78 +1,60 @@
 <?php
 
-class AnimalViewModel {
-    private $apiUrl;
+class Animalid {
+    public $ID_Animal;
+    public $Nombre_Animal;
+    public $Raza;
+    public $Sexo;
+    public $Foto;
+    public $Descripcion;
+    public $Especie_Animal;
+    public $Estado_Animal;
+}
 
-    public function __construct($apiUrl) {
-        $this->apiUrl = $apiUrl;
+class AnimalSearchViewModel {
+    private $apiBaseUrl;
+
+    public function __construct($apiBaseUrl) {
+        $this->apiBaseUrl = $apiBaseUrl;
     }
 
-    public function fetchAnimalById($animalId) {
+    public function fetchAnimal($animalId) {
         try {
-            // Inicializar cURL
-            $curl = curl_init();
-
-            // Configurar opciones de cURL para obtener los detalles del animal por su ID
-            $url = $this->apiUrl . '/animales/' . $animalId;
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => $url,
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_CUSTOMREQUEST => "GET",
-                CURLOPT_HTTPHEADER => array(
-                    "Content-Type: application/json"
-                ),
-            ));
-
-            // Ejecutar la solicitud cURL
-            $response = curl_exec($curl);
-
-            // Verificar si hubo algún error
-            if ($response === false) {
-                throw new Exception(curl_error($curl));
-            }
-
-            // Decodificar la respuesta JSON
+            // Hacer una solicitud GET a la API para obtener el animal por su ID
+            $url = $this->apiBaseUrl . 'animales/' . $animalId;
+            $response = file_get_contents($url);
             $animalData = json_decode($response, true);
-
-            // Cerrar la sesión cURL
-            curl_close($curl);
-
+    
             if (isset($animalData['data'])) {
-                $animal = $this->mapToAnimal($animalData['data']);
-                // Obtener el nombre de la raza
-                $animal->Raza = $this->fetchRazaById($animalData['data']['Raza']);
+                $animal = new Animalid();
+                $animal->ID_Animal = $animalData['data']['ID_Animal'];
+                $animal->Nombre_Animal = $animalData['data']['Nombre_Animal'];
+                $animal->Raza = $this->fetchRazaById($animalData['data']['Razas']); // Obtener el nombre de la raza
+                $animal->Sexo = $animalData['data']['Sexo'];
+                $animal->Foto = $animalData['data']['Foto'];
+                $animal->Descripcion = $animalData['data']['Descripcion'];
+                $animal->Especie_Animal = $animalData['data']['Especie_Animal'];
+                $animal->Estado_Animal = $animalData['data']['Estado_Animal'];
+    
                 return $animal;
             } else {
+                // No se encontró ningún animal con el ID especificado
                 return null;
             }
         } catch (Exception $e) {
-            echo 'ERROR: ' . $e->getMessage();
+            // Error genérico en caso de fallo en la solicitud o procesamiento
+            echo 'Lo sentimos, ha ocurrido un error al procesar la solicitud.';
             return null;
         }
     }
-
-    private function mapToAnimal($data) {
-        $animal = new Animal();
-        $animal->ID_Animal = $data['ID_Animal'];
-        $animal->Nombre_Animal = $data['Nombre_Animal'];
-        $animal->Raza = $data['Raza'];
-        $animal->Sexo = $data['Sexo'];
-        $animal->Foto = $data['Foto'];
-        $animal->Descripcion = $data['Descripcion'];
-        $animal->Especie_Animal = $data['Especie_Animal'];
-        $animal->Estado_Animal = $data['Estado_Animal'];
-        
-        return $animal;
-    }
+    
+    
 
     // Método para obtener todas las razas
-    private function fetchRazas() {
+    public function fetchRazas() {
         try {
             // Hacer una solicitud GET a la API para obtener las razas
-            $response = file_get_contents($this->apiUrl . '/razas');
-            
-            // Decodificar la respuesta JSON
+            $response = file_get_contents($this->apiBaseUrl . 'razas');
             $razasData = json_decode($response, true);
 
             if (isset($razasData['data'])) {
