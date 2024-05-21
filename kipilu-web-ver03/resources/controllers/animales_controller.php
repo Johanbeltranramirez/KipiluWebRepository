@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>KIPILU - CRUD Animales</title>
-=======
     <title>KIPILU - CRUD ANIMALES Leer Animales</title>
     <script type="text/javascript">
         function confirmar() {
             return confirm('¿Estás seguro? Se eliminarán los datos.');
         }
     </script>
->>>>>>> c971c2572b5f56a1be9e518fd548bfb42afd5250
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/animal_controller.css">
     <link rel="icon" href="../../assets/icon/logo.ico">
@@ -39,6 +35,46 @@
                 <button class="btn btn-primary btn-buscar btn-block">Buscar</button>
             </div>
         </div>
+        <?php
+    if (isset($_GET['id']) && !empty($_GET['id'])) {
+        require_once 'logic/animales-controller/viewModel_leer_id.php';
+        // Instancia del ViewModel de los animales
+        $viewModel_Leer_ID = new AnimalsViewModel();
+
+        // Obtener el animal por su ID
+        $animal = $viewModel_Leer_ID->fetchAnimalById($_GET['id']);
+
+        // Arrays de mapeo para los nombres
+        $especies = [1 => 'Canino', 2 => 'Felino'];
+        $sexos = [1 => 'Hembra', 2 => 'Macho'];
+        $estados = [1 => 'Adoptado', 2 => 'No adoptado', 3 => 'En proceso'];
+
+        // Si se encontró el animal, mostrar los detalles
+        if ($animal) {
+            ?>
+            <div class="animal-details">
+                <div class="animal-info">
+                    <strong>ID_Animal:</strong> <?php echo $animal->ID_Animal; ?><br>
+                    <strong>Nombre del Animal:</strong> <?php echo $animal->Nombre_Animal; ?><br>
+                    <strong>Raza:</strong> <?php echo $animal->Raza; ?><br>
+                    <strong>Sexo:</strong> <?php echo $sexos[$animal->Sexo]; ?><br>
+                    <strong>Foto:</strong> <img src="<?php echo $animal->Foto; ?>" alt="Foto de <?php echo $animal->Nombre_Animal; ?>" style="max-width: 100px;"><br>
+                    <strong>Descripción:</strong> <?php echo $animal->Descripcion; ?><br>
+                    <strong>Especie del Animal:</strong> <?php echo $especies[$animal->Especie_Animal]; ?><br>
+                    <strong>Estado del Animal:</strong> <?php echo $estados[$animal->Estado_Animal]; ?><br>
+                </div>
+                <div class="animal-actions">
+                    <a href="editar_animal.php?id=<?php echo $animal->ID_Animal; ?>" class="btn btn-warning mb-2 w-100">Editar</a>
+                    <a href="logic/animales-controller/viewModel_eliminar.php?animalId=<?php echo $animal->ID_Animal; ?>" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>
+                </div>
+            </div>
+            <?php
+        } else {
+            echo "<p class='text-center'>No se encontró ningún animal con el ID proporcionado.</p>";
+        }
+    }
+    ?>
+    <br>
         <br>
     <a href="crear_animal.php" class="btn btn-success mb-2" >Agregar animal</a>
     <a href="crear_raza.php" class="btn btn-success mb-2" >Agregar raza</a>
