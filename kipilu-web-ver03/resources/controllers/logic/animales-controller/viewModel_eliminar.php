@@ -1,18 +1,17 @@
 <?php
 
-require_once 'ApiKipilu.php';
-
 class AnimalsViewModel {
-    private $api;
+    private $apiBaseUrl;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.1.9:3000/api/');
+        // Definimos la URL base de la API
+        $this->apiBaseUrl = 'http://192.168.128.3:3000/api/';
     }
 
     public function deleteAnimal($id) {
         try {
             // Hacer una solicitud DELETE a la API para eliminar el animal
-            $url = 'http://192.168.1.9:3000/api/animales/eliminar/' . $id;
+            $url = $this->apiBaseUrl . 'animales/eliminar/' . $id;
             $options = [
                 'http' => [
                     'method' => 'DELETE'
@@ -22,7 +21,7 @@ class AnimalsViewModel {
             $response = @file_get_contents($url, false, $context); 
 
             if ($response === false) {
-                throw new Exception('No se puede eliminar el animal porque está asociado a uno o más formularios..');
+                throw new Exception('No se puede eliminar el animal porque está asociado a uno o más formularios.');
             }
 
             $responseData = json_decode($response, true);
