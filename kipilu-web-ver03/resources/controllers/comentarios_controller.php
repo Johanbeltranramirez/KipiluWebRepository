@@ -53,7 +53,7 @@
             echo '<td>' . $comment->Nombre . ' ' . $comment->Apellido . '</td>';
             echo '<td>' . $comment->Comentario . '</td>';
             echo '<td>';
-            echo '<a href="logic/comentarios-controller/viewModel_eliminar.php?commentId=' . $comment->ID_Comentario . '" class="btn btn-danger w-100">Eliminar Comentario</a>';
+            echo '<a href="logic/comentarios-controller/viewModel_eliminar.php?commentId=' . $comment->ID_Comentario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar Comentario</a>';
             echo '</td>';
             echo '</tr>';
         }
