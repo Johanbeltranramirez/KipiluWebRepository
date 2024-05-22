@@ -1,7 +1,5 @@
 <?php
 
-require_once '../../Data/ApiKipilu.php';
-
 class Comentarista {
     public $ID_Comentario;
     public $Nombre;
@@ -10,17 +8,20 @@ class Comentarista {
 }
 
 class CommentsViewModel {
-    private $api;
-
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.1.2:3000/api/');
+        // Definimos la URL base de la API
+        $this->apiBaseUrl = 'http://10.175.81.39:3000/api/';
     }
 
     public function fetchComments() {
         try {
-            // Hacer una solicitud GET a la API para obtener los comentarios
-            $response = file_get_contents('http://192.168.1.2:3000/api/comentaristas');
-            
+            // Hacer una solicitud GET a la API para obtener los comentarios 
+            $url = $this->apiBaseUrl . 'comentaristas';
+            $response = @file_get_contents($url);
+
+            if ($response === FALSE) {
+                throw new Exception('Failed to fetch data from API.');
+            }
             // Decodificar la respuesta JSON
             $commentsData = json_decode($response, true);
 

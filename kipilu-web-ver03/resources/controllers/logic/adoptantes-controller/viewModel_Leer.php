@@ -17,13 +17,13 @@ class AdoptantesViewModel {
     private $api;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.20.20:3000/api/');
+        $this->api = new ApiKipilu('http://10.175.81.39:3000/api/');
     }
 
     public function fetchAdoptantes() {
         try {
             // Hacer una solicitud GET a la API para obtener los adoptantes
-            $response = file_get_contents('http://192.168.128.3:3000/api/users/adoptantes');
+            $response = file_get_contents('http://10.175.81.39:3000/api/users/adoptantes');
 
             // Decodificar la respuesta JSON
             $adoptantesData = json_decode($response, true);
