@@ -30,6 +30,9 @@
     </form>
     <br>
 
+     <!-- Botón para crear nuevo adoptante -->
+     <a href="crear_adoptantes.php" class="btn btn-primary">Crear Nuevo Adoptante</a>
+
     <?php
 
     require_once 'logic/adoptantes-controller/viewModel_Leer.php';
