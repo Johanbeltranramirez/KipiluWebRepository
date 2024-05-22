@@ -12,7 +12,7 @@ class Animalid {
 }
 
 class AnimalSearchViewModel {
-    private $apiBaseUrl;
+    private $apiBaseUrl; 
 
     public function __construct($apiBaseUrl) {
         $this->apiBaseUrl = $apiBaseUrl;

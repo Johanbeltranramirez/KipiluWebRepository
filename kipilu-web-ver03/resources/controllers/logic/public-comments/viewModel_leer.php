@@ -1,31 +1,27 @@
 <?php
 
-require_once '../../Data/ApiKipilu.php';
-
 class Comentarista {
     public $ID_Comentario;
     public $Nombre;
     public $Apellido;
     public $Comentario;
-
 }
 
 class CommentsViewModel {
-    private $api;
-
     public function __construct() {
-
-        $this->api = new ApiKipilu('http://10.175.81.39:3000/api/');
-
+        // Definimos la URL base de la API
+        $this->apiBaseUrl = 'http://10.175.81.39:3000/api/';
     }
 
     public function fetchComments() {
         try {
-            // Hacer una solicitud GET a la API para obtener los comentarios
+            // Hacer una solicitud GET a la API para obtener los comentarios 
+            $url = $this->apiBaseUrl . 'comentaristas';
+            $response = @file_get_contents($url);
 
-            $response = file_get_contents('http://10.175.81.39:3000/api/comentaristas');
-
-            
+            if ($response === FALSE) {
+                throw new Exception('Failed to fetch data from API.');
+            }
             // Decodificar la respuesta JSON
             $commentsData = json_decode($response, true);
 
@@ -37,7 +33,6 @@ class CommentsViewModel {
                     $comment->Nombre = $commentData['Nombre'];
                     $comment->Apellido = $commentData['Apellido'];
                     $comment->Comentario = $commentData['Comentario'];
-
                     $comments[] = $comment;
                 }
                 return $comments;
@@ -50,5 +45,9 @@ class CommentsViewModel {
         }
     }
 }
+
+header('Content-Type: application/json');
+$viewModel = new CommentsViewModel();
+echo json_encode($viewModel->fetchComments());
 
 ?>

@@ -1,18 +1,17 @@
 <?php
 
-require_once 'ApiKipilu.php';
-
 class CommentsViewModel {
-    private $api;
+    private $apiBaseUrl;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.1.9:3000/api/');
+        // Definimos la URL base de la API
+        $this->apiBaseUrl = 'http://10.175.81.39:3000/api/';
     }
 
     public function deleteComentarista($id) {
         try {
             // Hacer una solicitud DELETE a la API para eliminar el comentarista
-            $url = 'http://192.168.1.9:3000/api/comentaristas/eliminar/' . $id;
+            $url = $this->apiBaseUrl . 'comentaristas/eliminar/' . $id;
             $options = [
                 'http' => [
                     'method' => 'DELETE'
@@ -40,7 +39,7 @@ class CommentsViewModel {
         }
     }
 }
-
+ 
 // Verificar si se ha pasado el ID del comentarista a eliminar
 if (isset($_GET['commentId'])) {
     $id = $_GET['commentId'];

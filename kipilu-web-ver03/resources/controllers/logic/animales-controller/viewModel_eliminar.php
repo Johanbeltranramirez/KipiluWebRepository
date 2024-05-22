@@ -6,6 +6,7 @@ class AnimalsViewModel {
     public function __construct() {
         // Definimos la URL base de la API
         $this->apiBaseUrl = 'http://192.168.2.34:3000/api/';
+
     }
 
     public function deleteAnimal($id) {
