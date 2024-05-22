@@ -1,6 +1,6 @@
 <?php
 
-class AnimalUpdateViewModel {
+class AdoptanteUpdateViewModel {
     private $apiBaseUrl;
 
     public function __construct() {
@@ -8,29 +8,14 @@ class AnimalUpdateViewModel {
         $this->apiBaseUrl = 'http://192.168.2.34:3000/api/';
     }
 
-    public function getAnimalById($animalId) {
-        $url = $this->apiBaseUrl . 'animales/' . $animalId;
+    public function getAdoptanteById($adoptanteId) {
+        $url = $this->apiBaseUrl . 'users/adoptantes/search/' . $adoptanteId;
         return $this->sendRequest($url, 'GET');
     }
 
-    public function updateAnimal($animalId, $animalData) {
-        $url = $this->apiBaseUrl . 'animales/actualizar/' . $animalId;
-        return $this->sendRequest($url, 'PUT', $animalData);
-    }
-
-    public function fetchRazas() {
-        $url = $this->apiBaseUrl . 'razas';
-        return $this->sendRequest($url, 'GET');
-    }
-
-    private function fetchRazaById($razaId) {
-        $razas = $this->fetchRazas();
-        foreach ($razas['data'] as $raza) {
-            if ($raza['ID_Raza'] === $razaId) {
-                return $raza['Nombre_Raza'];
-            }
-        }
-        return 'Desconocida';
+    public function updateAdoptante($adoptanteId, $adoptanteData) {
+        $url = $this->apiBaseUrl . 'users/adoptantes/' . $adoptanteId;
+        return $this->sendRequest($url, 'PUT', $adoptanteData);
     }
 
     private function sendRequest($url, $method, $data = null) {

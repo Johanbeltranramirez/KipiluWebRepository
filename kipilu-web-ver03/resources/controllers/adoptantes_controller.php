@@ -54,6 +54,7 @@
     echo "<th>Correo</th>";
     echo "<th>Direccion</th>";
     echo "<th>Telefono</th>";
+    echo "<th>Acciones</th>";
     echo "</tr>";
 
     foreach ($adoptantes as $adoptante) {
@@ -66,6 +67,7 @@
         echo "<td>" . $adoptante->Correo . "</td>";
         echo "<td>" . $adoptante->Direccion . "</td>";
         echo "<td>" . $adoptante->Telefono . "</td>";
+        echo "<td><a href='editar_adoptantes.php?id=" . $adoptante->ID_Adoptante . "' class='btn btn-primary'>Editar</a></td>";
         echo "</tr>";
     }
 
