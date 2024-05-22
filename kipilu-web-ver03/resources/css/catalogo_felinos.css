@@ -1,16 +1,51 @@
-.contenido {
-    background: url('../../assets/img/catalogos/felino_portada.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+/* Estilos para la portada gatos*/
+.portadaf {
+    position: relative;
+    height: 73vh;
+    background-image: url('../img/animales/portadaf.jpg'); 
+    background-size: contain;
     background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenido {
+    background :linear-gradient(to right, #4fc7c7, #77bcd7cc, #5edbb9e7, #cbe4fd);
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 48%;
-    height: 315px;
-    margin: 20px auto 0; /* Baja el contenedor 50px desde la parte superior y lo centra horizontalmente */
 }
+
+.texto h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.opciones h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
 
 .separador {
     text-align: center; /* Centra todo el contenido dentro de la sección */
@@ -61,12 +96,14 @@
     }
 
     .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-image: url('../../assets/img/catalogos/fondo.png'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* La imagen se adapta al tamaño del contenedor */
+      }
+      
   .card-title,
   .card-text,
   .card-text .btn {
@@ -76,3 +113,4 @@
   .card-text .btn {
     margin-top: auto;
   }
+

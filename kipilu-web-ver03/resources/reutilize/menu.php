@@ -5,7 +5,7 @@
     <div class="container-fluid" style="background-color: #ffffff;">
         <div class="d-flex justify-content-start align-items-center">
             <a href="index2.php"><img src="../../assets/icon/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;"></a>
-            <a class="navbar-brand custom-brand" href="index.php">HOGAR DE <br> RESCATE</a>
+            <a class="navbar-brand custom-brand" href="inicio.php">HOGAR DE <br> RESCATE</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
