@@ -54,7 +54,11 @@ class CommentsViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
+<<<<<<< HEAD
     $apiUrl = 'http://192.168.1.2:3000/api'; // Reemplaza 'puerto' 
+=======
+    $apiUrl = 'http://192.168.1.5:3000/api'; // Reemplaza 'puerto' 
+>>>>>>> 5ba6461597c29e6a20ee8db225de42862a53a62f
 
     // Crear una instancia del ViewModel de Comentaristas
     $commentsViewModel = new CommentsViewModel($apiUrl);

@@ -87,7 +87,7 @@
             if ($animal->Estado_Animal === 3) {
                 echo '<button type="button" class="btn btn-warning btn-sm w-100 mt-2 disabled">En proceso de adopción</button>';
             } elseif ($animal->Estado_Animal === 2) {
-                echo '<a href="#" class="btn btn-primary btn-sm w-100 mt-2">Formulario de Adopción</a>';
+                echo '<a href="../views/formulario_adoptante.php" class="btn btn-primary btn-sm w-100 mt-2">Formulario de Adopción</a>';
             }
     
             echo '</div>';

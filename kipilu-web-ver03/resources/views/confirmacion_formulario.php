@@ -11,7 +11,7 @@
 <main>
 
 <?php
-include("../db.php");
+include("../Apikipilu.php");
 
 // Verificar si se recibió la respuesta del reCAPTCHA
 if(isset($_POST['g-recaptcha-response'])){

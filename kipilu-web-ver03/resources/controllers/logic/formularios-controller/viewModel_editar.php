@@ -1,38 +1,21 @@
 <?php
 
-class AnimalUpdateViewModel {
+class FormularioUpdateViewModel {
     private $apiBaseUrl;
 
     public function __construct() {
         // Definimos la URL base de la API
-
         $this->apiBaseUrl = 'http://192.168.1.5:3000/api/';
-
     }
 
-    public function getAnimalById($animalId) {
-        $url = $this->apiBaseUrl . 'animales/' . $animalId;
+    public function getFormularioById($formularioId) {
+        $url = $this->apiBaseUrl . 'formularios/' . $formularioId;
         return $this->sendRequest($url, 'GET');
     }
 
-    public function updateAnimal($animalId, $animalData) {
-        $url = $this->apiBaseUrl . 'animales/actualizar/' . $animalId;
-        return $this->sendRequest($url, 'PUT', $animalData);
-    }
-
-    public function fetchRazas() {
-        $url = $this->apiBaseUrl . 'razas';
-        return $this->sendRequest($url, 'GET');
-    }
-
-    private function fetchRazaById($razaId) {
-        $razas = $this->fetchRazas();
-        foreach ($razas['data'] as $raza) {
-            if ($raza['ID_Raza'] === $razaId) {
-                return $raza['Nombre_Raza'];
-            }
-        }
-        return 'Desconocida';
+    public function updateFormulario($formularioId, $formularioData) {
+        $url = $this->apiBaseUrl . 'formularios/actualizar/' . $formularioId;
+        return $this->sendRequest($url, 'PUT', $formularioData);
     }
 
     private function sendRequest($url, $method, $data = null) {

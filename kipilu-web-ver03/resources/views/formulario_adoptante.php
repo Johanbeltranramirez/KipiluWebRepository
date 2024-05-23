@@ -29,7 +29,7 @@ if (isset($_GET['animal_id']) && isset($_GET['catalogo'])) {
     <!--MENU-->
     <link rel="stylesheet" href="css/men_fot.css">
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/form_adopcion.css">
+    <link rel="stylesheet" href="../css/formulario_adopcion.css">
     <!--LLAMAR ICONOS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google ReCAPTCHA -->
