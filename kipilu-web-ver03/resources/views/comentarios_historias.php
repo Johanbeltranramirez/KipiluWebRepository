@@ -11,6 +11,7 @@
     <link rel="icon" href="../../assets/icon/logo.ico">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/comentarios_historias.css">
+    <link rel="stylesheet" href="../css/public_comments.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- jQuery -->
@@ -36,11 +37,11 @@
                             <form id="commentForm">
                                 <div class="form-group">
                                     <label for="Nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="30" required>
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="Apellido">Apellido:</label>
-                                    <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="30" required>
+                                    <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="25" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="Comentario">Comentario:</label>

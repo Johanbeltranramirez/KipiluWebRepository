@@ -142,18 +142,18 @@ object-fit: cover;
 }
 
 @media (max-width: 768px) {
-.poste {
-background-image: url('https://images.moqups.com/repo/RcVv9iMoCs1Xou20BhiDQL8vlVPeCyBp/p_fXXmkYw3IQMv2g0y2wz86dk6AAesO5NP/XarsIOKwiQI3KyMGosIEtddGAlhCfUPZ.png?Expires=1695421320&Signature=UH9QMk5Kv2yug6bUiG1laXtW4fyx1Mrf~8KgtqX06j9bs08bpHaEpNCg9skxNtdaoCEgZA-A7qjq8xU0QxqdJFGlioGWMVawy7OSK~7lI6kmZ0zC4EsJ~wwxKI8Xbeg7TlByLEhEs8qVQzhiEeeqMB5dH-wmpqf5mDe4Nh76ME7kW1B4C0qOpAcFyx3apf9jL8ddKJqQ7f1NAl9GwBG7cwPAiJD~ccjTQRrmeS~Bma94qQSf-OP6g1GMNmSQ7O1ColMxqC5yEwLJcVra2cb0znif29t3TCyKq5Iu8qIWcGFYZFp5qTxXXdMj5bqyZLE8CAOZn-4SjNGwXzbXkjQwyg__&Key-Pair-Id=K1TPUF1X6HKIYU'); 
-background-size: cover;
-background-repeat: no-repeat;
-border: 2px solid #fff;
-border-radius: 5px;
-padding: 20px;
-max-width: 360px;
-width: 100%;
-height: auto; 
-margin: 0 10px; 
-position: relative;
-box-sizing: border-box; 
-}
+    .poste {
+        background-image: url('https://images.moqups.com/repo/RcVv9iMoCs1Xou20BhiDQL8vlVPeCyBp/p_fXXmkYw3IQMv2g0y2wz86dk6AAesO5NP/XarsIOKwiQI3KyMGosIEtddGAlhCfUPZ.png?Expires=1695421320&Signature=UH9QMk5Kv2yug6bUiG1laXtW4fyx1Mrf~8KgtqX06j9bs08bpHaEpNCg9skxNtdaoCEgZA-A7qjq8xU0QxqdJFGlioGWMVawy7OSK~7lI6kmZ0zC4EsJ~wwxKI8Xbeg7TlByLEhEs8qVQzhiEeeqMB5dH-wmpqf5mDe4Nh76ME7kW1B4C0qOpAcFyx3apf9jL8ddKJqQ7f1NAl9GwBG7cwPAiJD~ccjTQRrmeS~Bma94qQSf-OP6g1GMNmSQ7O1ColMxqC5yEwLJcVra2cb0znif29t3TCyKq5Iu8qIWcGFYZFp5qTxXXdMj5bqyZLE8CAOZn-4SjNGwXzbXkjQwyg__&Key-Pair-Id=K1TPUF1X6HKIYU'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 20px;
+        width: calc(100% - 20px); /* Ajuste para que ocupe el 100% del contenedor menos los márgenes */
+        height: auto; 
+        margin: 10px auto; /* Ajuste para centrar el elemento y agregar margen superior e inferior */
+        position: relative;
+        box-sizing: border-box; 
+    }
 } 
+

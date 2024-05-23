@@ -1,0 +1,82 @@
+/* Estilos para la lista de comentarios */
+#commentsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Estilo individual para cada comentario */
+.comment-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.comment-item:hover {
+    background-image: url('https://st2.depositphotos.com/2459687/10050/v/450/depositphotos_100505490-stock-illustration-vector-seamless-pattern-with-cat.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+/* Estilo para el avatar */
+.comment-avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('https://pnghq.com/wp-content/uploads/download-playstation-photography-carnivoran-avatar-monochrome-free-download-png-hq-hq-png-image-33006-1024x1024.png'); /* Ruta a la imagen deseada */
+    background-size: cover; /* Ajusta la imagen para cubrir el avatar */
+    background-position: center; /* Centra la imagen */
+    margin-right: 15px;
+}
+
+/* Estilo para el contenido del comentario */
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-metadata {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Estilo para el texto truncado */
+.comment-text.truncated {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Botón para mostrar más texto */
+.read-more {
+    color: #007bff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Botones de mostrar y ocultar comentarios */
+.show-comments, .hide-comments {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}

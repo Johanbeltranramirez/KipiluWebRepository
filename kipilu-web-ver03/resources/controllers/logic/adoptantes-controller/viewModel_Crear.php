@@ -57,7 +57,7 @@ class AdoptantesViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'http://192.168.2.34:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
+    $apiUrl = 'http://192.168.1.2:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
 
     // Crear una instancia del ViewModel de Adoptantes
     $adoptantesViewModel = new AdoptantesViewModel($apiUrl);
