@@ -1,82 +1,94 @@
-.container2 {
-  margin-top: 50px;
-}
-
-.mensaje {
-  margin-left: 200px;
-  margin-top: 20px;
-}
-
-.btn-buscar {
-  background-color: #8eff84; 
-  color: white;
-  border: none;
-}
-
-.btn-buscar:hover {
-  background-color: #aff77f; 
-}
-
-.cuadro-datos {
-  background-color: #f8f9fa; 
-  padding: 10px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-}
-
-table.table {
-  width: auto;
-  max-width: 86%;
-  margin: 15px auto;
-  margin-left: 200px;
+.form-table {
+  width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ccc; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  margin-top: 10px; /* Reducir el margen superior */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-table.table th,
-table.table td {
-  padding: 5px; 
-  text-align: center; 
-  text-align: justify;
-  border: 1px solid #ccc; 
-  border-radius: 5px;
+.title {
+  margin-top: 10px; /* Reducir el margen superior */
+  text-align: left;
+  font-size: 35px; /* Tamaño de letra del título */
 }
 
-table.table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; 
+.form-table th,
+.form-table td {
+  padding: 8px; /* Espacio alrededor del contenido */
+  border: 1px solid #ccc;
+  font-size: 14px; /* Tamaño de fuente de las celdas */
+  text-align: center; /* Alinear contenido a la izquierda */
 }
 
-.search-form {
-  display: flex;
-  align-items: center;
-  margin-left: 200px; 
-  margin-bottom: 20px; 
+.form-table th {
+  background: linear-gradient(to right, #e6f1f1, #afedf3cc);
 }
 
-.search-input {
-  width: 188px; 
-  margin-right: 10px; 
+.form-table td img {
+  max-width: 60px; /* Tamaño máximo de la imagen */
+  border-radius: 5px; /* Radio del borde de las imágenes */
 }
 
-.search-button {
-  margin-right: 10px; 
+.descripcion-cell {
+  max-width: 120px; /* Ancho máximo de la celda de descripción */
+  overflow-x: auto;
+  white-space: nowrap;
+  background: url('ruta/al/ícono-de-flecha.png') no-repeat right center;
+  text-align: center; /* Centrar el texto dentro de la celda de descripción */
 }
 
-.boton-estilizado {
-  background-color: #6bf188e5; 
-  color: black;
-  border: 2px solid #ffff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-image: linear-gradient(to right, #e6f1f1, #95f195b6);
-  width: 100%; 
+/* Estilos para los botones */
+.btn {
+  padding: 6px 12px; /* Espacio alrededor del texto */
+  font-size: 12px; /* Tamaño de fuente de los botones */
 }
 
-.boton-estilizado:hover {
-  background-color: #34b86096; 
+
+@media (max-width: 767.98px) {
+  .w-50-responsive {
+      width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
+  }
+  .btn-cerrar {
+      margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .title {
+      margin-left: -85px;    
+  }
+  .form-control{
+      margin-left: -85px;  
+      max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
+  }
+  .btn-primary {
+      margin-left: 240px;  
+      max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
+      margin-top: -65px;
+  }
+  .form-table {
+      margin-left: -85px;    
+  }
+  .form-table th,
+  .form-table td {
+      font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
+      margin-left: -100px;    
+  }
+  .botones {
+      margin-left: -85px;    
+  }
+  .form-table td img {
+      max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
+  }
+  
+  .descripcion-cell {
+      max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
+  }
+  
+  .btn {
+      padding: 4px 8px; /* Reducir el espacio alrededor del texto de los botones */
+      font-size: 10px; /* Reducir el tamaño de fuente de los botones */
+  }
 }
