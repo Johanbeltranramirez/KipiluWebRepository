@@ -15,11 +15,9 @@ class CommentsViewModel {
 
     public function __construct() {
 
-<<<<<<< HEAD
+
         $this->api = new ApiKipilu('http://192.168.1.2:3000/api/');
-=======
-        $this->api = new ApiKipilu('http://192.168.1.5:3000/api/');
->>>>>>> 5ba6461597c29e6a20ee8db225de42862a53a62f
+
 
     }
 
@@ -27,11 +25,9 @@ class CommentsViewModel {
         try {
             // Hacer una solicitud GET a la API para obtener los comentarios
 
-<<<<<<< HEAD
+
             $response = file_get_contents('http://192.168.1.2:3000/api/comentaristas');
-=======
-            $response = file_get_contents('http://192.168.1.5:3000/api/comentaristas');
->>>>>>> 5ba6461597c29e6a20ee8db225de42862a53a62f
+
 
             
             // Decodificar la respuesta JSON

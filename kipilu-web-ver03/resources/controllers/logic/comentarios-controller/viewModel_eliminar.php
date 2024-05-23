@@ -5,11 +5,9 @@ class CommentsViewModel {
 
     public function __construct() {
         // Definimos la URL base de la API
-<<<<<<< HEAD
+
         $this->apiBaseUrl = 'http://192.168.1.2:3000/api/';
-=======
-        $this->apiBaseUrl = 'http://192.168.1.5:3000/api/';
->>>>>>> 5ba6461597c29e6a20ee8db225de42862a53a62f
+
     }
 
     public function deleteComentarista($id) {
