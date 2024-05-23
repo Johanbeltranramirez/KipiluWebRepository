@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="form-group">
             <label for="Validacion_donativo">Validacion_donativo:</label>
-            <input type="text" name="Validacion_donativo" class="form-control" value="<?php echo isset($formulario['data']['validacion_donativo']) ? $formulario['data']['Validacion_donativo'] : ''; ?>">
+            <input type="text" name="Validacion_donativo" class="form-control" value="<?php echo isset($formulario['data']['Validacion_donativo']) ? $formulario['data']['Validacion_donativo'] : ''; ?>">
             <select name="Validacion_donativo" class="form-control" required>
                     <option>Selecciona la validación del donativo</option>
                     <option value="1" <?php echo ($formulario['data']['Validacion_donativo'] == 1) ? 'selected' : ''; ?>>SI</option>
