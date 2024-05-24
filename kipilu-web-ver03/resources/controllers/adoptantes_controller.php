@@ -30,7 +30,7 @@
         <div class="col-md-6">
             <form action="adoptantes_controller.php" method="GET" class="custom-search-form">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar por Cedula de adoptante" id="adoptantes_id" name="adoptantes_id" maxlength="10">
+                    <input type="text" class="form-control" placeholder="Buscar por ID" id="adoptantes_id" name="adoptantes_id" maxlength="10">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                         <a href="adoptantes_controller.php" class="btn btn-outline-secondary" type="button">Cerrar búsqueda</a>
@@ -40,8 +40,68 @@
         </div>
     </div>
 </div>
-     <!-- Botón para crear nuevo adoptante -->
+
+     <?php
+require_once 'logic/adoptantes-controller/viewModel_leer_id.php';
+
+$message = null;
+
+if (isset($_GET['adoptante_id'])) {
+    $adoptanteId = $_GET['adoptante_id'];
+
+    $viewModel = new AdoptanteSearchViewModel('http://192.168.2.34:3000/api/');
+    $adoptanteData = $viewModel->fetchAdoptante($adoptanteId);
+
+    if ($adoptanteData) {
+        echo '<div class="title">Detalles del adoptante</div>';
+        echo '<table class="adoptante-table">';
+        echo '<tr><th>ID</th><th>Primer Nombre</th><th>Segundo Nombre</th><th>Primer Apellido</th><th>Segundo Apellido</th><th>Correo</th><th>Dirección</th><th>Teléfono</th><th>Acciones</th></tr>';
+        echo '<tr>';
+        echo '<td>' . $adoptanteData->ID_Adoptante . '</td>';
+        echo '<td>' . $adoptanteData->P_Nombre . '</td>';
+        echo '<td>' . $adoptanteData->S_Nombre . '</td>';
+        echo '<td>' . $adoptanteData->P_Apellido . '</td>';
+        echo '<td>' . $adoptanteData->S_Apellido . '</td>';
+        echo '<td>' . $adoptanteData->Correo . '</td>';
+        echo '<td>' . $adoptanteData->Direccion . '</td>';
+        echo '<td>' . $adoptanteData->Telefono . '</td>';
+        echo '<td>';
+        echo '<a href="editar_adoptantes.php?id=' . $adoptanteData->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+        echo '<a href="logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=' . $adoptanteData->ID_Adoptante . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+        echo '</td>';
+        echo '</tr>';
+        echo '</table>';
+    } else {
+        $message = [
+            'type' => 'danger',
+            'text' => 'Lo sentimos, no se encontró ningún adoptante con el ID especificado o hubo un error al procesar la solicitud.'
+        ];
+    }
+}
+?>
+
+<?php if (isset($message)): ?>
+    <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">
+        <?php echo $message['text']; ?>
+        <script>
+            setTimeout(() => {
+                document.querySelector('.alert').remove();
+            }, 3000);
+        </script>
+    </div>
+<?php endif; ?>
+
+<script>
+    function confirmar() {
+        return confirm('¿Estás seguro de que deseas eliminar este adoptante?');
+    }
+</script>
+
+  <!-- Botón para crear nuevo adoptante -->
+  <div class="botones">
      <a href="crear_adoptantes.php" class="btn btn-success mb-2">Crear Nuevo Adoptante</a>
+     </div>
+
 
     <?php
 
@@ -77,7 +137,9 @@
         echo "<td>" . $adoptante->Correo . "</td>";
         echo "<td>" . $adoptante->Direccion . "</td>";
         echo "<td>" . $adoptante->Telefono . "</td>";
-        echo "<td><a href='editar_adoptantes.php?id=" . $adoptante->ID_Adoptante . "' class='btn btn-warning mb-2 w-100'>Editar</a></td>";
+        echo "<td>";
+        echo "<a href='editar_adoptantes.php?id=" . $adoptante->ID_Adoptante . "' class='btn btn-warning mb-2 w-100'>Editar</a>";
+        echo "<a href='logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=" . $adoptante->ID_Adoptante . "' class='btn btn-danger mb-2 w-100' onclick='return confirm(\"¿Estás seguro de que deseas eliminar este adoptante?\")'>Eliminar</a></td>";
         echo "</tr>";
     }
 
