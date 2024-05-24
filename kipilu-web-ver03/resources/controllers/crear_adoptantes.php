@@ -76,7 +76,7 @@
         </div>
         <div class="form-group">
             <label for="P_Apellido">Primer Apellido:</label>
-            <input type="text" name="P_Apellido" class="form -control" required>
+            <input type="text" name="P_Apellido" class="form-control">
         </div>
         <div class="form-group">
             <label for="S_Apellido">Segundo Apellido:</label>
