@@ -28,35 +28,43 @@
     <br>
     <div class="row">
         <div class="col-md-6">
-            <form action="adoptantes_controller.php" method="GET" class="custom-search-form">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar por ID" id="adoptantes_id" name="adoptantes_id" maxlength="10">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
-                        <a href="adoptantes_controller.php" class="btn btn-outline-secondary" type="button">Cerrar búsqueda</a>
-                    </div>
-                </div>
-            </form>
+        <form action="adoptantes_controller.php" method="GET" class="custom-search-form">
+          <div class="input-group mb-3">
+           <input type="text" class="form-control" placeholder="Buscar por ID" id="adoptante_id" name="adoptante_id" maxlength="10">
+             <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            <a href="adoptantes_controller.php" class="btn btn-outline-secondary" type="button">Cerrar búsqueda</a>
         </div>
     </div>
-</div>
+</form>
 
-     <?php
-require_once 'logic/adoptantes-controller/viewModel_leer_id.php';
+<?php
+require_once 'logic/adoptantes-controller/viewModel_Leer_id.php';
 
 $message = null;
 
 if (isset($_GET['adoptante_id'])) {
     $adoptanteId = $_GET['adoptante_id'];
 
-    $viewModel = new AdoptanteSearchViewModel('http://10.175.83.121:3000/api/');
+    $viewModel = new AdoptanteSearchViewModel('http://192.168.137.1:3000/api/');
     $adoptanteData = $viewModel->fetchAdoptante($adoptanteId);
 
+    
+
     if ($adoptanteData) {
-        echo '<div class="title">Detalles del adoptante</div>';
-        echo '<table class="adoptante-table">';
-        echo '<tr><th>ID</th><th>Primer Nombre</th><th>Segundo Nombre</th><th>Primer Apellido</th><th>Segundo Apellido</th><th>Correo</th><th>Dirección</th><th>Teléfono</th><th>Acciones</th></tr>';
-        echo '<tr>';
+        echo '<h2>Detalles del adoptante:</h2>';
+        echo '<table class="adoptantes-table">';
+        echo "<tr>";
+        echo "<th>ID_Adoptante</th>";
+        echo "<th>P_Nombre</th>";
+        echo "<th>S_Nombre</th>";
+        echo "<th>P_Apellido</th>";
+        echo "<th>S_Apellido</th>";
+        echo "<th>Correo</th>";
+        echo "<th>Direccion</th>";
+        echo "<th>Telefono</th>";
+        echo "<th>Acciones</th>";
+        echo "</tr>";
         echo '<td>' . $adoptanteData->ID_Adoptante . '</td>';
         echo '<td>' . $adoptanteData->P_Nombre . '</td>';
         echo '<td>' . $adoptanteData->S_Nombre . '</td>';
@@ -66,19 +74,22 @@ if (isset($_GET['adoptante_id'])) {
         echo '<td>' . $adoptanteData->Direccion . '</td>';
         echo '<td>' . $adoptanteData->Telefono . '</td>';
         echo '<td>';
-        echo '<a href="editar_adoptantes.php?id=' . $adoptanteData->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-        echo '<a href="logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=' . $adoptanteData->ID_Adoptante . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+        echo "<a href='editar_adoptantes.php?id=" .  $adoptanteData->ID_Adoptante . "' class='btn btn-warning mb-2 w-100'>Editar</a>";
+        echo "<a href='logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=" .  $adoptanteData->ID_Adoptante . "' class='btn btn-danger mb-2 w-100' onclick='return confirm(\"¿Estás seguro de que deseas eliminar este adoptante?\")'>Eliminar</a></td>";
+        echo '</td>';
         echo '</td>';
         echo '</tr>';
         echo '</table>';
     } else {
-        $message = [
-            'type' => 'danger',
-            'text' => 'Lo sentimos, no se encontró ningún adoptante con el ID especificado o hubo un error al procesar la solicitud.'
-        ];
+        $message = 'No se encontró ningún adoptante con el ID especificado.';
     }
 }
+
+if ($message) {
+    echo '<p>' . $message . '</p>';
+}
 ?>
+
 
 <?php if (isset($message)): ?>
     <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">
