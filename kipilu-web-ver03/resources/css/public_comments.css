@@ -13,6 +13,7 @@
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
     transition: background-color 0.3s;
+    max-width: 100%;
 }
 
 .comment-item:hover {
@@ -36,6 +37,7 @@
 /* Estilo para el contenido del comentario */
 .comment-content {
     flex-grow: 1;
+    max-width: 100%;
 }
 
 .comment-author {
@@ -47,28 +49,13 @@
 .comment-text {
     font-size: 14px;
     color: #555;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
 }
 
 .comment-metadata {
     font-size: 12px;
     color: #999;
-    margin-top: 5px;
-}
-
-/* Estilo para el texto truncado */
-.comment-text.truncated {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-/* Botón para mostrar más texto */
-.read-more {
-    color: #007bff;
-    cursor: pointer;
-    display: inline-block;
     margin-top: 5px;
 }
 
@@ -79,4 +66,9 @@
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+/* Estilo para comentarios largos */
+.comment-long {
+    flex-direction: column;
 }
