@@ -1,4 +1,4 @@
-<?php
+  <?php
 require_once 'logic/formularios-controller/viewModel_editar.php';
 
 $viewModel = new FormularioUpdateViewModel();
@@ -73,8 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" name="Estado_solicitud" class="form-control" value="<?php echo isset($formulario['data']['Estado_solicitud']) ? $formulario['data']['Estado_solicitud'] : ''; ?>">
             <select name="Estado_solicitud" class="form-control" required>
                     <option>Selecciona el estado de la solicitud</option>
-                    <option value="1" <?php echo ($formulario['data']['Estado_solicitud'] == 1) ? 'selected' : ''; ?>>Rechazada</option>
-                    <option value="2" <?php echo ($formulario['data']['Estado_solicitud'] == 2) ? 'selected' : ''; ?>>Aceptada</option>
+                    <option value="1" <?php echo ($formulario['data']['Estado_solicitud'] == 1) ? 'selected' : ''; ?>>Aprobado</option>
+                    <option value="2" <?php echo ($formulario['data']['Estado_solicitud'] == 2) ? 'selected' : ''; ?>>No aprobado</option>
                     <option value="3" <?php echo ($formulario['data']['Estado_solicitud'] == 3) ? 'selected' : ''; ?>>En proceso</option>
         </div>
         
