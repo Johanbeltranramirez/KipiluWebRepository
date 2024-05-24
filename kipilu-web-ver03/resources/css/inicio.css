@@ -2,7 +2,7 @@
         .body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 0px;
             text-align: center;
         }
 
@@ -63,23 +63,46 @@
 
         .image-text {
             display: flex;
+            justify-content: flex-start;
             align-items: center;
-            margin: 20px 0;
-            text-align: left;
+            margin-bottom: 1rem;
+            margin-top: 40px; 
             margin-left: 2cm; 
-
+        }
+        .card {
+            width: 100%;
+            max-width: 540px;
+        }
+        .card-img-container, .card-body {
+            height: 100%;
+        }
+        .card-img-container img, .card-body {
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card-text {
+            margin-bottom: 0.5rem;
+        }
+        .row.g-0 > [class*="col-"] {
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .overlay {
          position: relative;
          display: inline-block;
-         width: 100%; 
-         height: 100%; 
+         width: 80%; 
+         height: 80%; 
         }
 
       .overlay img {
-       width: 100%;
-       height: 100%;
+       width: 80%;
+       height: 8%;
       object-fit: cover;
       }
 
