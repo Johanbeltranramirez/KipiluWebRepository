@@ -1,17 +1,12 @@
 # KipiluWebRepository
 
 Link al repositorio del Back-end: https://github.com/Johanbeltranramirez/KipiluBackendRepository.git
-
-Video para seguimiento con laravel:  https://youtu.be/3e1IsZJuYAw?si=pUzQNNp4SLvzLTvU
-
+URL para pruebas: http://localhost/KipiluWebRepository/kipilu-web-ver03/resources/views/inicio.php
+URL para pruebas: http://localhost/KipiluWebRepository/kipilu-web-ver03/resources/controllers/administradores_controller.php
 
 Pagina oficial laravel: https://laravel.com/docs/11.x
 
-
-Para abrir la pagina: http://localhost/KipiluWebRepository/kipilu-web-ver03/public/views/index.php
-
-
-# Comandos para crear proyecto
+# Comandos para crear proyecton con laravel
 
  1. composer create-project laravel/laravel example-app
  2. **Instalar globalmente el paquete**: composer global require laravel/installer
