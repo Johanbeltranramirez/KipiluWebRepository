@@ -31,9 +31,9 @@
                     <a class="nav-link" href="comentarios_controller.php" role="button">Gestionar Comentarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../views/cerrar_sesion.php">Cerrar Sesión</a>
-                </li>
-            </ul>
-        </div>
+                <a class="nav-link" href="../controllers/logic/login/cerrar_sesion.php">Cerrar Sesión</a>
+            </li>
+        </ul>
+    </div>
     </div>
 </nav>

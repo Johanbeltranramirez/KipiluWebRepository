@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILU - Inicio</title>
@@ -108,6 +109,17 @@
         </div>
     </div>
 </section>
+<script>
+        // Verificar si la página se cargó nuevamente después de cerrar sesión
+        if (window.history && window.history.pushState) {
+            // Cambiar la URL en el historial del navegador
+            window.history.pushState(null, null, window.location.href);
+            window.onpopstate = function () {
+                // Regresar a la página actual si el usuario intenta retroceder
+                window.history.pushState(null, null, window.location.href);
+            };
+        }
+        </script>
 
 
 </main>
