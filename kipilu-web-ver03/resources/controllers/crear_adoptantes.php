@@ -63,6 +63,9 @@
     <h1 class="text-center">Agregar Nuevo Adoptante</h1>
     <div id="notification" class="notification"></div>
     <form id="adoptanteForm" method="POST" class="custom-form">
+    <div class="form-group">
+            <label for="P_Nombre">Cedula:</label>
+            <input type="text" name="ID_Adoptante" class="form-control" required>
         <div class="form-group">
             <label for="P_Nombre">Primer Nombre:</label>
             <input type="text" name="P_Nombre" class="form-control" required>
