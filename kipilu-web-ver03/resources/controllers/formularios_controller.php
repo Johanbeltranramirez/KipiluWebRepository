@@ -117,15 +117,15 @@ if (isset($_GET['formulario_id'])) {
         echo '<tbody>';
         foreach ($forms as $form) {
             echo '<tr>';
-            echo '<td>' . $formData->ID_Formulario . '</td>';
-            echo '<td>' . $formData->Adoptante . '</td>';
-            echo '<td>' . $formData->Animal . '</td>';
-            echo '<td>' . $formData->Validacion_donativo . '</td>';
-            echo '<td>' . $formData->Estado_solicitud . '</td>';
-            echo '<td>' . $formData->Administrador . '</td>';
+            echo '<td>' . $form->ID_Formulario . '</td>';
+            echo '<td>' . $form->Adoptante . '</td>';
+            echo '<td>' . $form->Animal . '</td>';
+            echo '<td>' . $form->Validacion_donativo . '</td>';
+            echo '<td>' . $form->Estado_solicitud . '</td>';
+            echo '<td>' . $form->Administrador . '</td>';
             echo '<td>';
-            echo '<a href="editar_formulario.php?id=' . $formData->ID_Formulario . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-            echo '<a href="logic/formularios-controller/Eliminar_Formulario.php?formularioId=' . $formData->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '<a href="editar_formulario.php?id=' . $form->ID_Formulario . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="logic/formularios-controller/Eliminar_Formulario.php?formularioId=' . $form->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
             echo '</table>';
