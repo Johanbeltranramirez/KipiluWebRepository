@@ -14,7 +14,7 @@ $(document).ready(function() {
                     $('#commentForm')[0].reset(); // Resetear el formulario
                     loadComments(); // Recargar comentarios
                 } else {
-                    $('#result').html('<div class="alert alert-danger">Error al envíar el comentario</div>');
+                    $('#result').html('<div class="alert alert-danger">Error al enviar el comentario</div>');
                 }
             },
             error: function(xhr, status, error) {
@@ -37,14 +37,35 @@ $(document).ready(function() {
                 commentsList.empty(); // Limpiar lista de comentarios
                 if (response.length > 0) {
                     $.each(response, function(index, comment) {
-                        commentsList.append('<li class="list-group-item"><strong>' + comment.Nombre + ' ' + comment.Apellido + ':</strong> ' + comment.Comentario + '</li>');
+                        var commentText = comment.Comentario;
+                        var isTruncated = commentText.length > 150; // Limite para truncar el comentario
+                        var displayedText = isTruncated ? commentText.substring(0, 150) + '...' : commentText;
+
+                        commentsList.append(
+                            '<li class="comment-item">' +
+                                '<div class="comment-avatar"></div>' +
+                                '<div class="comment-content">' +
+                                    '<div class="comment-author">' + comment.Nombre + ' ' + comment.Apellido + '</div>' +
+                                    '<div class="comment-text ' + (isTruncated ? 'truncated' : '') + '">' + displayedText + '</div>' +
+                                    (isTruncated ? '<div class="read-more">Leer más</div>' : '') +
+                                    '<div class="comment-metadata">Hace un miawmento</div>' +
+                                '</div>' +
+                            '</li>'
+                        );
+                    });
+
+                    // Añadir evento de clic para "Leer más"
+                    $('.read-more').click(function() {
+                        var fullText = $(this).prev('.comment-text').text().replace('...', '');
+                        $(this).prev('.comment-text').text(fullText);
+                        $(this).remove();
                     });
                 } else {
                     commentsList.append('<li class="list-group-item">No hay comentarios.</li>');
                 }
             },
             error: function(xhr, status, error) {
-                $('#commentsList').html('<li class="list-group-item">Error al cargar los comentarios. ' + xhr.responseText + '</li>');
+                $('#commentsList').html('<li class="list-group-item">Error al cargar los comentarios.</li>');
             }
         });
     }

@@ -23,15 +23,25 @@
 </section>
 <br>
 
-    <h2>Buscar Adoptante:</h2>
-    <form method="GET" action="">
-        <input type="text" name="busqueda" placeholder="ID Adoptante">
-        <input type="submit" value="Buscar">
-    </form>
+<div class="container">
+    <div class="title">Lista de adoptantes</div>
     <br>
-
+    <div class="row">
+        <div class="col-md-6">
+            <form action="adoptantes_controller.php" method="GET" class="custom-search-form">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar por Cedula de adoptante" id="adoptantes_id" name="adoptantes_id" maxlength="10">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                        <a href="adoptantes_controller.php" class="btn btn-outline-secondary" type="button">Cerrar búsqueda</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
      <!-- Botón para crear nuevo adoptante -->
-     <a href="crear_adoptantes.php" class="btn btn-primary">Crear Nuevo Adoptante</a>
+     <a href="crear_adoptantes.php" class="btn btn-success mb-2">Crear Nuevo Adoptante</a>
 
     <?php
 
@@ -44,7 +54,7 @@
     $adoptantes = $viewModel_Leer->fetchAdoptantes();
 
     if (!empty($adoptantes)) {
-    echo "<table border='1'>";
+    echo '<table class="adoptantes-table">';
     echo "<tr>";
     echo "<th>ID_Adoptante</th>";
     echo "<th>P_Nombre</th>";
@@ -67,7 +77,7 @@
         echo "<td>" . $adoptante->Correo . "</td>";
         echo "<td>" . $adoptante->Direccion . "</td>";
         echo "<td>" . $adoptante->Telefono . "</td>";
-        echo "<td><a href='editar_adoptantes.php?id=" . $adoptante->ID_Adoptante . "' class='btn btn-primary'>Editar</a></td>";
+        echo "<td><a href='editar_adoptantes.php?id=" . $adoptante->ID_Adoptante . "' class='btn btn-warning mb-2 w-100'>Editar</a></td>";
         echo "</tr>";
     }
 

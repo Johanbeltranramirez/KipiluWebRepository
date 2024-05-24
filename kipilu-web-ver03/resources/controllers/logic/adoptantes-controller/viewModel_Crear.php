@@ -1,5 +1,6 @@
 <?php
 class Adoptante {
+    public $ID_Adoptante;
     public $P_Nombre;
     public $S_Nombre;
     public $P_Apellido;
@@ -57,13 +58,14 @@ class AdoptantesViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'http://192.168.1.5:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
+    $apiUrl = 'http://192.168.2.34:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
 
     // Crear una instancia del ViewModel de Adoptantes
     $adoptantesViewModel = new AdoptantesViewModel($apiUrl);
 
     // Obtener los datos del adoptante del formulario
     $adoptanteData = array(
+        'ID_Adoptante' => $_POST["ID_Adoptante"],
         'P_Nombre' => $_POST["P_Nombre"],
         'S_Nombre' => $_POST["S_Nombre"],
         'P_Apellido' => $_POST["P_Apellido"],
@@ -80,3 +82,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode(array("success" => $resultado));
     exit(); // Detener la ejecución del script
 }
+?>

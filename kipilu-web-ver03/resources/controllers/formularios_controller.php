@@ -48,7 +48,7 @@ $mensaje=null;
 if (isset($_GET['formulario_id'])) {
     $formularioId = $_GET['formulario_id'];
 
-    $viewModel = new FormularioSearchViewModel('http://192.168.1.5:3000/api/');
+    $viewModel = new FormularioSearchViewModel('http://192.168.2.34:3000/api/');
     $formData = $viewModel->fetchForm($formularioId);
 
     if ($formData) {
