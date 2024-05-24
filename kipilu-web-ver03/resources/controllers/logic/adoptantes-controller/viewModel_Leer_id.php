@@ -14,20 +14,15 @@ class AdoptanteId {
 class AdoptanteSearchViewModel {
     private $apiBaseUrl;
 
-    public function __construct() {
-
-        $this->api = new ApiKipilu('http://10.175.83.121:3000/api/');
-
+    public function __construct($apiBaseUrl) {
+        $this->apiBaseUrl = $apiBaseUrl;
     }
 
     public function fetchAdoptante($adoptanteId) {
         try {
             // Hacer una solicitud GET a la API para obtener el adoptante por su ID
-
             $url = $this->apiBaseUrl . 'users/adoptantes/search/' . $adoptanteId;
             $response = @file_get_contents($url);
-
-            
 
             if ($response === FALSE) {
                 throw new Exception('Failed to fetch data from API.');
