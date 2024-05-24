@@ -12,7 +12,7 @@ class AdoptanteId {
 }
 
 class AdoptanteSearchViewModel {
-    private $apiBaseUrl; 
+    private $apiBaseUrl;
 
     public function __construct($apiBaseUrl) {
         $this->apiBaseUrl = $apiBaseUrl;
@@ -21,7 +21,7 @@ class AdoptanteSearchViewModel {
     public function fetchAdoptante($adoptanteId) {
         try {
             // Hacer una solicitud GET a la API para obtener el adoptante por su ID
-            $url = $this->apiBaseUrl . 'users/adoptantes/search' . $adoptanteId;
+            $url = $this->apiBaseUrl . 'users/adoptantes/search/' . $adoptanteId;
             $response = @file_get_contents($url);
 
             if ($response === FALSE) {
@@ -30,16 +30,16 @@ class AdoptanteSearchViewModel {
 
             $adoptanteData = json_decode($response, true);
 
-            if (isset($adoptanteData['data'])) {
+            if (isset($adoptanteData['data'][0])) {
                 $adoptante = new AdoptanteId();
-                $adoptante->ID_Adoptante = $adoptanteData['data']['ID_Adoptante'];
-                $adoptante->P_Nombre = $adoptanteData['data']['P_Nombre'];
-                $adoptante->S_Nombre = $adoptanteData['data']['S_Nombre'];
-                $adoptante->P_Apellido = $adoptanteData['data']['P_Apellido'];
-                $adoptante->S_Apellido = $adoptanteData['data']['S_Apellido'];
-                $adoptante->Correo = $adoptanteData['data']['Correo'];
-                $adoptante->Direccion = $adoptanteData['data']['Direccion'];
-                $adoptante->Telefono = $adoptanteData['data']['Telefono'];
+                $adoptante->ID_Adoptante = $adoptanteData['data'][0]['ID_Adoptante'];
+                $adoptante->P_Nombre = $adoptanteData['data'][0]['P_Nombre'];
+                $adoptante->S_Nombre = $adoptanteData['data'][0]['S_Nombre'];
+                $adoptante->P_Apellido = $adoptanteData['data'][0]['P_Apellido'];
+                $adoptante->S_Apellido = $adoptanteData['data'][0]['S_Apellido'];
+                $adoptante->Correo = $adoptanteData['data'][0]['Correo'];
+                $adoptante->Direccion = $adoptanteData['data'][0]['Direccion'];
+                $adoptante->Telefono = $adoptanteData['data'][0]['Telefono'];
 
                 return $adoptante;
             } else {
@@ -52,5 +52,6 @@ class AdoptanteSearchViewModel {
         }
     }
 }
+
 
 ?>
