@@ -11,8 +11,7 @@ class CommentsViewModel {
     public function __construct() {
         // Definimos la URL base de la API
 
-        $this->apiBaseUrl = 'http://192.168.1.5:3000/api/';
-        $this->apiBaseUrl = 'http://192.168.1.2:3000/api/';
+        $this->apiBaseUrl = 'http://192.168.128.3:3000/api/';
 
     }
 

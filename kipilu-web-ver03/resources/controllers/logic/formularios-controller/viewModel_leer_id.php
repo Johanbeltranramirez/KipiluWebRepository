@@ -16,13 +16,18 @@ class FormularioSearchViewModel {
         $this->apiBaseUrl = $apiBaseUrl;
     }
 
-    public function fetchForm($formularioId) {
+    public function fetchFormulario($formularioId) {
         try {
             // Hacer una solicitud GET a la API para obtener el formulario por su ID
             $url = $this->apiBaseUrl . 'formularios/' . $formularioId;
-            $response = file_get_contents($url);
+            $response = @file_get_contents($url);
+
+
+            if ($response === FALSE) {
+                throw new Exception('Failed to fetch data from API.');
+            }
+
             $formData = json_decode($response, true);
-    
 
             if (isset($formData['data'])) {
                 $form = new Formularioid();
@@ -38,9 +43,8 @@ class FormularioSearchViewModel {
                 // No se encontró ningún formulario con el ID especificado
                 return null;
             }
-        } catch (Exception $excetion) {
+        } catch (Exception $e) {
             // Error genérico en caso de fallo en la solicitud o procesamiento
-            echo 'Lo sentimos, ha ocurrido un error al procesar la solicitud.';
             return null;
         }
     }

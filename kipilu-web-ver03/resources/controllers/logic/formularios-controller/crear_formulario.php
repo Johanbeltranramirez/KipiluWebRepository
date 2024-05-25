@@ -1,29 +1,29 @@
 <?php
-class Adoptante {
-    public $ID_Adoptante;
-    public $P_Nombre;
-    public $S_Nombre;
-    public $P_Apellido;
-    public $S_Apellido;
-    public $Correo;
-    public $Direccion;
-    public $Telefono;
+require_once '../../logic/adoptantes-controller/viewModel_Crear.php';
+
+class Formulario {
+    public $ID_Formulario;
+    public $Adoptante;
+    public $Animal;
+    public $Validacion_donativo;
+    public $Estado_solicitud;
+    public $Administrador;
 }
 
-class AdoptantesViewModel {
+class FormulariosViewModel {
     private $apiUrl;
 
     public function __construct($apiUrl) {
         $this->apiUrl = $apiUrl;
     }
 
-    public function createAdoptante($adoptanteData) {
+    public function createFormulario($formData) {
         try {
             // Inicializar cURL
             $curl = curl_init();
 
             // Configurar opciones de cURL
-            curl_setopt($curl, CURLOPT_URL, $this->apiUrl . '/users/adoptantes/create');
+            curl_setopt($curl, CURLOPT_URL, $this->apiUrl . '/users/formularios/create');
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($adoptanteData));
@@ -37,13 +37,13 @@ class AdoptantesViewModel {
             }
 
             // Decodificar la respuesta JSON
-            $adoptanteData = json_decode($response, true);
+            $formData = json_decode($response, true);
 
             // Cerrar la sesión cURL
             curl_close($curl);
 
             // Verificar si se creó correctamente el adoptante
-            if (isset($adoptanteData['success']) && $adoptanteData['success'] === true) {
+            if (isset($formData['success']) && $formData['success'] === true) {
                 return true; // Adoptante creado correctamente
             } else {
                 return false; // Error al crear el adoptante
@@ -61,10 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apiUrl = 'http://192.168.128.3:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
 
     // Crear una instancia del ViewModel de Adoptantes
-    $adoptantesViewModel = new AdoptantesViewModel($apiUrl);
+    $formulariosViewModel = new FormulariosViewModel($apiUrl);
 
     // Obtener los datos del adoptante del formulario
-    $adoptanteData = array(
+    $formData = array(
         'ID_Adoptante' => $_POST["ID_Adoptante"],
         'P_Nombre' => $_POST["P_Nombre"],
         'S_Nombre' => $_POST["S_Nombre"],

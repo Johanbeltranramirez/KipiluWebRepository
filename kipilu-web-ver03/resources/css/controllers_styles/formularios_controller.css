@@ -1,4 +1,5 @@
-.form-table {
+/* Estilos para la tabla de formularios */
+.formulario-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px; /* Reducir el margen superior */
@@ -10,32 +11,19 @@
 .title {
   margin-top: 10px; /* Reducir el margen superior */
   text-align: left;
-  font-size: 35px; /* Tamaño de letra del título */
+  font-size: 30px; /* Tamaño de letra del título */
 }
 
-.form-table th,
-.form-table td {
-  padding: 8px; /* Espacio alrededor del contenido */
+.formulario-table th,
+.formulario-table td {
+  padding: 2px; /* Espacio alrededor del contenido */
   border: 1px solid #ccc;
   font-size: 14px; /* Tamaño de fuente de las celdas */
   text-align: center; /* Alinear contenido a la izquierda */
 }
 
-.form-table th {
-  background: linear-gradient(to right, #e6f1f1, #9dffcecc);
-}
-
-.form-table td img {
-  max-width: 60px; /* Tamaño máximo de la imagen */
-  border-radius: 5px; /* Radio del borde de las imágenes */
-}
-
-.descripcion-cell {
-  max-width: 120px; /* Ancho máximo de la celda de descripción */
-  overflow-x: auto;
-  white-space: nowrap;
-  background: url('ruta/al/ícono-de-flecha.png') no-repeat right center;
-  text-align: center; /* Centrar el texto dentro de la celda de descripción */
+.formulario-table th {
+  background: linear-gradient(to right, #e6f1f1, #8afc9dcc);
 }
 
 /* Estilos para los botones */
@@ -43,7 +31,6 @@
   padding: 6px 12px; /* Espacio alrededor del texto */
   font-size: 12px; /* Tamaño de fuente de los botones */
 }
-
 
 @media (max-width: 767.98px) {
   .w-50-responsive {
@@ -68,18 +55,18 @@
       max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
       margin-top: -65px;
   }
-  .form-table {
+  .formulario-table {
       margin-left: -85px;    
   }
-  .form-table th,
-  .form-table td {
+  .formulario-table th,
+  .formulario-table td {
       font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
       margin-left: -100px;    
   }
   .botones {
       margin-left: -85px;    
   }
-  .form-table td img {
+  .formulario-table td img {
       max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
   }
   

@@ -11,12 +11,10 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
      <!--BOOSTRAP-->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_controller.css">
+    <link rel="stylesheet" href="../css/controllers_styles/formularios_controller.css">
 </head>
-
 <body>
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
@@ -38,33 +36,43 @@
             </form>
         </div>
     </div>
-</div>
     
-<?php
+    <?php
 require_once 'logic/formularios-controller/viewModel_leer_id.php';
 
-$mensaje=null;
+$mensaje = null;
 
 if (isset($_GET['formulario_id'])) {
     $formularioId = $_GET['formulario_id'];
 
-    $viewModel = new FormularioSearchViewModel('http://192.168.2.34:3000/api/');
-    $formData = $viewModel->fetchForm($formularioId);
+    $viewModel = new FormularioSearchViewModel('http://192.168.128.3:3000/api/');
+    $formData = $viewModel->fetchFormulario($formularioId);
+
+    // Arrays de mapeo para los nombres
+    $estados = [1 => 'Aprobado', 2 => 'No aprobado', 3 => 'Pendiente'];
 
     if ($formData) {
         echo '<div class="title">Detalles del formulario</div>';
         echo '<table class="formulario-table">';
-        echo '<tr><th>ID</th><th>ID_Formulario</th><th>Adoptante</th><th>Animal</th><th>Validacion_donativo</th><th>Estado_solicitud</th><th>Administrador</th><th>Acciones</th></tr>';
+        echo '<tr>
+                <th>ID_Formulario</th>
+                <th>Adoptante</th>
+                <th>Animal</th>
+                <th>Validacion_donativo</th>
+                <th>Estado_solicitud</th>
+                <th>Administrador</th>
+                <th>Acciones</th>
+              </tr>';
         echo '<tr>';
         echo '<td>' . $formData->ID_Formulario . '</td>';
         echo '<td>' . $formData->Adoptante . '</td>';
         echo '<td>' . $formData->Animal . '</td>';
         echo '<td>' . $formData->Validacion_donativo . '</td>';
-        echo '<td>' . $formData->Estado_solicitud . '</td>';
+        echo '<td>' . $estados[$formData->Estado_solicitud] . '</td>';
         echo '<td>' . $formData->Administrador . '</td>';
         echo '<td>';
         echo '<a href="editar_formulario.php?id=' . $formData->ID_Formulario . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-        echo '<a href="logic/formularios-controller/Eliminar_Formulario.php?formularioId=' . $formData->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+        echo '<a href="logic/formularios-controller/viewModel_eliminar.php?formularioId=' . $formData->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
         echo '</td>';
         echo '</tr>';
         echo '</table>';
@@ -77,21 +85,23 @@ if (isset($_GET['formulario_id'])) {
 }
 ?>
 
-<?php if (isset($message)): ?>
-    <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">
-        <?php echo $message['text']; ?>
-        <script>
-            setTimeout(() => {
-                document.querySelector('.alert').remove();
-            }, 3000);
-        </script>
-    </div>
-<?php endif; ?>
+
+
+    <?php if (isset($message)): ?>
+        <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">
+            <?php echo $message['text']; ?>
+            <script>
+                setTimeout(() => {
+                    document.querySelector('.alert').remove();
+                }, 3000);
+            </script>
+        </div>
+    <?php endif; ?>
 
     
-<!--FIN Datos búsqueda-->
-
-<?php
+    <!--FIN Datos búsqueda-->
+    <br>
+    <?php
     require_once 'logic/formularios-controller/viewModel_leer.php';
 
     // Instancia del ViewModel de los formulario
@@ -99,6 +109,9 @@ if (isset($_GET['formulario_id'])) {
 
     // Obtener los formularios
     $forms = $viewModel_leer->fetchforms();
+
+    // Arrays de mapeo para los nombres
+    $estados = [1 => 'Aprobado', 2 => 'No aprobado', 3 => 'Pendiente'];
 
     // Si hay formularios, puedes mostrarlos en la vista
     if (!empty($forms)) {
@@ -121,14 +134,13 @@ if (isset($_GET['formulario_id'])) {
             echo '<td>' . $form->Adoptante . '</td>';
             echo '<td>' . $form->Animal . '</td>';
             echo '<td>' . $form->Validacion_donativo . '</td>';
-            echo '<td>' . $form->Estado_solicitud . '</td>';
+            echo '<td>' . $estados[$form->Estado_solicitud] . '</td>';
             echo '<td>' . $form->Administrador . '</td>';
             echo '<td>';
             echo '<a href="editar_formulario.php?id=' . $form->ID_Formulario . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-            echo '<a href="logic/formularios-controller/Eliminar_Formulario.php?formularioId=' . $form->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '<a href="logic/formularios-controller/viewModel_eliminar.php?formularioId=' . $form->ID_Formulario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
-            echo '</table>';
         }
         echo '</tbody>';
         echo '</table>';
@@ -137,7 +149,6 @@ if (isset($_GET['formulario_id'])) {
     }
     ?>
 </div>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

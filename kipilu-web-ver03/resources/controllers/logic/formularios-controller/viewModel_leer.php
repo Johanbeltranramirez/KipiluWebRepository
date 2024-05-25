@@ -15,13 +15,13 @@ class FormsViewModel {
     private $api;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.2.34:3000/api/');
+        $this->api = new ApiKipilu('http://192.168.128.3:3000/api/');
     }
 
     public function fetchForms() {
         try {
             // Hacer una solicitud GET a la API para obtener los formularios
-            $response = file_get_contents('http://192.168.2.34:3000/api/formularios');
+            $response = file_get_contents('http://192.168.128.3:3000/api/formularios');
             
             // Decodificar la respuesta JSON
             $formsData = json_decode($response, true);
@@ -29,7 +29,7 @@ class FormsViewModel {
             if (isset($formsData['data'])) {
                 $forms = [];
                 foreach ($formsData['data'] as $formData) {
-                    $form = new form();
+                    $form = new Formulario();
                     $form->ID_Formulario = $formData['ID_Formulario'];
                     $form->Adoptante = $formData['Adoptante'];
                     $form->Animal = $formData['Animal'];
