@@ -1,7 +1,7 @@
 <?php
 require_once 'logic/adoptantes-controller/viewModel_Editar.php';
 
-$viewModel = new AdoptanteEditViewModel('http://192.168.128.3:3000/api/');
+$viewModel = new AdoptanteEditViewModel('http://192.168.10.14:3000/api/');
 $adoptante = null; // Inicializamos la variable $adoptante
 $message = null;
 
