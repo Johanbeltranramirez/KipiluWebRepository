@@ -73,7 +73,7 @@
 
 <section class="image-text">
   
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3">
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="../../assets/img/inicio/imagen llilli.jpg" class="img-fluid rounded-start" alt="...">
@@ -91,7 +91,7 @@
 </section>
 
 <section class="image-text">
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3">
         <div class="row g-0">
             <div class="col-md-4">
                 <div class="card-img-container">

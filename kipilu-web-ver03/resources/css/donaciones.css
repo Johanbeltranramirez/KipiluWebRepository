@@ -112,64 +112,33 @@ color: #333;
 }
 
 .rectangulo-rojo {
-    background-color: white;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     font-weight: bold;
+    background-color: red;
 }
 
 .imagenes-container {
-display: flex;
-justify-content: center;
-gap: 40px; /* Aumenta la separación entre las imágenes */
-margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-
 .imagen {
-display: inline-block;
-position: relative;
-overflow: hidden;
-width: 200px;
-height: auto;
+    text-align: center;
+    transition: transform 0.3s;
 }
-
 .imagen img {
-max-width: 100%;
-transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
 }
-
-.imagen::before {
-content: '';
-position: absolute;
-top: -5px; /* Ajusta la posición del cuadro */
-left: -5px; /* Ajusta la posición del cuadro */
-width: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
-height: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
-border: 5px solid transparent;
-border-image: linear-gradient(45deg, #ff8a00, #e52e71) 1;
-transition: transform 0.3s ease;
-z-index: -1;
-}
-
 .imagen:hover img {
-transform: scale(1.1); /* Aumenta un poco el tamaño de la imagen al hacer hover */
+    transform: scale(1.2);
 }
-
-.imagen:hover::before {
-transform: rotate(10deg); /* Rota ligeramente el cuadro al hacer hover */
-}
-
-
 .numero-contacto {
-font-size: 20px;
-color: black; /* Establece el color del texto */
-display: inline-block; /* Para que el fondo se ajuste solo al texto */
-}
-
-.numero-contacto:hover {
-    background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado en hover */
-    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 

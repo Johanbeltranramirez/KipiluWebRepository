@@ -86,12 +86,14 @@
                 <div class="imagen">
                     <img src="../../assets/img/donativos/QR_DAVIPLATA.PNG" alt="Imagen 1">
                     <br>
+                    <br>
                     <div class="numero-contacto">3153683603</div>
                   </div>
                 
                 <!-- Imagen 2 -->
                 <div class="imagen">
                     <img src="../../assets/img/donativos/QR_NEQUI.jpg"  alt="Imagen 2" >
+                    <br>
                     <br>
                     <div class="numero-contacto">3143683603</div>
                   </div>
