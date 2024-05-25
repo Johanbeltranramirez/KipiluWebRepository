@@ -99,36 +99,47 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .form-control{
+
+  .form-control {
     margin-left: auto;
     margin-right: auto;
   }
+
   .btn-primary {
-      margin-left: 10px; /* Mover botón ligeramente a la derecha */
-      max-width: 300px; /* Reducir el tamaño máximo del botón */
-      margin-top: -65px;
+    margin-left: 10px; /* Mover botón ligeramente a la derecha */
+    max-width: 300px; /* Reducir el tamaño máximo del botón */
+    margin-top: -65px;
   }
+
   .adoptantes-table {
     margin-left: auto;
     margin-right: auto;
+    overflow-x: auto; /* Permitir scroll horizontal */
+    display: block; /* Convertir la tabla en un elemento de bloque */
   }
+
   .adoptantes-table th,
   .adoptantes-table td {
-      font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
+    font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
+    white-space: nowrap; /* Evitar que el texto se envuelva en la celda */
   }
+
   .botones {
-      margin-left: 10px; /* Mover botones ligeramente a la derecha */
+    margin-left: 10px; /* Mover botones ligeramente a la derecha */
   }
+
+  .adoptantes-table td .btn {
+    padding: 2px 4px; /* Reducir el espacio alrededor del texto de los botones */
+    font-size: 8px; /* Reducir el tamaño de fuente de los botones */
+    display: block; /* Hacer que los botones se apilen uno encima del otro */
+    margin-bottom: 2px; /* Agregar un pequeño espacio entre los botones */
+  }
+
   .adoptantes-table td img {
-      max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
+    max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
   }
-  
+
   .descripcion-cell {
-      max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
-  }
-  
-  .btn {
-      padding: 4px 8px; /* Reducir el espacio alrededor del texto de los botones */
-      font-size: 10px; /* Reducir el tamaño de fuente de los botones */
+    max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
   }
 }
