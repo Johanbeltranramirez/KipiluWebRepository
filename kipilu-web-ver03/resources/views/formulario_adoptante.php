@@ -11,30 +11,43 @@
         document.addEventListener("DOMContentLoaded", function() {
             const form = document.getElementById('adoptanteForm');
 
+            // Obtener el parámetro id_animal de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const idAnimal = urlParams.get('id_animal');
+
+            // Si hay un ID de animal, completar el campo oculto en el formulario
+            if (idAnimal) {
+                const idAnimalField = document.querySelector('input[name="ID_Animal"]');
+                idAnimalField.value = idAnimal;
+            }
+
             form.addEventListener('submit', async function(event) {
                 event.preventDefault();
 
                 const formData = new FormData(form);
 
                 try {
-                    const response = await fetch('../controllers/logic/formularios-controller/crear_formulario.php', {
+                    const responseAdoptante = await fetch('../controllers/logic/adoptantes-controller/viewModel_Crear.php', {
                         method: 'POST',
                         body: formData
                     });
 
-                    if (!response.ok) {
-                        throw new Error('Error en la solicitud.');
+                    if (!responseAdoptante.ok) {
+                        throw new Error('Error en la solicitud al crear el adoptante.');
                     }
 
-                    const data = await response.json();
+                    const adoptanteData = await responseAdoptante.json();
 
-                    if (data.success) {
-                        showAlert('success', 'El adoptante se creó correctamente.');
-                    } else {
-                        showAlert('danger', 'Error al crear el adoptante.');
+                    if (!adoptanteData.success) {
+                        throw new Error('Error al crear el adoptante.');
                     }
+
+                    showAlert('success', 'Sus datos han sido registrados correctamente, por favor estar pendiente a su correo.');
+
+                    // Limpiar el formulario después de crear el adoptante
+                    form.reset();
                 } catch (error) {
-                    showAlert('danger', 'Error en la solicitud.');
+                    showAlert('danger', error.message || 'Error en la solicitud.');
                 }
             });
 
@@ -56,13 +69,18 @@
 <body>
 
 <div class="container mt-5">
-<h2 class="bienvenido">Bienvenid@</h2>
-            <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>
+    <h2 class="bienvenido">Bienvenid@</h2>
+    <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>
     <div id="notification" class="notification"></div>
     <form id="adoptanteForm" method="POST" class="custom-form">
-    <div class="form-group">
-            <label for="P_Nombre">Cedula:</label>
+        <div class="form-group">
+            <label for="ID_Adoptante">Cédula:</label>
             <input type="text" name="ID_Adoptante" class="form-control" required>
+        </div>
+
+        <!-- Campo oculto para el ID del animal -->
+        <input type="hidden" name="ID_Animal" class="form-control" required>
+
         <div class="form-group">
             <label for="P_Nombre">Primer Nombre:</label>
             <input type="text" name="P_Nombre" class="form-control" required>

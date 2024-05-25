@@ -78,8 +78,76 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Crear el nuevo adoptante y obtener el resultado
     $resultado = $adoptantesViewModel->createAdoptante($adoptanteData);
 
-    // Devolver el resultado al formulario
-    echo json_encode(array("success" => $resultado));
-    exit(); // Detener la ejecución del script
+    // Verificar si el adoptante se creó correctamente
+    if ($resultado) {
+        // Obtener los datos del formulario del POST
+        $formData = array(
+            'Adoptante' => $_POST["ID_Adoptante"],
+            'Animal' => $_POST["ID_Animal"]
+        );
+
+        // Inicializar cURL para el formulario
+        $curlFormulario = curl_init();
+
+        // Configurar opciones de cURL para el formulario
+        curl_setopt($curlFormulario, CURLOPT_URL, $apiUrl . '/formularios/create');
+        curl_setopt($curlFormulario, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curlFormulario, CURLOPT_POST, true);
+        curl_setopt($curlFormulario, CURLOPT_POSTFIELDS, http_build_query($formData));
+
+        // Ejecutar la solicitud cURL para el formulario
+        $responseFormulario = curl_exec($curlFormulario);
+
+        // Verificar si hubo algún error en la solicitud del formulario
+        if ($responseFormulario === false) {
+            echo 'ERROR al crear el formulario: ' . curl_error($curlFormulario);
+        } else {
+            // Decodificar la respuesta JSON del formulario
+            $formularioData = json_decode($responseFormulario, true);
+
+            // Cerrar la sesión cURL del formulario
+            curl_close($curlFormulario);
+
+            // Verificar si se creó correctamente el formulario
+            if (isset($formularioData['success']) && $formularioData['success'] === true) {
+                // Obtener el ID del animal para cambiar su estado
+                $animalId = $_POST["ID_Animal"];
+
+                // Inicializar cURL para cambiar el estado del animal
+                $curlCambiarEstado = curl_init();
+
+                // Configurar opciones de cURL para cambiar el estado del animal
+                curl_setopt($curlCambiarEstado, CURLOPT_URL, $apiUrl . '/animales/cambiarEstado/' . $animalId);
+                curl_setopt($curlCambiarEstado, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($curlCambiarEstado, CURLOPT_CUSTOMREQUEST, 'PUT');
+                // Puedes enviar datos adicionales si es necesario en el cuerpo de la solicitud
+
+                // Ejecutar la solicitud cURL para cambiar el estado del animal
+                $responseCambiarEstado = curl_exec($curlCambiarEstado);
+
+                // Verificar si hubo algún error al cambiar el estado del animal
+                if ($responseCambiarEstado === false) {
+                    echo 'ERROR al cambiar el estado del animal: ' . curl_error($curlCambiarEstado);
+                } else {
+                    // Decodificar la respuesta JSON del cambio de estado del animal
+                    $cambiarEstadoData = json_decode($responseCambiarEstado, true);
+
+                    // Cerrar la sesión cURL del cambio de estado del animal
+                    curl_close($curlCambiarEstado);
+
+                    // Verificar si se cambió correctamente el estado del animal
+                    if (isset($cambiarEstadoData['success']) && $cambiarEstadoData['success'] === true) {
+                        echo json_encode(array("success" => true));
+                    } else {
+                        echo json_encode(array("success" => false, "message" => "Error al cambiar el estado del animal."));
+                    }
+                }
+            } else {
+                echo json_encode(array("success" => false, "message" => $formularioData['message']));
+            }
+        }
+    } else {
+        echo json_encode(array("success" => false, "message" => "Error al crear el adoptante."));
+    }
 }
 ?>

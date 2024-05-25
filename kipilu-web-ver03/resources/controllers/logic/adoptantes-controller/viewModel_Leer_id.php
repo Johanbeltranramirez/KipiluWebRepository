@@ -53,5 +53,42 @@ class AdoptanteSearchViewModel {
     }
 }
 
+class AnimalStateViewModel {
+    private $apiBaseUrl;
 
+    public function __construct($apiBaseUrl) {
+        $this->apiBaseUrl = $apiBaseUrl;
+    }
+
+    public function changeAnimalState($animalId) {
+        try {
+            // Hacer una solicitud PUT a la API para cambiar el estado del animal por su ID
+            $url = $this->apiBaseUrl . 'animales/cambiarEstado/' . $animalId;
+            $options = array(
+                'http' => array(
+                    'method' => 'PUT',
+                    'header' => 'Content-Type: application/json',
+                    'content' => json_encode(array('ID_Animal' => $animalId))
+                )
+            );
+            $context = stream_context_create($options);
+            $response = @file_get_contents($url, false, $context);
+
+            if ($response === FALSE) {
+                throw new Exception('Failed to change animal state through API.');
+            }
+
+            $responseData = json_decode($response, true);
+
+            if (isset($responseData['success']) && $responseData['success'] === true) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            // Error genérico en caso de fallo en la solicitud o procesamiento
+            return false;
+        }
+    }
+}
 ?>
