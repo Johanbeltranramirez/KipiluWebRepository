@@ -95,11 +95,13 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .title {
-      margin-left: 10px; /* Mover título ligeramente a la derecha */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .form-control{
-      margin-left: 10px; /* Mover formulario ligeramente a la derecha */
-      max-width: 300px; /* Reducir el tamaño máximo del formulario */
+    margin-left: auto;
+    margin-right: auto;
   }
   .btn-primary {
       margin-left: 10px; /* Mover botón ligeramente a la derecha */
@@ -107,7 +109,8 @@
       margin-top: -65px;
   }
   .adoptantes-table {
-      margin-left: 10px; /* Mover tabla ligeramente a la derecha */
+    margin-left: auto;
+    margin-right: auto;
   }
   .adoptantes-table th,
   .adoptantes-table td {
