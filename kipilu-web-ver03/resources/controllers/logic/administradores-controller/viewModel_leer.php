@@ -22,7 +22,7 @@ class AdministradorViewModel {
     public function fetchAdministradores(){
         try {
             //Hacetr una solicitud GET a la API para obtener a los administradores
-            $response = file_get_contents('http://192.168.128.3:3000/api/administradores');
+            $response = file_get_contents('http://192.168.101.9:3000/api/administradores');
 
             //Decodicar la respuesta JSON 
             $administradoresData = json_decode($response, true);

@@ -46,12 +46,8 @@ $message = null;
 if (isset($_GET['adoptante_id'])) {
     $adoptanteId = $_GET['adoptante_id'];
 
-<<<<<<< HEAD
-    $viewModel = new AdoptanteSearchViewModel('http://192.168.128.3:3000/api/');
+    $viewModel = new AdoptanteSearchViewModel('http://192.168.101.9:3000/api/');
 
-=======
-    $viewModel = new AdoptanteSearchViewModel('http://192.168.10.14:3000/api/');
->>>>>>> 33381a3c9c54e905a64a770ee45425b2cdecc024
     $adoptanteData = $viewModel->fetchAdoptante($adoptanteId);
 
     
