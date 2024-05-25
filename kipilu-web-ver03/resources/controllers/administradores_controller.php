@@ -47,12 +47,12 @@
     if (isset($_GET['administrador_id'])) {
         $administradorId = $_GET['administrador_id'];
 
-        $viewModel = new AdministradorSearchViewModel('http://192.168.101.9:3000/api/');
+        $viewModel = new AdministradorSearchViewModel('http://192.168.128.3:3000/api/');
         $administradorData = $viewModel->fetchAdministrador($administradorId);
 
         if ($administradorData) {
             echo '<div class="title">Detalles del administrador</div>';
-            echo '<table class="table table-striped">';
+            echo '<table class="administrador-table">'; // Aquí se cambió la clase a "administrador-table"
             echo '<tr><th>ID Administrador</th><th>Primer Nombre</th><th>Segundo Nombre</th><th>Primer Apellido</th><th>Segundo Apellido</th><th>Acciones</th></tr>';
             echo '<tr>';
             echo '<td>' . $administradorData->ID_Administrador . '</td>';
@@ -104,7 +104,7 @@
 
     // Si hay administradores, puedes mostrarlos en la vista
     if (!empty($administradores)) {
-        echo '<table class="table table-striped">';
+        echo '<table class="administrador-table">'; // Aquí se cambió la clase a "administrador-table"
         echo '<thead>';
         echo '<tr>';
         echo '<th>ID_Administrador</th>';
@@ -125,7 +125,7 @@
             echo '<td>' . $administrador->S_Apellido . '</td>';
             echo '<td>';
             echo '<a href="editar_administrador.php?id=' . $administrador->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-            echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administrador->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administradorData->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
         }
@@ -140,3 +140,4 @@
 <br>
 </body>
 </html>
+
