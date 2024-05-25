@@ -47,7 +47,7 @@ $message = null;
 if (isset($_GET['animal_id'])) {
     $animalId = $_GET['animal_id'];
 
-    $viewModel = new AnimalSearchViewModel('http://192.168.128.3:3000/api/');
+    $viewModel = new AnimalSearchViewModel('http://192.168.1.7:3000/api/');
     $animalData = $viewModel->fetchAnimal($animalId);
 
     // Arrays de mapeo para los nombres

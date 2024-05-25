@@ -47,7 +47,7 @@
     if (isset($_GET['administrador_id'])) {
         $administradorId = $_GET['administrador_id'];
 
-        $viewModel = new AdministradorSearchViewModel('http://192.168.101.9:3000/api/');
+        $viewModel = new AdministradorSearchViewModel('http://192.168.1.7:3000/api/');
         $administradorData = $viewModel->fetchAdministrador($administradorId);
 
         if ($administradorData) {

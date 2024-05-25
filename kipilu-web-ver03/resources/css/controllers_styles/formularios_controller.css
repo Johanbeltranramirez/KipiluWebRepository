@@ -30,6 +30,11 @@
 .btn {
   padding: 6px 12px; /* Espacio alrededor del texto */
   font-size: 12px; /* Tamaño de fuente de los botones */
+  margin: auto;
+}
+
+.btn:hover{
+  background-color:#515457;
 }
 
 @media (max-width: 767.98px) {

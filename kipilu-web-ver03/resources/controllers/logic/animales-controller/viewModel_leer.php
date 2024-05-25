@@ -18,14 +18,14 @@ class AnimalsViewModel {
 
     public function __construct() {
 
-        $this->api = new ApiKipilu('http://192.168.128.3:3000/api/');
+        $this->api = new ApiKipilu('http://192.168.1.7:3000/api/');
 
     }
 
     public function fetchAnimals() {
         try {
             // Hacer una solicitud GET a la API para obtener los animales
-            $response = file_get_contents('http://192.168.128.3:3000/api/animales');
+            $response = file_get_contents('http://192.168.1.7:3000/api/animales');
 
             
             // Decodificar la respuesta JSON
@@ -60,7 +60,7 @@ class AnimalsViewModel {
     public function fetchRazas() {
         try {
             // Hacer una solicitud GET a la API para obtener las razas
-            $response = file_get_contents('http://192.168.128.3:3000/api/razas');
+            $response = file_get_contents('http://192.168.1.7:3000/api/razas');
 
             
             // Decodificar la respuesta JSON

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILÚ - Formulario Adopción</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <!--STYLE-->
+    <link rel="stylesheet" href="../css/formulario_adopcion.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google ReCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const form = document.getElementById('adoptanteForm');
+            const recaptchaError = document.getElementById('recaptchaError');
 
             // Obtener el parámetro id_animal de la URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -24,6 +28,14 @@
             form.addEventListener('submit', async function(event) {
                 event.preventDefault();
 
+                // Verificar si el reCAPTCHA se ha completado
+                if (!grecaptcha.getResponse()) {
+                    recaptchaError.textContent = 'Por favor, marque la casilla de reCAPTCHA antes de enviar el formulario.';
+                    return;
+                } else {
+                    recaptchaError.textContent = '';
+                }
+
                 const formData = new FormData(form);
 
                 try {
@@ -33,13 +45,13 @@
                     });
 
                     if (!responseAdoptante.ok) {
-                        throw new Error('Error en la solicitud al crear el adoptante.');
+                        throw new Error('Error en la solicitud de envio.');
                     }
 
                     const adoptanteData = await responseAdoptante.json();
 
                     if (!adoptanteData.success) {
-                        throw new Error('Error al crear el adoptante.');
+                        throw new Error('Error al enviar sus datos.');
                     }
 
                     showAlert('success', 'Sus datos han sido registrados correctamente, por favor estar pendiente a su correo.');
@@ -68,53 +80,60 @@
 </head>
 <body>
 
-<div class="container mt-5">
     <h2 class="bienvenido">Bienvenid@</h2>
-    <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>
-    <div id="notification" class="notification"></div>
+    <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>    
+
+<div class="container">   
+    <img src="../../assets/img/formulario_adopcion/gato_agarrando1.png" alt="image1">
+    <div id="notification" class="notification"></div>       
+ 
     <form id="adoptanteForm" method="POST" class="custom-form">
+
         <div class="form-group">
-            <label for="ID_Adoptante">Cédula:</label>
-            <input type="text" name="ID_Adoptante" class="form-control" required>
+            <label for="ID_Adoptante">Número de Identificación (Cédula de Ciudadanía o extranjera)🐾</label>
+            <input type="text" name="ID_Adoptante" class="form-control" placeholder="Digite su número de identidad" required maxlength="10">
         </div>
 
         <!-- Campo oculto para el ID del animal -->
         <input type="hidden" name="ID_Animal" class="form-control" required>
 
         <div class="form-group">
-            <label for="P_Nombre">Primer Nombre:</label>
-            <input type="text" name="P_Nombre" class="form-control" required>
+            <label for="P_Nombre">Primer Nombre🐾</label>
+            <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20">
         </div>
         <div class="form-group">
-            <label for="S_Nombre">Segundo Nombre:</label>
-            <input type="text" name="S_Nombre" class="form-control">
+            <label for="S_Nombre">Segundo Nombre</label>
+            <input type="text" name="S_Nombre" class="form-control" placeholder="Digite en caso de tener más nombres" maxlength="20">
         </div>
         <div class="form-group">
-            <label for="P_Apellido">Primer Apellido:</label>
-            <input type="text" name="P_Apellido" class="form-control">
+            <label for="P_Apellido">Primer Apellido🐾</label>
+            <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20">
         </div>
         <div class="form-group">
-            <label for="S_Apellido">Segundo Apellido:</label>
-            <input type="text" name="S_Apellido" class="form-control">
+            <label for="S_Apellido">Segundo Apellido</label>
+            <input type="text" name="S_Apellido" class="form-control"  placeholder="Digite su segundo apellido (opcional)" maxlength="20">
         </div>
         <div class="form-group">
-            <label for="Correo">Correo Electrónico:</label>
-            <input type="email" name="Correo" class="form-control" required>
+            <label for="Correo">Correo electrónico personal o de contacto🐾</label>
+            <input type="email" name="Correo" class="form-control" placeholder="Digite su correo electrónico para contactarlo" required maxlength="40">
         </div>
         <div class="form-group">
-            <label for="Direccion">Dirección:</label>
-            <input type="text" name="Direccion" class="form-control" required>
+            <label for="Direccion">Dirección de residencia actual🐾</label>
+            <input type="text" name="Direccion" class="form-control" placeholder="Digite la dirección exacta de su vivienda actual" required maxlength="40">
         </div>
         <div class="form-group">
-            <label for="Telefono">Teléfono:</label>
-            <input type="tel" name="Telefono" class="form-control" required>
+            <label for="Telefono">Número telefónico móvil o fijo (Para contacto)🐾</label>
+            <input type="tel" name="Telefono" class="form-control" placeholder="Ingrese el número de teléfono para contactarlo" required maxlength="20">
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfRwaspAAAAAAD_Xm2bIqfEdzWMRw2FCFbcMf_h"></div>
+        <div id="recaptchaError" class="text-danger"></div> <!--Para mostrar mensaje de error -->
         <br>
         <div class="mb-4">
-            <button type="submit" class="btn btn-success mb-2 w-20">Enviar</button>
-            <a href="adoptantes_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <button type="submit" class="custom-button">Enviar</button>
+            <a href="../views/Tips.php" class="custom-button2">Volver al inicio</a>
         </div>
     </form>
+    <img src="../../assets/img/formulario_adopcion/gatito_perrito.png" alt="image2">
 </div>
 
 </body>
