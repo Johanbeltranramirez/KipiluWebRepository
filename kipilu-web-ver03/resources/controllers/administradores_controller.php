@@ -125,7 +125,7 @@
             echo '<td>' . $administrador->S_Apellido . '</td>';
             echo '<td>';
             echo '<a href="editar_administrador.php?id=' . $administrador->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-            echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administradorData->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administrador->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
         }
