@@ -1,5 +1,5 @@
-/* Estilos para la tabla de comentarios */
-.comment-table {
+/* Estilos para la tabla de administradores */
+.administrador-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px; /* Reducir el margen superior */
@@ -14,19 +14,19 @@
     font-size: 35px; /* Tamaño de letra del título */
 }
 
-.comment-table th,
-.comment-table td {
+.administrador-table th,
+.administrador-table td {
     padding: 8px; /* Espacio alrededor del contenido */
     border: 1px solid #ccc;
     font-size: 14px; /* Tamaño de fuente de las celdas */
-    text-align: center; /* Alinear contenido al centro */
+    text-align: center; /* Alinear contenido a la izquierda */
 }
 
-.comment-table th {
-    background: linear-gradient(to right, #e6f1f1, #ffffff);
+.administrador-table th {
+    background: linear-gradient(to right, #fefff0, #fcf7b1cc);
 }
 
-.comment-table td img {
+.administrador-table td img {
     max-width: 60px; /* Tamaño máximo de la imagen */
     border-radius: 5px; /* Radio del borde de las imágenes */
 }
@@ -35,6 +35,7 @@
     max-width: 120px; /* Ancho máximo de la celda de descripción */
     overflow-x: auto;
     white-space: nowrap;
+    background: url('ruta/al/ícono-de-flecha.png') no-repeat right center;
     text-align: center; /* Centrar el texto dentro de la celda de descripción */
 }
 
@@ -67,17 +68,18 @@
         max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
         margin-top: -65px;
     }
-    .comment-table {
+    .administrador-table {
         margin-left: -85px;    
     }
-    .comment-table th,
-    .comment-table td {
+    .administrador-table th,
+    .administrador-table td {
         font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
+        margin-left: -100px;    
     }
     .botones {
         margin-left: -85px;    
     }
-    .comment-table td img {
+    .administrador-table td img {
         max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
     }
     

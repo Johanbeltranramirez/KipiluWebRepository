@@ -2,24 +2,24 @@
 .formulario-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px; /* Reducir el margen superior */
+  margin-top: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  margin-top: 10px; /* Reducir el margen superior */
+  margin-top: 10px;
   text-align: left;
-  font-size: 30px; /* Tamaño de letra del título */
+  font-size: 35px;
 }
 
 .formulario-table th,
 .formulario-table td {
-  padding: 2px; /* Espacio alrededor del contenido */
+  padding: 8px;
   border: 1px solid #ccc;
-  font-size: 14px; /* Tamaño de fuente de las celdas */
-  text-align: center; /* Alinear contenido a la izquierda */
+  font-size: 14px;
+  text-align: center;
 }
 
 .formulario-table th {
@@ -28,54 +28,22 @@
 
 /* Estilos para los botones */
 .btn {
-  padding: 6px 12px; /* Espacio alrededor del texto */
-  font-size: 12px; /* Tamaño de fuente de los botones */
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.botones {
+  margin-top: 20px;
 }
 
 @media (max-width: 767.98px) {
-  .w-50-responsive {
-      width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
-  }
-  .btn-cerrar {
-      margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
-  }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .title {
-      margin-left: -85px;    
-  }
-  .form-control{
-      margin-left: -85px;  
-      max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
-  }
-  .btn-primary {
-      margin-left: 240px;  
-      max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
-      margin-top: -65px;
-  }
-  .formulario-table {
-      margin-left: -85px;    
-  }
   .formulario-table th,
   .formulario-table td {
-      font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
-      margin-left: -100px;    
+      font-size: 12px;
   }
-  .botones {
-      margin-left: -85px;    
-  }
-  .formulario-table td img {
-      max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
-  }
-  
-  .descripcion-cell {
-      max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
-  }
-  
+
   .btn {
-      padding: 4px 8px; /* Reducir el espacio alrededor del texto de los botones */
-      font-size: 10px; /* Reducir el tamaño de fuente de los botones */
+      padding: 4px 8px;
+      font-size: 10px;
   }
 }

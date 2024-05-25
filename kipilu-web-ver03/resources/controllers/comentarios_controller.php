@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../assets/icon/logo.ico">
     <title>KIPILU - CRUD Comentarios</title>
     <script type="text/javascript">
-        function confirmar(){
-            return confirm('¿Estas Seguro?, se eliminará el comentario');
+        function confirmar() {
+            return confirm('¿Estás seguro? Se eliminará el comentario.');
         }
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-     <!--BOOSTRAP-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <!--Styles-->
+    <!--PROPIO-->
     <link rel="stylesheet" href="../css/controllers_styles/comentarios_controller.css">
+    <link rel="icon" href="../../assets/icon/logo.ico">
+    <!--BOOSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -26,6 +24,7 @@
 
 <div class="container">
     <div class="title">Lista de comentarios</div>
+    <br>
 
     <?php
     require_once 'logic/comentarios-controller/viewModel_leer.php';
@@ -40,10 +39,10 @@
         echo '<table class="comment-table">';
         echo '<thead>';
         echo '<tr>';
-        echo '<th>Num</th>';
-        echo '<th>Nombre comentarista</th>';
+        echo '<th>ID_Comentario</th>';
+        echo '<th>Nombre del comentarista</th>';
         echo '<th>Comentario</th>';
-        echo '<th>Acción</th>';
+        echo '<th>Acciones</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
@@ -51,22 +50,20 @@
             echo '<tr>';
             echo '<td>' . $comment->ID_Comentario . '</td>';
             echo '<td>' . $comment->Nombre . ' ' . $comment->Apellido . '</td>';
-            echo '<td>' . $comment->Comentario . '</td>';
+            echo '<td class="descripcion-cell">' . $comment->Comentario . '</td>';
             echo '<td>';
-            echo '<a href="logic/comentarios-controller/viewModel_eliminar.php?commentId=' . $comment->ID_Comentario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar Comentario</a>';
+            echo '<a href="logic/comentarios-controller/viewModel_eliminar.php?commentId=' . $comment->ID_Comentario . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
     } else {
-        echo "<p class='text-center'>No se encontraron comentarios en la plataforma.</p>";
+        echo "<p class='text-center'>No se encontraron comentarios.</p>";
     }
     ?>
 
 </div>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
 </body>
 </html>
