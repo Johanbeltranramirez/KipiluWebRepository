@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 /* Estilo individual para cada comentario */
@@ -13,12 +14,14 @@
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
     transition: background-color 0.3s;
-    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Evita desbordamientos horizontales */
 }
 
 .comment-item:hover {
-    background-image: url('https://st2.depositphotos.com/2459687/10050/v/450/depositphotos_100505490-stock-illustration-vector-seamless-pattern-with-cat.jpg');
-    background-size: cover; 
+    background-image: url('../../assets/img/comentarios-historias/comments.png');
+    background-size: cover;
     background-position: center;
 }
 
@@ -37,20 +40,27 @@
 /* Estilo para el contenido del comentario */
 .comment-content {
     flex-grow: 1;
-    max-width: 100%;
+    max-width: calc(100% - 55px); /* Ajusta el ancho máximo teniendo en cuenta el avatar y el margen */
+    overflow: hidden; /* Evita desbordamientos horizontales */
+    max-height: 180px; /* Altura máxima del contenido del comentario */
+    overflow-y: auto; /* Añade barra de desplazamiento vertical si el contenido excede la altura máxima */
 }
 
 .comment-author {
     font-weight: bold;
     font-size: 14px;
     color: #333;
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
+    overflow-wrap: break-word; /* Soporte adicional para el ajuste de palabras */
+    white-space: pre-wrap; /* Asegura que los saltos de línea se respeten */
 }
 
 .comment-text {
     font-size: 14px;
     color: #555;
-    max-width: 100%;
     word-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
+    overflow-wrap: break-word; /* Soporte adicional para el ajuste de palabras */
+    white-space: pre-wrap; /* Asegura que los saltos de línea se respeten */
 }
 
 .comment-metadata {
@@ -71,4 +81,49 @@
 /* Estilo para comentarios largos */
 .comment-long {
     flex-direction: column;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .comment-item {
+        flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .comment-avatar {
+        margin-right: 0;
+        margin-bottom: 10px; /* Añade un margen inferior para separar del contenido */
+    }
+
+    .comment-content {
+        max-width: 100%;
+    }
+
+    .comment-author, .comment-text, .comment-metadata {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-item {
+        padding: 10px; /* Reduce el padding en pantallas muy pequeñas */
+    }
+
+    .comment-avatar {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
+    }
+
+    .comment-author {
+        font-size: 13px;
+    }
+
+    .comment-text {
+        font-size: 13px;
+    }
+
+    .comment-metadata {
+        font-size: 11px;
+    }
 }
