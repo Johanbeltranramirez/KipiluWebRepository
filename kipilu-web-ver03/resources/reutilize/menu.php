@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid" style="background-color: #ffffff;">
         <div class="d-flex justify-content-start align-items-center">
-            <a href="login_administrador.php"><img src="../../assets/icon/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;"></a>
+            <a href="login_administrador.php"><img src="../../assets/icon/logo.png" alt="Logo" style="max-height: 100px; margin-right: 10px;"></a>
             <a class="navbar-brand custom-brand" href="inicio.php">HOGAR DE <br> RESCATE</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,9 +15,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="inicio.php">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
