@@ -4,8 +4,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid" style="background-color:  #ffff;">
         <div class="d-flex justify-content-start align-items-center" style="background-color:  #ffff;">
-            <img src="../../assets/icon/logo.ico" alt="Logo" style="max-height: 100px; margin-right: 10px;">
-            <a class="navbar-brand custom-brand" href="index.php">HOGAR DE <br> RESCATE</a>
+            <img src="../../assets/icon/admin_icon.png" alt="Logo" style="max-height: 100px; margin-right: 10px;">
+            <a class="navbar-brand custom-brand">ADMINISTRACIÓN<br>DE KIPILÚ</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,9 +14,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="administradores_controller.php">Gestionar Administradores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="animales_controller.php" role="button">Gestionar  Animales</a>
