@@ -18,14 +18,14 @@
         <div class="social-media">
             <h2 class="bland">Redes<br>sociales</h2>
 
-            <a href="https://www.facebook.com/profile.php?id=100084248649661&mibextid=ZbWKwL" target="_blank"
+            <a href="https://www.facebook.com/groups/1937157206581880/?mibextid=A7sQZp&rdid=QbSOTNTWxgBkBbxT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fjw7M2BJKrSDoYyv7%2F%3Fmibextid%3DA7sQZp" target="_blank"
                class="social-media-icon">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://twitter.com/ManuelM16762431" target="_blank" class="social-media-icon">
+            <a href="https://twitter.com/search?q=hogar%20de%20rescate%20usme&src=typed_query" target="_blank" class="social-media-icon">
                 <i class="fab fa-x"></i>
             </a>
-            <a href="https://www.instagram.com/juancm484?r=nametag" target="_blank" class="social-media-icon">
+            <a href="https://www.instagram.com/hogarderescateusme_15/?igsh=eDkwcnZldTFrdjU2" target="_blank" class="social-media-icon">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
