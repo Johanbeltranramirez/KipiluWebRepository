@@ -44,49 +44,103 @@
     font-size: 12px; /* Tamaño de fuente de los botones */
 }
 
-@media (max-width: 767.98px) {
-    .w-50-responsive {
-        width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 30px; /* Ajustar tamaño de letra del título */
     }
-    .btn-cerrar {
-        margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
+    
+    .comment-table th,
+    .comment-table td {
+        font-size: 13px; /* Ajustar tamaño de fuente de las celdas */
+    }
+    
+    .descripcion-cell {
+        max-width: 100px; /* Ajustar ancho máximo de la celda de descripción */
+    }
+    
+    .comment-table td img {
+        max-width: 50px; /* Ajustar tamaño máximo de la imagen */
+    }
+    
+    .btn {
+        padding: 5px 10px; /* Ajustar espacio alrededor del texto */
+        font-size: 11px; /* Ajustar tamaño de fuente de los botones */
     }
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .title {
-        margin-left: -85px;    
+        font-size: 25px; /* Ajustar tamaño de letra del título */
     }
-    .form-control{
-        margin-left: -85px;  
-        max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
-    }
-    .btn-primary {
-        margin-left: 240px;  
-        max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
-        margin-top: -65px;
-    }
+    
     .comment-table {
-        margin-left: -85px;    
+        margin-left: 0; /* Ajustar margen izquierdo */
     }
+    
     .comment-table th,
     .comment-table td {
-        font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
-    }
-    .botones {
-        margin-left: -85px;    
-    }
-    .comment-table td img {
-        max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
+        font-size: 12px; /* Reducir tamaño de fuente de las celdas */
+        padding: 6px; /* Ajustar espacio alrededor del contenido */
     }
     
     .descripcion-cell {
         max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
     }
     
+    .comment-table td img {
+        max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
+    }
+    
     .btn {
         padding: 4px 8px; /* Reducir el espacio alrededor del texto de los botones */
         font-size: 10px; /* Reducir el tamaño de fuente de los botones */
+    }
+    
+    .w-50-responsive {
+        width: 100%; /* Ajustar el ancho del formulario para dispositivos móviles */
+    }
+    
+    .btn-cerrar {
+        margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px; /* Ajustar tamaño de letra del título */
+        text-align: center; /* Centrar el título */
+    }
+    
+    .comment-table {
+        width: 100%;
+        margin-left: 0; /* Ajustar margen izquierdo */
+    }
+    
+    .comment-table th,
+    .comment-table td {
+        font-size: 11px; /* Reducir tamaño de fuente de las celdas */
+        padding: 4px; /* Ajustar espacio alrededor del contenido */
+    }
+    
+    .descripcion-cell {
+        max-width: 60px; /* Reducir el ancho máximo de la celda de descripción */
+    }
+    
+    .comment-table td img {
+        max-width: 30px; /* Reducir el tamaño máximo de las imágenes */
+    }
+    
+    .btn {
+        padding: 3px 6px; /* Reducir el espacio alrededor del texto de los botones */
+        font-size: 9px; /* Reducir el tamaño de fuente de los botones */
+    }
+    
+    .w-50-responsive {
+        width: 100%; /* Ajustar el ancho del formulario para dispositivos móviles */
+    }
+    
+    .btn-cerrar {
+        margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
     }
 }
