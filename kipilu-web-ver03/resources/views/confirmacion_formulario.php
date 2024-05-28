@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILÚ - ¡¡EXITO!!</title>
     <link rel="stylesheet" href="../css/form_adopcion.css">
-    <link rel="icon" href="../img/logo.ico">
+    <link rel="icon" href="../../assets/icon/logo.png">
 </head>
 <body class="body">
 <main>
