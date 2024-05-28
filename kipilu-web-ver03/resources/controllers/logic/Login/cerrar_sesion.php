@@ -9,6 +9,6 @@ session_unset();
 session_destroy();
 
 // Redirigir al usuario a inicio.php después de cerrar la sesión
-header('Location: ../../../views/inicio.php');
+header('Location: ../../../views/login_administrador.php');
 exit();
 ?>
