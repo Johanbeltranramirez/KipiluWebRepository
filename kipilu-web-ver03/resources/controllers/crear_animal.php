@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../assets/icon/admin_icon.png">
-    <title>KIPILU - CRUD ANIMALES Crear Animal</title>
+    <title>KIPILU - CRUD ANIMALES</title>
     <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="icon" href="../../assets/icon/admin_icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -56,6 +56,18 @@
 </head>
 <body>
 
+<script>
+function validateText(input) {
+    // Elimina cualquier carácter que no sea letra o letra con tilde
+    input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.]/g, '');
+}
+
+function validateTextDes(input) {
+    // Elimina cualquier carácter que no sea letra, letra con tilde, espacio, punto o coma
+    input.value = input.value.replace(/[0-9]/g, '');
+}
+</script>
+
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
@@ -64,17 +76,17 @@
     <h1 class="text-center">Agregar Nuevo Animal</h1>
     <div id="notification" class="notification"></div>
     <form id="animalForm" method="POST" class="custom-form">
-        <div class="form-group">
-            <label for="Nombre_Animal">Nombre del Animal:</label>
-            <input type="text" name="Nombre_Animal" class="form-control" required maxlength="20">
-        </div>
+      <div class="form-group">
+        <label for="Nombre_Animal">Nombre del Animal:</label>
+         <input type="text" id="Nombre_Animal" name="Nombre_Animal" class="form-control" required maxlength="20" oninput="validateText(this)">
+      </div>
         <div class="form-group">
             <label for="Razas">Raza:</label>
             <select name="Razas" class="form-control" required>
                 <option>Selecciona una raza</option>
                 <?php
                 require_once 'logic/animales-controller/viewModel_leer.php';
-                $viewModel = new AnimalsViewModel('http://192.168.10.14:3000/api');
+                $viewModel = new AnimalsViewModel('https://kipilubackendrepository-2.onrender.com/api');
                 $razas = $viewModel->fetchRazas();
                 foreach ($razas as $raza) {
                     echo '<option value="' . $raza['ID_Raza'] . '">' . $raza['Nombre_Raza'] . '</option>';
@@ -96,7 +108,7 @@
         </div>
         <div class="form-group">
             <label for="Descripcion">Descripción:</label>
-            <textarea name="Descripcion" class="form-control" rows="3" maxlength="300" required></textarea>
+            <textarea name="Descripcion" class="form-control" rows="3" maxlength="300" required oninput="validateTextDes(this)"></textarea>
         </div>
         <div class="form-group">
             <label for="Especie_Animal">Especie del Animal:</label>

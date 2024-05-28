@@ -54,6 +54,11 @@
                 }, 3000);
             }
         });
+
+        function validateText(input) {
+         // Elimina cualquier carácter que no sea letra o letra con tilde
+       input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.]/g, '');
+    }
     </script>
 </head>
 <body>
@@ -67,7 +72,7 @@
     <form id="razaForm" action="logic/animales-controller/viewModel_crear_raza.php" method="POST" class="custom-form">
         <div class="form-group">
             <label for="nombreRaza">Nombre de la raza:</label>
-            <input type="text" name="nombreRaza" class="form-control" required maxlength="20">
+            <input type="text" name="nombreRaza" class="form-control" required maxlength="20" oninput="validateText(this)">
         </div>
         <br>
         <div class="mb-4">

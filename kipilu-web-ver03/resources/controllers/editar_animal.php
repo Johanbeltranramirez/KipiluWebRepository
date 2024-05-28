@@ -42,6 +42,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
+<script>
+function validateText(input) {
+    // Elimina cualquier carácter que no sea letra o letra con tilde
+    input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.]/g, '');
+}
+
+function validateTextDes(input) {
+    // Elimina cualquier carácter que no sea letra, letra con tilde, espacio, punto o coma
+    input.value = input.value.replace(/[0-9]/g, '');
+}
+</script>
+
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
@@ -54,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="ID_Animal" value="<?php echo $animal['data']['ID_Animal']; ?>">
             <div class="form-group">
                 <label for="Nombre_Animal">Nombre del Animal:</label>
-                <input type="text" name="Nombre_Animal" class="form-control" value="<?php echo $animal['data']['Nombre_Animal']; ?>" required maxlength="20">
+                <input type="text" name="Nombre_Animal" class="form-control" value="<?php echo $animal['data']['Nombre_Animal']; ?>" required maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="Razas">Raza:</label>
