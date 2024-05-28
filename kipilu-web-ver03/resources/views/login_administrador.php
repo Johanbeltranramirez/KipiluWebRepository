@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILU - Iniciar Sesión ADMIN</title>
-    <link rel="icon" href="img/logo.ico">
 
      <!--PROPIO-->
      <link rel="stylesheet" href="../css/login_administrador.css">
+    <link rel="icon" href="../../assets/icon/logo.png">
 </head>
 
 
