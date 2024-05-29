@@ -19,6 +19,13 @@
 </head>
 <body>
 
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o punto, coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]/g, '');
+}
+</script>
+
 <!-- Nav (navegacion) -->
 <?php include '../reutilize/menu.php'; ?>
 <!-- Cierre Nav (navegacion) -->
@@ -37,11 +44,11 @@
                             <form id="commentForm">
                                 <div class="form-group">
                                     <label for="Nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" required>
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" oninput="validateText(this)" >
                                 </div>
                                 <div class="form-group">
                                     <label for="Apellido">Apellido:</label>
-                                    <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="25" required>
+                                    <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="25" required oninput="validateText(this)">
                                 </div>
                                 <div class="form-group">
                                     <label for="Comentario">Comentario:</label>
