@@ -41,6 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
+<script>
+function validateNumber(input) {
+  // Elimina cualquier carácter que no sea número
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
+</script>
+
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
@@ -81,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="form-group">
             <label for="Administrador">Administrador:</label>
-            <input type="text" name="Administrador" class="form-control" value="<?php echo isset($formulario['data']['Administrador']) ? $formulario['data']['Administrador'] : ''; ?>" required>
+            <input type="text" name="Administrador" class="form-control" value="<?php echo isset($formulario['data']['Administrador']) ? $formulario['data']['Administrador'] : ''; ?>" required maxlength="12" oninput="validateNumber(this)">
         </div>
         <br>
         <div class="mb-4">

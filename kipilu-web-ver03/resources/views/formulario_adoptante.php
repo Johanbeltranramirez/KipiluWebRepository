@@ -81,6 +81,24 @@
 </head>
 <body>
 
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o letra con tilde
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
+}
+
+function validateTextDes(input) {
+  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
+}
+
+function validateNumber(input) {
+  // Elimina cualquier carácter que no sea número
+  input.value = input.value.replace(/[^0-9]/g, '');
+
+}
+</script>
+
     <h2 class="bienvenido">Bienvenid@</h2>
     <p>En este formulario podrá ingresar sus datos para validar su petición para adopción del animal seleccionado...</p>    
 
@@ -91,7 +109,7 @@
         <form id="adoptanteForm" method="POST" class="custom-form">
             <div class="form-group">
                 <label for="ID_Adoptante">Número de Identificación (Cédula de Ciudadanía o extranjera)🐾</label>
-                <input type="text" name="ID_Adoptante" class="form-control" placeholder="Digite su número de identidad" required maxlength="10" pattern="\d*" title="Solo se permiten números.">
+                <input type="text" name="ID_Adoptante" class="form-control" placeholder="Digite su número de identidad" required maxlength="10" oninput="validateNumber(this)">
             </div>
 
             <!-- Campo oculto para el ID del animal -->
@@ -99,19 +117,19 @@
 
             <div class="form-group">
                 <label for="P_Nombre">Primer Nombre🐾</label>
-                <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+                <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="S_Nombre">Segundo Nombre</label>
-                <input type="text" name="S_Nombre" class="form-control" placeholder="Digite en caso de tener más nombres" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+                <input type="text" name="S_Nombre" class="form-control" placeholder="Digite en caso de tener más nombres" maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="P_Apellido">Primer Apellido🐾</label>
-                <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+                <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="S_Apellido">Segundo Apellido</label>
-                <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido (opcional)" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+                <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido (opcional)" maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="Correo">Correo electrónico personal o de contacto🐾</label>
@@ -123,7 +141,7 @@
             </div>
             <div class="form-group">
                 <label for="Telefono">Número telefónico móvil o fijo (Para contacto)🐾</label>
-                <input type="tel" name="Telefono" class="form-control" placeholder="Ingrese el número de teléfono para contactarlo" required maxlength="12" pattern="\d*" title="Solo se permiten números.">
+                <input type="tel" name="Telefono" class="form-control" placeholder="Ingrese el número de teléfono para contactarlo" required maxlength="12" oninput="validateNumber(this)">
             </div>
             <div class="g-recaptcha" data-sitekey="6LfRwaspAAAAAAD_Xm2bIqfEdzWMRw2FCFbcMf_h"></div>
             <div id="recaptchaError" class="text-danger"></div> <!--Para mostrar mensaje de error -->
