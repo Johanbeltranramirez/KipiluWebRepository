@@ -43,6 +43,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o letra con tilde
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
+}
+
+function validateTextDes(input) {
+  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
+}
+
+function validateNumber(input) {
+  // Elimina cualquier carácter que no sea número
+  input.value = input.value.replace(/[^0-9]/g, '');
+
+}
+</script>
+
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
@@ -58,31 +76,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="form-group">
                 <label for="P_Nombre">Primer Nombre:</label>
-                <input type="text" name="P_Nombre" class="form-control" value="<?php echo isset($adoptante->P_Nombre) ? $adoptante->P_Nombre : ''; ?>" required maxlength="20">
+                <input type="text" name="P_Nombre" class="form-control" value="<?php echo isset($adoptante->P_Nombre) ? $adoptante->P_Nombre : ''; ?>" required maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="S_Nombre">Segundo Nombre:</label>
-                <input type="text" name="S_Nombre" class="form-control" value="<?php echo isset($adoptante->S_Nombre) ? $adoptante->S_Nombre : ''; ?>" maxlength="20">
+                <input type="text" name="S_Nombre" class="form-control" value="<?php echo isset($adoptante->S_Nombre) ? $adoptante->S_Nombre : ''; ?>" maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="P_Apellido">Primer Apellido:</label>
-                <input type="text" name="P_Apellido" class="form-control" value="<?php echo isset($adoptante->P_Apellido) ? $adoptante->P_Apellido : ''; ?>" required maxlength="20">
+                <input type="text" name="P_Apellido" class="form-control" value="<?php echo isset($adoptante->P_Apellido) ? $adoptante->P_Apellido : ''; ?>" required maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="S_Apellido">Segundo Apellido:</label>
-                <input type="text" name="S_Apellido" class="form-control" value="<?php echo isset($adoptante->S_Apellido) ? $adoptante->S_Apellido : ''; ?>" maxlength="20">
+                <input type="text" name="S_Apellido" class="form-control" value="<?php echo isset($adoptante->S_Apellido) ? $adoptante->S_Apellido : ''; ?>" maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
                 <label for="Correo">Correo Electrónico:</label>
-                <input type="email" name="Correo" class="form-control" value="<?php echo isset($adoptante->Correo) ? $adoptante->Correo : ''; ?>" required>
+                <input type="email" name="Correo" class="form-control" value="<?php echo isset($adoptante->Correo) ? $adoptante->Correo : ''; ?>" required maxlength="25">
             </div>
             <div class="form-group">
                 <label for="Direccion">Dirección:</label>
-                <input type="text" name="Direccion" class="form-control" value="<?php echo isset($adoptante->Direccion) ? $adoptante->Direccion : ''; ?>" required>
+                <input type="text" name="Direccion" class="form-control" value="<?php echo isset($adoptante->Direccion) ? $adoptante->Direccion : ''; ?>" required maxlength="50">
             </div>
             <div class="form-group">
                 <label for="Telefono">Teléfono:</label>
-                <input type="tel" name="Telefono" class="form-control" value="<?php echo isset($adoptante->Telefono) ? $adoptante->Telefono : ''; ?>" required>
+                <input type="tel" name="Telefono" class="form-control" value="<?php echo isset($adoptante->Telefono) ? $adoptante->Telefono : ''; ?>" required maxlength="12" oninput="validateNumber(this)">
             </div>
             <br>
             <div class="mb-4">
