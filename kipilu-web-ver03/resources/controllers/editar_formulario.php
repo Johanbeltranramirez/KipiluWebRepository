@@ -52,15 +52,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form id="formularioForm" method="POST" class="custom-form">
         <div class="form-group">
             <label for="formulario">ID_Formulario:</label>
-            <input type="text" name="formulario" class="form-control" value="<?php echo isset($formulario['data']['ID_Formulario']) ? $formulario['data']['ID_Formulario'] : ''; ?>" maxlength="20">
+            <input type="text" name="formulario" class="form-control" value="<?php echo isset($formulario['data']['ID_Formulario']) ? $formulario['data']['ID_Formulario'] : ''; ?>" maxlength="20" readonly>
         </div>
         <div class="form-group">
             <label for="Animal">Animal:</label>
-            <input type="text" name="Animal" class="form-control" value="<?php echo isset($formulario['data']['Animal']) ? $formulario['data']['Animal'] : ''; ?>" required maxlength="20">
+            <input type="text" name="Animal" class="form-control" value="<?php echo isset($formulario['data']['Animal']) ? $formulario['data']['Animal'] : ''; ?>" required maxlength="20" readonly>
         </div>
         <div class="form-group">
             <label for="Adoptante">Adoptante:</label>
-            <input type="text" name="Adoptante" class="form-control" value="<?php echo isset($formulario['data']['Adoptante']) ? $formulario['data']['Adoptante'] : ''; ?>" required maxlength="20">
+            <input type="text" name="Adoptante" class="form-control" value="<?php echo isset($formulario['data']['Adoptante']) ? $formulario['data']['Adoptante'] : ''; ?>" required maxlength="20" readonly>
         </div>
         <div class="form-group">
     <label for="Validacion_donativo">Validación_donativo:</label>

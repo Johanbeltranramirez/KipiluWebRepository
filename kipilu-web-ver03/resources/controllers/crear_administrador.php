@@ -68,27 +68,27 @@
     <form id="administradorForm" method="POST" class="custom-form">
         <div class="form-group">
             <label for="ID_Administrador">Cedula:</label>
-            <input type="text" name="ID_Administrador" class="form-control" required>
+            <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required  maxlength="12">
         </div>
         <div class="form-group">
             <label for="P_Nombre">Primer Nombre:</label>
-            <input type="text" name="P_Nombre" class="form-control" required>
+            <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
         </div>
         <div class="form-group">
             <label for="S_Nombre">Segundo Nombre:</label>
-            <input type="text" name="S_Nombre" class="form-control" >
+            <input type="text" name="S_Nombre" class="form-control" placeholder="Digite su segundo nombre" maxlength="20" >
         </div>
         <div class="form-group">
             <label for="P_Apellido">Primer Apellido:</label>
-            <input type="text" name="P_Apellido" class="form-control" required>
+            <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.>
         </div>
         <div class="form-group">
             <label for="S_Apellido">Segundo Apellido:</label>
-            <input type="text" name="S_Apellido" class="form-control" >
+            <input type="text" name="S_Apellido" class="form-control"  placeholder="Digite su segundo apellido" maxlength="20">
         </div>
         <div class="form-group">
             <label for="Contrasena">Contraseña:</label>
-            <input type="password" name="Contrasena" class="form-control" required>
+            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" require maxlength="20">
         </div>
         <br>
         <div class="mb-4">
