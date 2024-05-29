@@ -19,10 +19,10 @@
                     <a class="nav-link" href="animales_controller.php" role="button">Gestionar  Animales</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="adoptantes_controller.php" role="button">Gestionar Adoptantes</a>
+                    <a class="nav-link" href="formularios_controller.php" role="button">Gestionar Formularios</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="formularios_controller.php" role="button">Gestionar Formularios</a>
+                    <a class="nav-link" href="adoptantes_controller.php" role="button">Gestionar Adoptantes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="comentarios_controller.php" role="button">Gestionar Comentarios</a>

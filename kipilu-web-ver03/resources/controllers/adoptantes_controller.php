@@ -90,11 +90,8 @@ if (isset($_GET['adoptante_id'])) {
 <?php endif; ?>
 
 <!--FIN Datos búsqueda-->
-<br><br>
+<br>
 
-<div class="botones">
-    <a href="crear_adoptantes.php" class="btn btn-success mb-2">Agregar adoptante</a>
-</div>
 
 <?php
 require_once 'logic/adoptantes-controller/viewModel_Leer.php';
