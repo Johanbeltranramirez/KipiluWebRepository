@@ -19,17 +19,35 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
+
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o letra con tilde
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
+}
+
+function validateTextDes(input) {
+  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
+}
+
+function validateAlphaNumeric(input) {
+            // Elimina cualquier carácter que no sea letra o número
+            input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+}
+</script>
+
 <body>
     <div class="login-container">
         <form action="../controllers/logic/Login/validar_login.php" method="post">
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
                 <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>
-                <input type="text" name="ID_Administrador" id="ID_Administrador" required>
+                <input type="text" name="ID_Administrador" id="ID_Administrador" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="input-container">
                 <label for="Contrasena" style="color: #000000;">Contraseña:</label>
-                <input type="password" name="Contrasena" id="Contrasena" required>
+                <input type="password" name="Contrasena" id="Contrasena" placeholder="Digite su contraseña" require maxlength="20" oninput="validateAlphaNumeric(this)">
             </div>
             <input type="submit" value="Ingresar">
             <a href="inicio.php" class="btn btn-secondary mt-2" style="text-decoration: none; border-radius: 15px; width: 100%;">Volver al inicio</a>
