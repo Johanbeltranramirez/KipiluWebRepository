@@ -58,6 +58,24 @@
 </head>
 <body>
 
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o letra con tilde
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
+}
+
+function validateTextDes(input) {
+  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
+}
+
+function validateAlphaNumeric(input) {
+            // Elimina cualquier carácter que no sea letra o número
+            input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+}
+</script>
+
+
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
 <!--Cierre Nav(navegacion)-->
@@ -68,27 +86,27 @@
     <form id="administradorForm" method="POST" class="custom-form">
         <div class="form-group">
             <label for="ID_Administrador">Cedula:</label>
-            <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required  maxlength="12">
+            <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
         </div>
         <div class="form-group">
             <label for="P_Nombre">Primer Nombre:</label>
-            <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+            <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" title="Solo se permiten letras." oninput="validateText(this)" >
         </div>
         <div class="form-group">
             <label for="S_Nombre">Segundo Nombre:</label>
-            <input type="text" name="S_Nombre" class="form-control" placeholder="Digite su segundo nombre" maxlength="20" >
+            <input type="text" name="S_Nombre" class="form-control" placeholder="Digite su segundo nombre" maxlength="20" oninput="validateText(this)">
         </div>
         <div class="form-group">
             <label for="P_Apellido">Primer Apellido:</label>
-            <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.>
+            <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20"  title="Solo se permiten letras." oninput="validateText(this)">
         </div>
         <div class="form-group">
             <label for="S_Apellido">Segundo Apellido:</label>
-            <input type="text" name="S_Apellido" class="form-control"  placeholder="Digite su segundo apellido" maxlength="20">
+            <input type="text" name="S_Apellido" class="form-control"  placeholder="Digite su segundo apellido" maxlength="20" oninput="validateText(this)">
         </div>
         <div class="form-group">
             <label for="Contrasena">Contraseña:</label>
-            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" require maxlength="20">
+            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" require maxlength="20" oninput="validateAlphaNumeric(this)">
         </div>
         <br>
         <div class="mb-4">

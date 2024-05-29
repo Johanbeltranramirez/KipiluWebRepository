@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $responseFormulario = curl_exec($curlFormulario);
 
         if ($responseFormulario === false) {
-            echo 'ERROR al crear el formulario: ' . curl_error($curlFormulario);
+            echo 'ERROR al crear el formulario: ' . curl_error($curlFormulario); 
         } else {
             $formularioData = json_decode($responseFormulario, true);
             curl_close($curlFormulario);

@@ -28,6 +28,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $administrador = $viewModel->getAdministradorById($administradorId);
 }
 ?>
+
+<script>
+function validateText(input) {
+  // Elimina cualquier carácter que no sea letra o letra con tilde
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
+}
+
+function validateTextDes(input) {
+  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
+  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
+}
+
+function validateAlphaNumeric(input) {
+            // Elimina cualquier carácter que no sea letra o número
+            input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,23 +74,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 <div class="form-group">
     <label for="P_Nombre">Primer Nombre:</label>
-    <input type="text" name="P_Nombre" class="form-control" value="<?php echo isset($administrador['data']['P_Nombre']) ? $administrador['data']['P_Nombre'] : ''; ?>" required maxlength="20">
+    <input type="text" name="P_Nombre" class="form-control" value="<?php echo isset($administrador['data']['P_Nombre']) ? $administrador['data']['P_Nombre'] : ''; ?>" required maxlength="20" oninput="validateText(this)">
 </div>
 <div class="form-group">
     <label for="S_Nombre">Segundo Nombre:</label>
-    <input type="text" name="S_Nombre" class="form-control" value="<?php echo isset($administrador['data']['S_Nombre']) ? $administrador['data']['S_Nombre'] : ''; ?>" maxlength="20">
+    <input type="text" name="S_Nombre" class="form-control" value="<?php echo isset($administrador['data']['S_Nombre']) ? $administrador['data']['S_Nombre'] : ''; ?>" maxlength="20" oninput="validateText(this)">
 </div>
 <div class="form-group">
     <label for="P_Apellido">Primer Apellido:</label>
-    <input type="text" name="P_Apellido" class="form-control" value="<?php echo isset($administrador['data']['P_Apellido']) ? $administrador['data']['P_Apellido'] : ''; ?>" required maxlength="20">
+    <input type="text" name="P_Apellido" class="form-control" value="<?php echo isset($administrador['data']['P_Apellido']) ? $administrador['data']['P_Apellido'] : ''; ?>" required maxlength="20" oninput="validateText(this)">
 </div>
 <div class="form-group">
     <label for="S_Apellido">Segundo Apellido:</label>
-    <input type="text" name="S_Apellido" class="form-control" value="<?php echo isset($administrador['data']['S_Apellido']) ? $administrador['data']['S_Apellido'] : ''; ?>" maxlength="20">
+    <input type="text" name="S_Apellido" class="form-control" value="<?php echo isset($administrador['data']['S_Apellido']) ? $administrador['data']['S_Apellido'] : ''; ?>" maxlength="20" oninput="validateText(this)">
 </div>
 <div class="form-group">
     <label for="Contrasena">Contraseña:</label>
-    <input type="text" name="Contrasena" class="form-control" value="<?php echo isset($administrador['data']['Contrasena']) ? $administrador['data']['Contrasena'] : ''; ?>" required>
+    <input type="text" name="Contrasena" class="form-control" value="<?php echo isset($administrador['data']['Contrasena']) ? $administrador['data']['Contrasena'] : ''; ?>" required oninput="validateAlphaNumeric(this)">
 </div>
 
     <br>
