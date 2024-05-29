@@ -90,7 +90,7 @@ function validateAlphaNumeric(input) {
 </div>
 <div class="form-group">
     <label for="Contrasena">Contraseña:</label>
-    <input type="text" name="Contrasena" class="form-control" value="<?php echo isset($administrador['data']['Contrasena']) ? $administrador['data']['Contrasena'] : ''; ?>" required oninput="validateAlphaNumeric(this)">
+    <input type="password" name="Contrasena" class="form-control" value="<?php echo isset($administrador['data']['Contrasena']) ? $administrador['data']['Contrasena'] : ''; ?>" required maxlength="20" oninput="validateAlphaNumeric(this)">
 </div>
 
     <br>
