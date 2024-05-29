@@ -59,7 +59,7 @@
 <script>
 function validateText(input) {
     // Elimina cualquier carácter que no sea letra o letra con tilde
-    input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.]/g, '');
+    input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
 }
 
 function validateTextDes(input) {
