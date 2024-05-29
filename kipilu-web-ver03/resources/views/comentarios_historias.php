@@ -44,7 +44,7 @@ function validateText(input) {
                             <form id="commentForm">
                                 <div class="form-group">
                                     <label for="Nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" oninput="validateText(this)" >
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" required oninput="validateText(this)" >
                                 </div>
                                 <div class="form-group">
                                     <label for="Apellido">Apellido:</label>
