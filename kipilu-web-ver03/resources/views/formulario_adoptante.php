@@ -92,4 +92,42 @@
 
             <div class="form-group">
                 <label for="P_Nombre">Primer Nombre🐾</label>
-                <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" pattern="[
+                <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" pattern="[                A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+            </div>
+            <div class="form-group">
+                <label for="S_Nombre">Segundo Nombre</label>
+                <input type="text" name="S_Nombre" class="form-control" placeholder="Digite en caso de tener más nombres" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+            </div>
+            <div class="form-group">
+                <label for="P_Apellido">Primer Apellido🐾</label>
+                <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+            </div>
+            <div class="form-group">
+                <label for="S_Apellido">Segundo Apellido</label>
+                <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido (opcional)" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*" title="Solo se permiten letras.">
+            </div>
+            <div class="form-group">
+                <label for="Correo">Correo electrónico personal o de contacto🐾</label>
+                <input type="email" name="Correo" class="form-control" placeholder="Digite su correo electrónico para contactarlo" required maxlength="40">
+            </div>
+            <div class="form-group">
+                <label for="Direccion">Dirección de residencia actual🐾</label>
+                <input type="text" name="Direccion" class="form-control" placeholder="Digite la dirección exacta de su vivienda actual" required maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="Telefono">Número telefónico móvil o fijo (Para contacto)🐾</label>
+                <input type="tel" name="Telefono" class="form-control" placeholder="Ingrese el número de teléfono para contactarlo" required maxlength="12" pattern="\d*" title="Solo se permiten números.">
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LfRwaspAAAAAAD_Xm2bIqfEdzWMRw2FCFbcMf_h"></div>
+            <div id="recaptchaError" class="text-danger"></div>
+            <br>
+            <div class="mb-4">
+                <button type="submit" class="custom-button">Enviar</button>
+                <a href="../views/Tips.php" class="custom-button2">Volver al inicio</a>
+            </div>
+        </form>
+        <img src="../../assets/img/formulario_adopcion/gatito_perrito.png" alt="image2">
+    </div>
+</body>
+</html>
+
