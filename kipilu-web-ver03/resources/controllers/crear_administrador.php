@@ -106,7 +106,7 @@ function validateAlphaNumeric(input) {
         </div>
         <div class="form-group">
             <label for="Contrasena">Contraseña:</label>
-            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" require maxlength="20" oninput="validateAlphaNumeric(this)">
+            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
         </div>
         <br>
         <div class="mb-4">
