@@ -48,7 +48,7 @@
     if (isset($_GET['formulario_id'])) {
         $formularioId = $_GET['formulario_id'];
 
-        $viewModel = new FormularioSearchViewModel('https://kipilubackendrepository-2.onrender.com/api/');
+        $viewModel = new FormularioSearchViewModel('http://192.168.128.12:3000/api/');
         $formData = $viewModel->fetchFormulario($formularioId);
 
         // Arrays de mapeo para los nombres

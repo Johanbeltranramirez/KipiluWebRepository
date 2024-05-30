@@ -5,7 +5,7 @@ class AdministradorUpdateViewModel {
 
     public function __construct() {
         // Definimos la URL base de la API
-        $this->apiBaseUrl = 'https://kipilubackendrepository-2.onrender.com/api/';
+        $this->apiBaseUrl = 'http://192.168.128.12:3000/api/';
     }
 
     public function getAdministradorById($administradorId) {

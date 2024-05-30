@@ -59,7 +59,7 @@
     require_once '../controllers/logic/animales-controller/viewModel_leer_especie.php';
 
     // Crear una instancia del ViewModel
-    $viewModel = new AnimalSearchViewModel('https://kipilubackendrepository-2.onrender.com');
+    $viewModel = new AnimalSearchViewModel('http://192.168.128.12:3000');
 
     // Arrays de mapeo para los nombres
     $sexos = [1 => 'Hembra', 2 => 'Macho'];
