@@ -7,6 +7,7 @@
     <title>KIPILU - CRUD ADMINISTRADORES Crear Administradores</title>
     <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -54,6 +55,20 @@
                 }, 3000);
             }
         });
+
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById("password");
+            const passwordToggleIcon = document.getElementById("password-toggle-icon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordToggleIcon.classList.remove("fa-eye");
+                passwordToggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                passwordToggleIcon.classList.remove("fa-eye-slash");
+                passwordToggleIcon.classList.add("fa-eye");
+            }
+        }
     </script>
 </head>
 <body>
@@ -70,11 +85,10 @@ function validateTextDes(input) {
 }
 
 function validateAlphaNumeric(input) {
-            // Elimina cualquier carácter que no sea letra o número
-            input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+  // Elimina cualquier carácter que no sea letra o número
+  input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
 }
 </script>
-
 
 <!--Nav(navegacion)-->
 <?php include '../reutilize/menu_controllers.php'; ?>
@@ -106,7 +120,12 @@ function validateAlphaNumeric(input) {
         </div>
         <div class="form-group">
             <label for="Contrasena">Contraseña:</label>
-            <input type="password" name="Contrasena" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
+            <div class="input-group">
+                <input type="password" name="Contrasena" id="password" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
+                    <i class="fas fa-eye" id="password-toggle-icon"></i>
+                </button>
+            </div>
         </div>
         <br>
         <div class="mb-4">
