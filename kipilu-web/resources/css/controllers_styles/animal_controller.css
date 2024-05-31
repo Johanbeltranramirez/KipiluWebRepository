@@ -1,0 +1,95 @@
+/* Estilos para la tabla de animales */
+.animal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Reducir el margen superior */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin-top: 10px; /* Reducir el margen superior */
+    text-align: left;
+    font-size: 35px; /* Tamaño de letra del título */
+}
+
+.animal-table th,
+.animal-table td {
+    padding: 8px; /* Espacio alrededor del contenido */
+    border: 1px solid #ccc;
+    font-size: 14px; /* Tamaño de fuente de las celdas */
+    text-align: center; /* Alinear contenido a la izquierda */
+}
+
+.animal-table th {
+    background: linear-gradient(to right, #e6f1f1, #afedf3cc);
+}
+
+.animal-table td img {
+    max-width: 60px; /* Tamaño máximo de la imagen */
+    border-radius: 5px; /* Radio del borde de las imágenes */
+}
+
+.descripcion-cell {
+    max-width: 120px; /* Ancho máximo de la celda de descripción */
+    overflow-x: auto;
+    white-space: nowrap;
+    background: url('ruta/al/ícono-de-flecha.png') no-repeat right center;
+    text-align: center; /* Centrar el texto dentro de la celda de descripción */
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 6px 12px; /* Espacio alrededor del texto */
+    font-size: 12px; /* Tamaño de fuente de los botones */
+}
+
+
+@media (max-width: 767.98px) {
+    .w-50-responsive {
+        width: 80%; /* Ajustar el ancho del formulario para dispositivos móviles */
+    }
+    .btn-cerrar {
+        margin-top: 5px; /* Ajustar margen superior del botón "Cerrar" */
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .title {
+        margin-left: -85px;    
+    }
+    .form-control{
+        margin-left: -85px;  
+        max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
+    }
+    .btn-primary {
+        margin-left: 240px;  
+        max-width: 300px; /* Reducir el tamaño máximo de las imágenes */  
+        margin-top: -65px;
+    }
+    .animal-table {
+        margin-left: -85px;    
+    }
+    .animal-table th,
+    .animal-table td {
+        font-size: 12px; /* Reducir el tamaño de fuente de las celdas */
+        margin-left: -100px;    
+    }
+    .botones {
+        margin-left: -85px;    
+    }
+    .animal-table td img {
+        max-width: 40px; /* Reducir el tamaño máximo de las imágenes */
+    }
+    
+    .descripcion-cell {
+        max-width: 80px; /* Reducir el ancho máximo de la celda de descripción */
+    }
+    
+    .btn {
+        padding: 4px 8px; /* Reducir el espacio alrededor del texto de los botones */
+        font-size: 10px; /* Reducir el tamaño de fuente de los botones */
+    }
+}

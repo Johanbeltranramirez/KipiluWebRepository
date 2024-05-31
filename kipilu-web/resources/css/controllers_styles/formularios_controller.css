@@ -1,0 +1,49 @@
+/* Estilos para la tabla de formularios */
+.formulario-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 35px;
+}
+
+.formulario-table th,
+.formulario-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.formulario-table th {
+  background: linear-gradient(to right, #e6f1f1, #8afc9dcc);
+}
+
+/* Estilos para los botones */
+.btn {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.botones {
+  margin-top: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .formulario-table th,
+  .formulario-table td {
+      font-size: 12px;
+  }
+
+  .btn {
+      padding: 4px 8px;
+      font-size: 10px;
+  }
+}

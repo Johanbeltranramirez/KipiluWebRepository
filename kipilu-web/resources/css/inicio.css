@@ -1,0 +1,189 @@
+/* styles inicio.css */
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .mission {
+         text-align: center;
+         margin-top: 600px; 
+          }
+
+        .mission h5 {
+            font-family: 'Source Sans', sans-serif;
+            color: #444444;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 2cm; 
+            margin-right: 2cm; 
+            margin-top: 20px; 
+
+        }
+
+        .content-left {
+            flex: 1;
+            margin-bottom: 2px;
+        }
+
+        .content-right {
+            flex: 1;
+        }
+
+        .content-text {
+            text-align: justify; 
+        }
+
+        .content-left {
+            flex: 1;
+            margin-bottom: 20px; 
+            margin-right: 105px; 
+        }
+
+        .content-right {
+            flex: 1;
+            margin-bottom: 20px; 
+            margin-left: 105px; 
+        }
+
+        .red-bullet {
+         color: red;
+         margin-right: 5px; /
+        }
+
+        .highlight {
+            background-color: #d6d6d6;
+            padding: 20px;
+        }
+
+        .image-text {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1rem;
+            margin-top: 40px; 
+            margin-left: 2cm; 
+        }
+        .card {
+            width: 100%;
+            max-width: 540px;
+        }
+        .card-img-container, .card-body {
+            height: 100%;
+        }
+        .card-img-container img, .card-body {
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card-text {
+            margin-bottom: 0.5rem;
+        }
+        .row.g-0 > [class*="col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .overlay {
+         position: relative;
+         display: inline-block;
+         width: 80%; 
+         height: 80%; 
+        }
+
+      .overlay img {
+       width: 80%;
+       height: 8%;
+      object-fit: cover;
+      }
+
+      .overlay .text {
+    background: url('../../assets/img/inicio/index1.jpg');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: black;
+      font-size: 24px;
+      padding: 300px; 
+      text-align: center;
+      width: 100%; 
+      height: 100%; 
+      }
+
+
+    .overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 75%;
+     z-index: -1; 
+    } 
+ 
+    .overlay img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; 
+    }
+    .card {
+    border: 2px solid white; 
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .content-left,
+        .content-right {
+            flex: none;
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .overlay .text {
+            font-size: 16px;
+            padding: 160px;
+            text-align: center;
+        }
+        .mission {
+            margin-top: 480px; 
+        }
+
+      
+    }
+
+    @media screen and (max-width: 768px) {
+        .card {
+            margin: 0 auto; /* Centrar horizontalmente */
+            text-align: center; /* Centrar el contenido de la carta */
+            margin-right: 2cm; 
+
+        }
+    }
+
+    .col-md-5{
+        background: url('../../assets/img/inicio/index2.jpg');
+    }
+
+    .col-md-4{
+        background: url('../../assets/img/inicio/llilli.jpg');
+    }
+
