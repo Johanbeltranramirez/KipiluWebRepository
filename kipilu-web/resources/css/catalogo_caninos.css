@@ -1,0 +1,116 @@
+/* Estilos para la portada gatos*/
+.portadac {
+    position: relative;
+    height: 73vh;
+    background-image: url('../img/animales/portadaf.jpg'); 
+    background-size: contain;
+    background-position: center; /* Centra la imagen de fondo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenido {
+    background :linear-gradient(to right, #c98139, #f13737cc, #eb7754e7, #cf8058);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.texto h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.opciones h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.separador {
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.linea-roja {
+    border: 0; /* Elimina el estilo de borde predeterminado */
+    height: 2px; /* Altura de la línea */
+    background-color: red; /* Color rojo para la línea */
+    width: 90%; /* Ancho de la línea */
+    margin: 0 auto 20px; /* Centra la línea horizontalmente y añade un margen inferior */
+}
+
+.titulo-adoptar {
+    font-size: 24px; /* Tamaño de la fuente del título */
+    margin: 10px 0; /* Espaciado superior e inferior del título */
+    color: rgb(255, 119, 0);
+}
+
+.texto-pequeno {
+    font-size: 14px; /* Tamaño de la fuente del texto pequeño */
+    margin-top: 10px; /* Espaciado superior del texto pequeño */
+}
+
+
+.animal-card {
+        background-color: purple;
+        color: white;
+    }
+    .animal-card .estado-adopt {
+        background-color: orange;
+    }
+    .animal-card .estado-proceso {
+        background-color: yellow;
+    }
+    .card-text .btn {
+        margin-top: 5px;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .card .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-image: url('../../assets/img/catalogos/fondo.png'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* La imagen se adapta al tamaño del contenedor */
+      }
+      
+  .card-title,
+  .card-text,
+  .card-text .btn {
+    margin-bottom: 5px;
+  }
+
+  .card-text .btn {
+    margin-top: auto;
+  }
+
