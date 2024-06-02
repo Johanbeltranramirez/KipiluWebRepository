@@ -34,12 +34,13 @@ form {
 input[type="text"],
 input[type="password"] {
     width: 88%;
-    padding: 1px;
+    padding: 5px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+    border: 1px solid #b9b9b9;
+    border-radius: 13px;
     padding-left: 30px;
     font-size: 19px;
+
 }
 
 input[type="submit"] {

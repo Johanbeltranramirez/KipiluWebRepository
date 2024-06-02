@@ -11,7 +11,7 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - Iniciar Sesión ADMIN</title>
+    <title>KIPILU - Iniciar Sesión Super Admin</title>
     <link rel="icon" href="img/logo.ico">
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/cambiar_contraseña.css">
@@ -37,6 +37,12 @@ function validateAlphaNumeric(input) {
   input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
 }
 
+function validateNumber(input) {
+  // Elimina cualquier carácter que no sea número
+  input.value = input.value.replace(/[^0-9]/g, '');
+
+}
+
 function togglePasswordVisibility() {
     const passwordField = document.getElementById("Contrasena");
     const passwordToggleIcon = document.getElementById("password-toggle-icon");
@@ -60,29 +66,21 @@ function togglePasswordVisibility() {
         <form action="../controllers/logic/Login/validar_login.php" method="post">  
              <h1 class="text-center" style="font-size: 150%;">Restablecer contraseña</h1>
     <div class="form-group">
-        <label for="ID_Administrador">Cédula:</label>
-        <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required maxlength="12" oninput="validateAlphaNumeric(this)">
+        <label for="ID_Superadmin">Cédula</label>
+        <input type="text" name="ID_Superadmin" class="form-control" placeholder="Ejp:CC123456789 " required maxlength="12" oninput="validateAlphaNumeric(this)">
     </div>
     <div class="form-group">
-        <label for="P_Nombre">Primer Nombre:</label>
-        <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" title="Solo se permiten letras." oninput="validateText(this)">
+        <label for=Correo">Correo</label>
+        <input type="text" name="Correo" class="form-control" placeholder="Digite su correo" required maxlength="20" title="Solo se permiten letras.">
     </div>
     <div class="form-group">
-        <label for="S_Nombre">Segundo Nombre:</label>
-        <input type="text" name="S_Nombre" class="form-control" placeholder="Digite su segundo nombre" maxlength="20" oninput="validateText(this)">
-    </div>
-    <div class="form-group">
-        <label for="P_Apellido">Primer Apellido:</label>
-        <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" title="Solo se permiten letras." oninput="validateText(this)">
-    </div>
-    <div class="form-group">
-        <label for="S_Apellido">Segundo Apellido:</label>
-        <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido" maxlength="20" oninput="validateText(this)">
+        <label for="Telefono">Teléfono</label>
+        <input type="text" name="Telefono" class="form-control" placeholder="Digite su n° de teléfono" maxlength="20" oninput="validateNumber(this)">
     </div>
     <div class="mb-1">
-                            <label for="Contrasena" class="form-label">Contraseña</label>
+                            <label for="Contrasena" class="form-label">Nueva contraseña</label>
                             <div class="input-group">
-                                <input type="password" name="Contrasena" id="Contrasena" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
+                                <input type="password" name="Contrasena" id="Contrasena" class="form-control" placeholder="Digite su contraseña nueva" required maxlength="20" oninput="validateAlphaNumeric(this)">
                                 <button class="btn btn-outline-secondary border-0" type="button" onclick="togglePasswordVisibility()">
                                     <i class="fas fa-eye" id="password-toggle-icon"></i>
                                 </button>

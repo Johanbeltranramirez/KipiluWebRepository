@@ -11,7 +11,7 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - Iniciar Sesión ADMIN</title>
+    <title>KIPILU - Iniciar Sesión Super Admin</title>
     <link rel="icon" href="img/logo.ico">
     <!--PROPIO-->
     <link rel="stylesheet" href="../css/login_superAdmin.css">
@@ -61,8 +61,8 @@ function togglePasswordVisibility() {
             </div>
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
-                <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>
-                <input type="text" name="ID_Administrador" id="ID_Administrador" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
+                <label for="ID_Superadmin" style="color: #000000;">ID Superadmin:</label>
+                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                             <label for="Contrasena" class="form-label">Contraseña</label>
