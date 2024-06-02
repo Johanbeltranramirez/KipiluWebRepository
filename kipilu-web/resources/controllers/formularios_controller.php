@@ -68,8 +68,8 @@
                   </tr>';
             echo '<tr>';
             echo '<td>' . $formData->ID_Formulario . '</td>';
-            echo '<td>' . $formData->Adoptante . '</td>';
-            echo '<td>' . $formData->Animal . '</td>';
+            echo '<td>' . $formData->ID_Adoptante . '</td>';
+            echo '<td>' . $formData->ID_Animal . '</td>';
             echo '<td>' . $formData->Validacion_donativo . '</td>';
             echo '<td>' . $estados[$formData->Estado_solicitud] . '</td>';
             echo '<td>' . $formData->Administrador . '</td>';
@@ -131,8 +131,8 @@
         foreach ($forms as $form) {
             echo '<tr>';
             echo '<td>' . $form->ID_Formulario . '</td>';
-            echo '<td>' . $form->Adoptante . '</td>';
-            echo '<td>' . $form->Animal . '</td>';
+            echo '<td>' . $form->ID_Adoptante . '</td>';
+            echo '<td>' . $form->ID_Animal . '</td>';
             echo '<td>' . $form->Validacion_donativo . '</td>';
             echo '<td>' . $estados[$form->Estado_solicitud] . '</td>';
             echo '<td>' . $form->Administrador . '</td>';

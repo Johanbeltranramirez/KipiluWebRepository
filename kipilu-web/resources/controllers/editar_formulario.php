@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Definir las variables $IdForm y $FormData a partir de la entrada del formulario
     $IdForm = isset($_POST['formulario']) ? $_POST['formulario'] : null;
     $FormData = [
-        'Adoptante' => $_POST['Adoptante'],
-        'Animal' => $_POST['Animal'],
+        'Adoptante' => $_POST['ID_Adoptante'],
+        'Animal' => $_POST['ID_Animal'],
         'Validacion_donativo' => $_POST['Validacion_donativo'],
         'Estado_solicitud' => $_POST['Estado_solicitud'],
         'Administrador' => $_POST['Administrador']
@@ -62,12 +62,12 @@ function validateNumber(input) {
             <input type="text" name="formulario" class="form-control" value="<?php echo isset($formulario['data']['ID_Formulario']) ? $formulario['data']['ID_Formulario'] : ''; ?>" maxlength="20" readonly>
         </div>
         <div class="form-group">
-            <label for="Animal">Animal:</label>
-            <input type="text" name="Animal" class="form-control" value="<?php echo isset($formulario['data']['Animal']) ? $formulario['data']['Animal'] : ''; ?>" required maxlength="20" readonly>
+            <label for="ID_Animal">Animal:</label>
+            <input type="text" name="ID_Animal" class="form-control" value="<?php echo isset($formulario['data']['ID_Animal']) ? $formulario['data']['ID_Animal'] : ''; ?>" required maxlength="20" readonly>
         </div>
         <div class="form-group">
-            <label for="Adoptante">Adoptante:</label>
-            <input type="text" name="Adoptante" class="form-control" value="<?php echo isset($formulario['data']['Adoptante']) ? $formulario['data']['Adoptante'] : ''; ?>" required maxlength="20" readonly>
+            <label for="ID_Adoptante">Adoptante:</label>
+            <input type="text" name="ID_Adoptante" class="form-control" value="<?php echo isset($formulario['data']['ID_Adoptante']) ? $formulario['data']['ID_Adoptante'] : ''; ?>" required maxlength="20" readonly>
         </div>
         <div class="form-group">
     <label for="Validacion_donativo">Validación_donativo:</label>

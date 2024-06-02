@@ -2,8 +2,8 @@
 
 class Formularioid {
     public $ID_Formulario;
-    public $Adoptante;
-    public $Animal;
+    public $ID_Adoptante;
+    public $ID_Animal;
     public $Validacion_donativo;
     public $Estado_solicitud;
     public $Administrador;
@@ -32,8 +32,8 @@ class FormularioSearchViewModel {
             if (isset($formData['data'])) {
                 $form = new Formularioid();
                 $form->ID_Formulario = $formData['data']['ID_Formulario'];
-                $form->Adoptante = $formData['data']['Adoptante'];
-                $form->Animal = $formData['data']['Animal']; 
+                $form->ID_Adoptante = $formData['data']['ID_Adoptante'];
+                $form->ID_Animal = $formData['data']['ID_Animal']; 
                 $form->Validacion_donativo = $formData['data']['Validacion_donativo'];
                 $form->Estado_solicitud = $formData['data']['Estado_solicitud'];
                 $form->Administrador = $formData['data']['Administrador'];

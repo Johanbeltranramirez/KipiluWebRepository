@@ -4,8 +4,8 @@ require_once '../../Data/ApiKipilu.php';
 
 class Formulario {
     public $ID_Formulario;
-    public $Adoptante;
-    public $Animal;
+    public $ID_Adoptante;
+    public $ID_Animal;
     public $Validacion_donativo;
     public $Estado_solicitud;
     public $Administrador;
@@ -31,8 +31,8 @@ class FormsViewModel {
                 foreach ($formsData['data'] as $formData) {
                     $form = new Formulario();
                     $form->ID_Formulario = $formData['ID_Formulario'];
-                    $form->Adoptante = $formData['Adoptante'];
-                    $form->Animal = $formData['Animal'];
+                    $form->ID_Adoptante = $formData['ID_Adoptante'];
+                    $form->ID_Animal = $formData['ID_Animal'];
                     $form->Validacion_donativo = $formData['Validacion_donativo'];
                     $form->Estado_solicitud = $formData['Estado_solicitud'];
                     $form->Administrador = $formData['Administrador'];
