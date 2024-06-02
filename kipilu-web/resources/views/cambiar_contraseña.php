@@ -14,7 +14,7 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
     <title>KIPILU - Iniciar Sesión ADMIN</title>
     <link rel="icon" href="img/logo.ico">
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/login_administrador.css">
+    <link rel="stylesheet" href="../css/cambiar_contraseña.css">
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -50,19 +50,36 @@ function togglePasswordVisibility() {
         passwordToggleIcon.classList.add("fa-eye");
     }
 }
+
+
 </script>
 
 <body>
     <div class="login-container">
-        <form action="../controllers/logic/Login/validar_login.php" method="post">
-        <a href="login_administrador.php" class="btn-admin">Admin</a>
-            <a href="login_superAdmin.php" class="btn-super-admin">Super Admin</a>
-            <h2 style="text-align: center;">Iniciar Sesión</h2><br>
-            <div class="input-container">
-                <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>
-                <input type="text" name="ID_Administrador" id="ID_Administrador" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
-            </div>
-            <div class="mb-1">
+ 
+        <form action="../controllers/logic/Login/validar_login.php" method="post">  
+             <h1 class="text-center" style="font-size: 150%;">Restablecer contraseña</h1>
+    <div class="form-group">
+        <label for="ID_Administrador">Cédula:</label>
+        <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required maxlength="12" oninput="validateAlphaNumeric(this)">
+    </div>
+    <div class="form-group">
+        <label for="P_Nombre">Primer Nombre:</label>
+        <input type="text" name="P_Nombre" class="form-control" placeholder="Digite su primer nombre" required maxlength="20" title="Solo se permiten letras." oninput="validateText(this)">
+    </div>
+    <div class="form-group">
+        <label for="S_Nombre">Segundo Nombre:</label>
+        <input type="text" name="S_Nombre" class="form-control" placeholder="Digite su segundo nombre" maxlength="20" oninput="validateText(this)">
+    </div>
+    <div class="form-group">
+        <label for="P_Apellido">Primer Apellido:</label>
+        <input type="text" name="P_Apellido" class="form-control" placeholder="Digite su primer apellido" required maxlength="20" title="Solo se permiten letras." oninput="validateText(this)">
+    </div>
+    <div class="form-group">
+        <label for="S_Apellido">Segundo Apellido:</label>
+        <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido" maxlength="20" oninput="validateText(this)">
+    </div>
+    <div class="mb-1">
                             <label for="Contrasena" class="form-label">Contraseña</label>
                             <div class="input-group">
                                 <input type="password" name="Contrasena" id="Contrasena" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
@@ -71,8 +88,12 @@ function togglePasswordVisibility() {
                                 </button>
                             </div>
             </div>
-            <input href="menu_controllers_admin.php"  type="submit" value="Ingresar">
-            <a href="inicio.php" class="btn btn-secondary mt-2" style="text-decoration: none; border-radius: 15px; width: 100%;">Volver al inicio</a>
+    <br>
+    <div class="mb-4 d-flex justify-content-between"> 
+    <input type="submit" value="Restablecer" class="me-2"></input>
+    <a href="login_superAdmin.php" class="btn btn-secondary">Cancelar</a>
+</div>
+</form>
             <!-- Manejo de errores -->
             <?php if ($error_message): ?>
               <div class="alert alert-danger mt-3" role="alert" style="color: red;">
@@ -81,11 +102,11 @@ function togglePasswordVisibility() {
                <script>
                   setTimeout(() => {
                   document.querySelector('.alert-danger').remove();
-                  }, 3000);
+                  }, 3500);
                </script>
              <?php endif; ?>
 
         </form>
     </div>
 </body>
-</html>
+</html> 

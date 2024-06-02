@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: url('../../assets/img/login-admin/foto.jpg');
+  background-image: url('../../assets/img/login-admin/login_A.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,11 +19,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #000000;
-  width: 450px; /* Ancho fijo para el contenedor */
+  width: 500px; /* Ancho fijo para el contenedor */
 }
 
 form {
-  max-width: 300px;
+  max-width: 315px;
   margin: 0 auto;
 }
 
@@ -56,6 +56,9 @@ h2 {
   margin: 0;
   font-size: 24px;
   color: #000000;
+}
+a.btn btn-secondary mt-2{
+  margin-bottom: 3px;
 }
 
 .error-message {
@@ -96,3 +99,34 @@ h2 {
   padding-left: 30px;
   cursor: pointer;
 }
+
+/* Estilos específicos para los botones de Admin y Super Admin */
+.btn-admin, .btn-super-admin {
+  display: inline-block;
+  width: 120px; /* Ancho fijo para los botones */
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #000000;
+  text-align: center;
+  border-radius: 15px; /* Ajusta el redondeo de los botones */
+  text-decoration: none;
+}
+
+.btn-admin {
+  background: linear-gradient(to right, #92f2fbcc, #bdfbfb);
+  margin-right: 10px; /* Espaciado a la derecha */
+}
+
+.btn-admin:hover {
+  background: linear-gradient(to right,#bdfbfb,  #92f2fbcc);
+}
+
+.btn-super-admin {
+  background: linear-gradient(to right, #fdea95e7, #fdaa81);
+  margin-left: 55px;
+}
+
+.btn-super-admin:hover {
+  background: linear-gradient(to right,  #fdaa81, #fdea95e7);
+}
+

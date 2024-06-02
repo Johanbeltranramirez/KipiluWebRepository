@@ -58,7 +58,7 @@ class AnimalesViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'http://192.168.128.12:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
+    $apiUrl = 'http://192.168.10.16:3000/api'; // Reemplaza 'puerto' con el puerto de tu API
 
     // Crear una instancia del ViewModel de Animales
     $animalesViewModel = new AnimalesViewModel($apiUrl);

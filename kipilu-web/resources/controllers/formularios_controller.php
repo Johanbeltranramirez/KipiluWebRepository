@@ -48,7 +48,7 @@
     if (isset($_GET['formulario_id'])) {
         $formularioId = $_GET['formulario_id'];
 
-        $viewModel = new FormularioSearchViewModel('http://192.168.128.12:3000/api/');
+        $viewModel = new FormularioSearchViewModel('http://192.168.10.16:3000/api/');
         $formData = $viewModel->fetchFormulario($formularioId);
 
         // Arrays de mapeo para los nombres

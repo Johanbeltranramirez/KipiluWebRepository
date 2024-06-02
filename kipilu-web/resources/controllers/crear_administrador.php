@@ -99,7 +99,7 @@ function validateAlphaNumeric(input) {
     <div id="notification" class="notification"></div>
     <form id="administradorForm" method="POST" class="custom-form">
         <div class="form-group">
-            <label for="ID_Administrador">Cedula:</label>
+            <label for="ID_Administrador">Cédula:</label>
             <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
         </div>
         <div class="form-group">
@@ -122,9 +122,9 @@ function validateAlphaNumeric(input) {
             <label for="Contrasena">Contraseña:</label>
             <div class="input-group">
                 <input type="password" name="Contrasena" id="password" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
-                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
-                    <i class="fas fa-eye" id="password-toggle-icon"></i>
-                </button>
+                <button class="btn btn-outline-secondary border-0" type="button" onclick="togglePasswordVisibility()">
+                                    <i class="fas fa-eye" id="password-toggle-icon"></i>
+                                </button>
             </div>
         </div>
         <br>

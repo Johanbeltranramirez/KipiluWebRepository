@@ -14,7 +14,7 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
     <title>KIPILU - Iniciar Sesión ADMIN</title>
     <link rel="icon" href="img/logo.ico">
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/login_administrador.css">
+    <link rel="stylesheet" href="../css/login_superAdmin.css">
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -55,8 +55,10 @@ function togglePasswordVisibility() {
 <body>
     <div class="login-container">
         <form action="../controllers/logic/Login/validar_login.php" method="post">
-        <a href="login_administrador.php" class="btn-admin">Admin</a>
+            <div class="btn-group">
+            <a href="login_administrador.php" class="btn-admin">Admin</a>
             <a href="login_superAdmin.php" class="btn-super-admin">Super Admin</a>
+            </div>
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
                 <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>
@@ -71,8 +73,10 @@ function togglePasswordVisibility() {
                                 </button>
                             </div>
             </div>
-            <input href="menu_controllers_admin.php"  type="submit" value="Ingresar">
+            <input href="menu_controllers_sa.php" type="submit" value="Ingresar">
             <a href="inicio.php" class="btn btn-secondary mt-2" style="text-decoration: none; border-radius: 15px; width: 100%;">Volver al inicio</a>
+            <br>
+
             <!-- Manejo de errores -->
             <?php if ($error_message): ?>
               <div class="alert alert-danger mt-3" role="alert" style="color: red;">
@@ -84,8 +88,8 @@ function togglePasswordVisibility() {
                   }, 3000);
                </script>
              <?php endif; ?>
-
-        </form>
+        </form>            
+        <a href="cambiar_contraseña.php" style="text-decoration: none;">¿Olvidó su contraseña?</a>
     </div>
 </body>
 </html>
