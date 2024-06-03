@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Si las credenciales son correctas, redirigir a la página de administradores
     if ($loginResult['success']) {
-        header("Location: ../../administradores_controller.php");
+        header("Location: ../../animales_controller.php");
         exit();
     } else {
         // Guardar el mensaje de error en una variable de sesión
