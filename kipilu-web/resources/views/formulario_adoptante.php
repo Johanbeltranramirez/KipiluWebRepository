@@ -83,19 +83,11 @@
 
 <script>
 function validateText(input) {
-  // Elimina cualquier carácter que no sea letra o letra con tilde
   input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.]/g, '');
 }
 
-function validateTextDes(input) {
-  // Elimina cualquier carácter que no sea letra, letra con tilde, punto o coma
-  input.value = input.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ.,]/g, '');
-}
-
 function validateNumber(input) {
-  // Elimina cualquier carácter que no sea número
   input.value = input.value.replace(/[^0-9]/g, '');
-
 }
 </script>
 
@@ -107,11 +99,6 @@ function validateNumber(input) {
         <div id="notification" class="notification"></div>       
  
         <form id="adoptanteForm" method="POST" class="custom-form">
-            <div class="form-group">
-                <label for="ID_Adoptante">Número de Identificación (Cédula de Ciudadanía o extranjera)🐾</label>
-                <input type="text" name="ID_Adoptante" class="form-control" placeholder="Digite su número de identidad" required maxlength="10" oninput="validateNumber(this)">
-            </div>
-
             <!-- Campo oculto para el ID del animal -->
             <input type="hidden" name="ID_Animal" class="form-control" required>
 
@@ -132,6 +119,10 @@ function validateNumber(input) {
                 <input type="text" name="S_Apellido" class="form-control" placeholder="Digite su segundo apellido (opcional)" maxlength="20" oninput="validateText(this)">
             </div>
             <div class="form-group">
+                <label for="ID_Adoptante">Número de Identificación (Cédula de Ciudadanía o extranjera)🐾</label>
+                <input type="text" name="ID_Adoptante" class="form-control" placeholder="Digite su número de identidad" required maxlength="10" oninput="validateNumber(this)">
+            </div>
+            <div class="form-group">
                 <label for="Correo">Correo electrónico personal o de contacto🐾</label>
                 <input type="email" name="Correo" class="form-control" placeholder="Digite su correo electrónico para contactarlo" required maxlength="40">
             </div>
@@ -144,7 +135,7 @@ function validateNumber(input) {
                 <input type="tel" name="Telefono" class="form-control" placeholder="Ingrese el número de teléfono para contactarlo" required maxlength="12" oninput="validateNumber(this)">
             </div>
             <div class="g-recaptcha" data-sitekey="6LfRwaspAAAAAAD_Xm2bIqfEdzWMRw2FCFbcMf_h"></div>
-            <div id="recaptchaError" class="text-danger"></div> <!--Para mostrar mensaje de error -->
+            <div id="recaptchaError" class="text-danger"></div>
             <br>
             <div class="mb-4">
                 <button type="submit" class="custom-button">Enviar</button>
