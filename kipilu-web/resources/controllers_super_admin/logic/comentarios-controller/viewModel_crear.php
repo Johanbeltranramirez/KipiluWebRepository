@@ -55,7 +55,7 @@ class CommentsViewModel {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
 
-    $apiUrl = 'http://192.168.10.16:3000/api'; // Reemplaza 'puerto' 
+    $apiUrl = 'http://192.168.1.7:3000/api'; // Reemplaza 'puerto' 
 
 
     // Crear una instancia del ViewModel de Comentaristas

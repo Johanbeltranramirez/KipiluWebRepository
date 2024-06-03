@@ -4,7 +4,7 @@ class GestorAdoptantesViewModel {
 
     public function __construct() {
         // Definimos la URL base de la API
-        $this->apiBaseUrl = 'http://192.168.10.16:3000/api/';
+        $this->apiBaseUrl = 'http://192.168.1.7:3000/api/';
     }
 
     public function deleteAdoptante($id) {

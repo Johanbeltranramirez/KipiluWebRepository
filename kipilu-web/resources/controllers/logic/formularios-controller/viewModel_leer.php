@@ -15,13 +15,13 @@ class FormsViewModel {
     private $api;
 
     public function __construct() {
-        $this->api = new ApiKipilu('http://192.168.10.16:3000/api/');
+        $this->api = new ApiKipilu('http://192.168.1.7:3000/api/');
     }
 
     public function fetchForms() {
         try {
             // Hacer una solicitud GET a la API para obtener los formularios
-            $response = file_get_contents('http://192.168.10.16:3000/api/formularios');
+            $response = file_get_contents('http://192.168.1.7:3000/api/formularios');
             
             // Decodificar la respuesta JSON
             $formsData = json_decode($response, true);

@@ -66,8 +66,8 @@ function togglePasswordVisibility() {
         <form action="../controllers/logic/Login/validar_login.php" method="post">  
              <h1 class="text-center" style="font-size: 150%;">Restablecer contraseña</h1>
     <div class="form-group">
-        <label for="ID_Superadmin">Cédula</label>
-        <input type="text" name="ID_Superadmin" class="form-control" placeholder="Ejp:CC123456789 " required maxlength="12" oninput="validateAlphaNumeric(this)">
+        <label for="ID_Superadmin">ID Superadmin</label>
+        <input type="text" name="ID_Superadmin" class="form-control" placeholder="Def..." required maxlength="12" oninput="validateAlphaNumeric(this)">
     </div>
     <div class="form-group">
         <label for="Correo">Correo</label>

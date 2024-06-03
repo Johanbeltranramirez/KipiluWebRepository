@@ -62,7 +62,7 @@ function togglePasswordVisibility() {
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
                 <label for="ID_Superadmin" style="color: #000000;">ID Superadmin:</label>
-                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
+                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Def..." required  maxlength="12" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                             <label for="Contrasena" class="form-label">Contraseña</label>
