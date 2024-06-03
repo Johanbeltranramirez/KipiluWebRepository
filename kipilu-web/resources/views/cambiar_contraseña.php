@@ -70,7 +70,7 @@ function togglePasswordVisibility() {
         <input type="text" name="ID_Superadmin" class="form-control" placeholder="Ejp:CC123456789 " required maxlength="12" oninput="validateAlphaNumeric(this)">
     </div>
     <div class="form-group">
-        <label for=Correo">Correo</label>
+        <label for="Correo">Correo</label>
         <input type="text" name="Correo" class="form-control" placeholder="Digite su correo" required maxlength="20" title="Solo se permiten letras.">
     </div>
     <div class="form-group">

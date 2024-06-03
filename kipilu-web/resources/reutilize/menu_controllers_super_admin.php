@@ -19,6 +19,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="administradores_controller.php">Gestionar Administradores</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="animales_controller.php" role="button">Gestionar Animales</a>
                     </li>
