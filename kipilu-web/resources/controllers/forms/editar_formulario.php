@@ -1,5 +1,5 @@
 <?php
-require_once 'logic/formularios-controller/viewModel_editar.php';
+require_once '../logic/formularios-controller/viewModel_editar.php';
 
 $viewModel = new FormularioUpdateViewModel();
 $formulario = null; // Inicializamos la variable $formulario
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <title>KIPILU - CRUD FORMULARIOS Editar Formulario</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -47,10 +47,6 @@ function validateNumber(input) {
   input.value = input.value.replace(/[^0-9]/g, '');
 }
 </script>
-
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
 
 <div class="container mt-5">
     <h1 class="text-center">Editar Formulario</h1>
@@ -93,7 +89,7 @@ function validateNumber(input) {
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Actualizar</button>
-            <a href="formularios_controller.php" class="btn btn-secondary mb-2 w-20">Cancelar</a>
+            <a href="../formularios_controller.php" class="btn btn-secondary mb-2 w-20">Volver</a>
         </div>
         <?php if ($message): ?>
             <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">

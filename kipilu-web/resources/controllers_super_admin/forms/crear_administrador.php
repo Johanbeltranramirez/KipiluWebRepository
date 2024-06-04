@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <title>KIPILU - CRUD ADMINISTRADORES Crear Administradores</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,7 +19,7 @@
                 const formData = new FormData(form);
 
                 try {
-                    const response = await fetch('logic/administradores-controller/viewModel_Crear.php', {
+                    const response = await fetch('../logic/administradores-controller/viewModel_Crear.php', {
                         method: 'POST',
                         body: formData
                     });
@@ -90,10 +90,6 @@ function validateAlphaNumeric(input) {
 }
 </script>
 
-<!--Nav(navegacion)-->
-<?php include '../reutilize/manu_controllers_super_admin.php'; ?>
-<!--Cierre Nav(navegacion)-->
-
 <div class="container mt-5">
     <h1 class="text-center">Agregar Nuevo Administrador</h1>
     <div id="notification" class="notification"></div>
@@ -130,7 +126,7 @@ function validateAlphaNumeric(input) {
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Crear</button>
-            <a href="administradores_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <a href="../administradores_controller.php" class="btn btn-primary mb-2 w-20">Volver</a>
         </div>
     </form>
 </div>

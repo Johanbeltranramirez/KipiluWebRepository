@@ -61,7 +61,7 @@
             echo '<td>' . $administradorData->P_Apellido . '</td>';
             echo '<td>' . $administradorData->S_Apellido . '</td>';
             echo '<td>';
-            echo '<a href="editar_administrador.php?id=' . $administradorData->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="forms/editar_administrador.php?id=' . $administradorData->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
             echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administradorData->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';
@@ -90,7 +90,7 @@
     <br>
     
     <div class="botones">
-        <a href="crear_administrador.php" class="btn btn-success mb-2">Agregar administrador</a>
+        <a href="forms/crear_administrador.php" class="btn btn-success mb-2">Agregar administrador</a>
     </div>
 
     <?php
@@ -118,13 +118,13 @@
         echo '<tbody>';
         foreach ($administradores as $administrador) {
             echo '<tr>';
-            echo '<td>' . $administrador->ID_Administrador . '</td>';
+            echo '<td>' . $administrador->ID_Administrador . '</td>'; 
             echo '<td>' . $administrador->P_Nombre . '</td>';
             echo '<td>' . $administrador->S_Nombre . '</td>';
             echo '<td>' . $administrador->P_Apellido . '</td>';
             echo '<td>' . $administrador->S_Apellido . '</td>';
             echo '<td>';
-            echo '<a href="editar_administrador.php?id=' . $administrador->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+           echo '<a href="forms/editar_administrador.php?id=' . $administrador->ID_Administrador . '" class="btn btn-warning mb-2 w-100">Editar</a>';
             echo '<a href="logic/administradores-controller/viewModel_eliminar.php?administradorId=' . $administrador->ID_Administrador . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
             echo '</td>';
             echo '</tr>';

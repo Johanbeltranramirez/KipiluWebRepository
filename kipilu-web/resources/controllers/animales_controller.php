@@ -75,7 +75,7 @@
                 echo '<td>' . htmlspecialchars($especies[$animalData->Especie_Animal] ?? 'Desconocido') . '</td>';
                 echo '<td>' . htmlspecialchars($estados[$animalData->Estado_Animal] ?? 'Desconocido') . '</td>';
                 echo '<td>';
-                echo '<a href="editar_animal.php?id=' . htmlspecialchars($animalData->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+                echo '<a href="forms/editar_animal.php?id=' . htmlspecialchars($animalData->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
                 echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . htmlspecialchars($animalData->ID_Animal) . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
                 echo '</td>';
                 echo '</tr>';
@@ -103,7 +103,7 @@
 <br><br>
 <div class="botones">
     <a href="crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
-    <a href="crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
+    <a href="forms/crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
 </div>
 
 <?php
@@ -148,7 +148,7 @@ if (!empty($animals)) {
         echo '<td>' . htmlspecialchars($especies[$animal->Especie_Animal] ?? 'Desconocido') . '</td>';
         echo '<td>' . htmlspecialchars($estados[$animal->Estado_Animal] ?? 'Desconocido') . '</td>';
         echo '<td>';
-        echo '<a href="editar_animal.php?id=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+        echo '<a href="forms/editar_animal.php?id=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
         echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
         echo '</td>';
         echo '</tr>';

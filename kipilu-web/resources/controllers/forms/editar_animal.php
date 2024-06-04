@@ -1,5 +1,5 @@
 <?php
-require_once 'logic/animales-controller/viewModel_editar.php';
+require_once '../logic/animales-controller/viewModel_editar.php';
 
 $viewModel = new AnimalUpdateViewModel();
 $animal = null; // Inicializamos la variable $animal
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <title>KIPILU - CRUD ANIMALES Editar Animal</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -53,10 +53,6 @@ function validateTextDes(input) {
     input.value = input.value.replace(/[0-9]/g, '');
 }
 </script>
-
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
 
 <div class="container mt-5">
     <h1 class="text-center">Editar Animal</h1>
@@ -115,7 +111,7 @@ function validateTextDes(input) {
             <br>
             <div class="mb-4">
                 <button type="submit" class="btn btn-success mb-2 w-20">Actualizar</button>
-                <a href="animales_controller.php" class="btn btn btn-secondary mb-2 w-20">Cancelar</a>
+                <a href="../animales_controller.php" class="btn btn btn-secondary mb-2 w-20">Volver</a>
             </div>
 
             <?php if (isset($message)): ?>

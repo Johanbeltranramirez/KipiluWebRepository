@@ -116,7 +116,7 @@ function validateNumber(input) {
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Crear</button>
-            <a href="adoptantes_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <a href="adoptantes_controller.php" class="btn btn-primary mb-2 w-20">Volver</a>
         </div>
     </form>
 </div>

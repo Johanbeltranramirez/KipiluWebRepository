@@ -64,7 +64,7 @@ if (isset($_GET['adoptante_id'])) {
         echo '<td>' . $adoptanteData->Direccion . '</td>';
         echo '<td>' . $adoptanteData->Telefono . '</td>';
         echo '<td>';
-        echo '<a href="editar_adoptantes.php?id=' . $adoptanteData->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+        echo '<a href="forms/editar_adoptantes.php?id=' . $adoptanteData->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
         echo '<a href="logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=' . $adoptanteData->ID_Adoptante . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
         echo '</td>';
         echo '</tr>';
@@ -130,7 +130,7 @@ if (!empty($adoptantes)) {
         echo '<td>' . $adoptante->Direccion . '</td>';
         echo '<td>' . $adoptante->Telefono . '</td>';
         echo '<td>';
-        echo '<a href="editar_adoptantes.php?id=' . $adoptante->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+        echo '<a href="forms/editar_adoptantes.php?id=' . $adoptante->ID_Adoptante . '" class="btn btn-warning mb-2 w-100">Editar</a>';
         echo '<a href="logic/adoptantes-controller/viewModel_Eliminar.php?adoptanteId=' . $adoptante->ID_Adoptante . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
         echo '</td>';
         echo '</tr>';

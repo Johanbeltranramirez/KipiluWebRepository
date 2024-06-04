@@ -41,7 +41,7 @@
 
             function showAlert(type, message) {
                 const alertDiv = document.createElement('div');
-                alertDiv.classList.add('alert', `alert-${type}`, 'mt-3');
+                alertDiv.classList.add('alert', alert-${type}, 'mt-3');
                 alertDiv.setAttribute('role', 'alert');
                 alertDiv.textContent = message;
 
@@ -67,10 +67,6 @@ function validateTextDes(input) {
     input.value = input.value.replace(/[0-9]/g, '');
 }
 </script>
-
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
 
 <div class="container mt-5">
     <h1 class="text-center">Agregar Nuevo Animal</h1>
@@ -130,7 +126,7 @@ function validateTextDes(input) {
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Crear</button>
-            <a href="animales_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <a href="animales_controller.php" class="btn btn-primary mb-2 w-20">Volver</a>
         </div>
     </form>
 </div>

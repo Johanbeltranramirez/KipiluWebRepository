@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIPILU - CRUD ANIMALES Crear Raza</title>
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -20,7 +20,7 @@
                 const formData = new FormData(form);
 
                 try {
-                    const response = await fetch('logic/animales-controller/viewModel_crear_raza.php', {
+                    const response = await fetch('../logic/animales-controller/viewModel_crear_raza.php', {
                         method: 'POST',
                         body: formData
                     });
@@ -63,10 +63,6 @@
 </head>
 <body>
 
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
-
 <div class="container mt-5">
     <h1 class="text-center">Agregar Nueva Raza</h1>
     <form id="razaForm" action="logic/animales-controller/viewModel_crear_raza.php" method="POST" class="custom-form">
@@ -77,7 +73,7 @@
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Crear Raza</button>
-            <a href="animales_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <a href="../animales_controller.php" class="btn btn-primary mb-2 w-20">Volver</a>
         </div>
     </form>
 </div>

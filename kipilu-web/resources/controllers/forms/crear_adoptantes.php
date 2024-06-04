@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <title>KIPILU - CRUD ADOPTANTES Crear Adoptante</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -18,7 +18,7 @@
                 const formData = new FormData(form);
 
                 try {
-                    const response = await fetch('logic/adoptantes-controller/viewModel_Crear.php', {
+                    const response = await fetch('../logic/adoptantes-controller/viewModel_Crear.php', {
                         method: 'POST',
                         body: formData
                     });
@@ -74,10 +74,6 @@ function validateNumber(input) {
 }
 </script>
 
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
-
 <div class="container mt-5">
     <h1 class="text-center">Agregar Nuevo Adoptante</h1>
     <div id="notification" class="notification"></div>
@@ -116,7 +112,7 @@ function validateNumber(input) {
         <br>
         <div class="mb-4">
             <button type="submit" class="btn btn-success mb-2 w-20">Crear</button>
-            <a href="adoptantes_controller.php" class="btn btn-primary mb-2 w-20">Volver al inicio</a>
+            <a href="../adoptantes_controller.php" class="btn btn-primary mb-2 w-20">Volver</a>
         </div>
     </form>
 </div>

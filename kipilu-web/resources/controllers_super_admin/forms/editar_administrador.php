@@ -1,5 +1,5 @@
 <?php
-require_once 'logic/administradores-controller/viewModel_editar.php';
+require_once '../logic/administradores-controller/viewModel_editar.php';
 
 $viewModel = new AdministradorUpdateViewModel();
 $administrador = null; // Inicializamos la variable $administrador
@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'S_Apellido' => $_POST['S_Apellido'],
         'Contrasena' => $_POST['Contrasena']
     ];
-
     $administradorId = $_POST['ID_Administrador']; // Obtenemos el ID del administrador del formulario
     $success = $viewModel->updateAdministrador($administradorId, $administradorData);
     if ($success) {
@@ -67,16 +66,13 @@ function togglePasswordVisibility() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/icon/admin_icon.png">
     <title>KIPILU - CRUD ADMINISTRADOR Editar Administrador</title>
-    <link rel="stylesheet" href="../css/controllers_styles/formulario_crear.css">
+    <link rel="stylesheet" href="../../css/controllers_styles/formulario_crear.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-<!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
-<!--Cierre Nav(navegacion)-->
 
 <div class="container mt-5">
     <h1 class="text-center">Editar Administrador</h1>
@@ -116,7 +112,7 @@ function togglePasswordVisibility() {
 <br>
 <div class="mb-4">
     <button type="submit" class="btn btn-success mb-2 w-20">Actualizar</button>
-    <a href="administradores_controller.php" class="btn btn btn-secondary mb-2 w-20">Volver al inicio</a>
+    <a href="../administradores_controller.php" class="btn btn btn-secondary mb-2 w-20">Volver</a>
 </div>
 <?php if ($message): ?>
 <div class="alert alert-<?php echo $message['type']; ?> mt-3" role="alert">
