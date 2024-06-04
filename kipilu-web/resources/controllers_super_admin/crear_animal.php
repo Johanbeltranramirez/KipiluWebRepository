@@ -41,7 +41,7 @@
 
             function showAlert(type, message) {
                 const alertDiv = document.createElement('div');
-                alertDiv.classList.add('alert', alert-${type}, 'mt-3');
+                alertDiv.classList.add('alert', `alert-${type}`, 'mt-3');
                 alertDiv.setAttribute('role', 'alert');
                 alertDiv.textContent = message;
 

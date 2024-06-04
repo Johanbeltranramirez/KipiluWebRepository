@@ -41,7 +41,7 @@
 
             function showAlert(type, message) {
                 const alertDiv = document.createElement('div');
-                alertDiv.classList.add('alert', alert-${type}, 'mt-3');
+                alertDiv.classList.add('alert', `alert-${type}`, 'mt-3');
                 alertDiv.setAttribute('role', 'alert');
                 alertDiv.textContent = message;
 
@@ -82,7 +82,7 @@ function validateTextDes(input) {
                 <option>Selecciona una raza</option>
                 <?php
                 require_once 'logic/animales-controller/viewModel_leer.php';
-                $viewModel = new AnimalsViewModel('http://192.168.1.7:3000/api');
+                $viewModel = new AnimalsViewModel('http://192.168.101.17:3000/api');
                 $razas = $viewModel->fetchRazas();
                 foreach ($razas as $raza) {
                     echo '<option value="' . $raza['ID_Raza'] . '">' . $raza['Nombre_Raza'] . '</option>';

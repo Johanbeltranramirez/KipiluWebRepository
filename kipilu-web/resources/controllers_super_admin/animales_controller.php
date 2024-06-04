@@ -53,7 +53,7 @@
                 'text' => 'Por favor, ingrese un ID de animal para realizar la búsqueda.'
             ];
         } else {
-            $viewModel = new AnimalSearchViewModel('http://192.168.1.7:3000/api/');
+            $viewModel = new AnimalSearchViewModel('http://192.168.101.17:3000/api/');
             $animalData = $viewModel->fetchAnimal($animalId);
 
             // Arrays de mapeo para los nombres
@@ -102,7 +102,7 @@
         <?php endif; ?>
 <br><br>
 <div class="botones">
-    <a href="forms/crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
+    <a href="crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
     <a href="forms/crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
 </div>
 

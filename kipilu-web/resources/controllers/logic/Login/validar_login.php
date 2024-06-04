@@ -50,7 +50,7 @@ class LoginViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'http://192.168.1.7:3000'; // Reemplaza con la URL correcta de tu API
+    $apiUrl = 'http://192.168.101.17:3000'; // Reemplaza con la URL correcta de tu API
 
     // Crear una instancia del ViewModel de Login
     $loginViewModel = new LoginViewModel($apiUrl);
