@@ -90,7 +90,7 @@ function togglePasswordVisibility() {
         
         <div class="button-container d-flex justify-content-between">
             <input type="submit" value="Restablecer" class="btn-submit"></input>
-            <a href="login_superAdmin.php" class="btn btn-secondary">Cancelar</a>
+            <a href="superadmin.php" class="btn btn-secondary">Cancelar</a>
         </div>
     </form>
 </div>
