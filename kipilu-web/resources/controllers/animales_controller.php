@@ -53,7 +53,7 @@
                 'text' => 'Por favor, ingrese un ID de animal para realizar la búsqueda.'
             ];
         } else {
-            $viewModel = new AnimalSearchViewModel('http://192.168.101.173000/api/');
+            $viewModel = new AnimalSearchViewModel('http://192.168.1.7:3000/api/');
             $animalData = $viewModel->fetchAnimal($animalId);
 
             // Arrays de mapeo para los nombres
