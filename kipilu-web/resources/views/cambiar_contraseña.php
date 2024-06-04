@@ -123,11 +123,12 @@ function togglePasswordVisibility() {
         <input type="password" name="newPassword" class="form-control" required>
     </div>
     <br>
-    <div class="button-container d-flex justify-content-between">
-        <input type="submit" value="Restablecer" class="btn-submit"></input>
-        <a href="superadmin.php" class="btn btn-secondary">Cancelar</a>
-    </div>
-</form>
+        
+        <div class="button-container d-flex justify-content-between">
+            <input type="submit" value="Restablecer" class="btn-submit"></input>
+            <a href="superadmin.php" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
 </div>
 
 </div>

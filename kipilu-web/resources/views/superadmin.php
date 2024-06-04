@@ -58,7 +58,7 @@ class LoginViewModelSuperAdmin {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'http://192.168.2.15:3000'; // Reemplaza con la URL correcta de tu API
+    $apiUrl = 'http://192.168.1.7:3000'; // Reemplaza con la URL correcta de tu API
 
     // Crear una instancia del ViewModel de Login del Super Admin
     $loginViewModelSuperAdmin = new LoginViewModelSuperAdmin($apiUrl);
@@ -142,6 +142,10 @@ function togglePasswordVisibility() {
                     <?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?>
                 </div>
             <?php endif; ?>
+
+            <div>
+            <a href="cambiar_contraseña.php" style="text-decoration: none;">¿Olvidó su contraseña?</a>
+            </div>
         </form>
     </div>
 </body>
