@@ -15,14 +15,14 @@ class AdministradorViewModel {
 
     public function __construct() {
         
-        $this->api = new ApiKipilu('http://192.168.1.7:3000/api/');
+        $this->api = new ApiKipilu('http://192.168.2.15:3000/api/');
 
     }
 
     public function fetchAdministradores(){
         try {
             //Hacetr una solicitud GET a la API para obtener a los administradores
-            $response = file_get_contents('http://192.168.1.7:3000/api/administradores');
+            $response = file_get_contents('http://192.168.2.15:3000/api/administradores');
 
             //Decodicar la respuesta JSON 
             $administradoresData = json_decode($response, true);

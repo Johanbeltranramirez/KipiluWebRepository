@@ -56,7 +56,7 @@ function togglePasswordVisibility() {
     <div class="login-container">
         <form action="../controllers/logic/Login/validar_login.php" method="post">
         <a href="login_administrador.php" class="btn-admin">Admin</a>
-            <a href="login_superAdmin.php" class="btn-super-admin">Super Admin</a>
+            <a href="superadmin.php" class="btn-super-admin">Super Admin</a>
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
                 <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>

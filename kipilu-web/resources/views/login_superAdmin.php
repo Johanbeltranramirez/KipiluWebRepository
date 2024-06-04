@@ -11,10 +11,10 @@ unset($_SESSION['error_message']); // Limpiar el mensaje de error después de mo
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - Iniciar Sesión Super Admin</title>
+    <title>KIPILU - Iniciar Sesión SUPER ADMIN</title>
     <link rel="icon" href="img/logo.ico">
     <!--PROPIO-->
-    <link rel="stylesheet" href="../css/login_superAdmin.css">
+    <link rel="stylesheet" href="../css/login_administrador.css">
     <!--BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -54,15 +54,13 @@ function togglePasswordVisibility() {
 
 <body>
     <div class="login-container">
-        <form action="../controllers/logic/Login/validar_login.php" method="post">
-            <div class="btn-group">
+        <form action="../controllers_super_admin/logic/Login/validar_login_superAdmin.php" method="post">
             <a href="login_administrador.php" class="btn-admin">Admin</a>
             <a href="login_superAdmin.php" class="btn-super-admin">Super Admin</a>
-            </div>
-            <h2 style="text-align: center;">Iniciar Sesión</h2><br>
+            <h2 style="text-align: center;">Iniciar Sesión Super Admin</h2><br>
             <div class="input-container">
-                <label for="ID_Superadmin" style="color: #000000;">ID Superadmin:</label>
-                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Def..." required  maxlength="12" oninput="validateAlphaNumeric(this)">
+                <label for="ID_SuperAdmin" style="color: #000000;">ID Super Admin:</label>
+                <input type="text" name="ID_SuperAdmin" id="ID_SuperAdmin" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                             <label for="Contrasena" class="form-label">Contraseña</label>
@@ -73,10 +71,8 @@ function togglePasswordVisibility() {
                                 </button>
                             </div>
             </div>
-            <input href="menu_controllers_sa.php" type="submit" value="Ingresar">
+            <input href="menu_controllers_superAdmin.php"  type="submit" value="Ingresar">
             <a href="inicio.php" class="btn btn-secondary mt-2" style="text-decoration: none; border-radius: 15px; width: 100%;">Volver al inicio</a>
-            <br>
-
             <!-- Manejo de errores -->
             <?php if ($error_message): ?>
               <div class="alert alert-danger mt-3" role="alert" style="color: red;">
@@ -88,8 +84,8 @@ function togglePasswordVisibility() {
                   }, 3000);
                </script>
              <?php endif; ?>
-        </form>            
-        <a href="cambiar_contraseña.php" style="text-decoration: none;">¿Olvidó su contraseña?</a>
+
+        </form>
     </div>
 </body>
 </html>
