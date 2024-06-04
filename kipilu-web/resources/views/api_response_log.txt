@@ -12,3 +12,8 @@
 {"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"def1092001002@$"}}
 {"success":false,"message":"ID_Superadmin o Contrasena incorrectos"}
 {"success":false,"message":"ID_Superadmin o Contrasena incorrectos"}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"def1092001002@$"}}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"piopio"}}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"nikollinda"}}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"karennikol"}}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"nicolvera"}}

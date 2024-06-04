@@ -133,6 +133,9 @@ function togglePasswordVisibility() {
             </div>
             <input type="submit" value="Ingresar">
             <a href="inicio.php" class="btn btn-secondary mt-2" style="text-decoration: none; border-radius: 15px; width: 100%;">Volver al inicio</a>
+            <br>
+            <a href="cambiar_contraseña.php">¿Olvidó su Contraseña?</a>
+
             <!-- Manejo de errores -->
             <?php if (isset($_SESSION['error_message'])): ?>
                 <div class="alert alert-danger mt-3" role="alert" style="color: red;">
