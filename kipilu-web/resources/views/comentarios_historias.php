@@ -52,7 +52,7 @@ function validateText(input) {
                                 </div>
                                 <div class="form-group">
                                     <label for="Comentario">Comentario:</label>
-                                    <textarea class="form-control" id="Comentario" name="Comentario" placeholder="Digite su comentario" maxlength="70" required></textarea>
+                                    <textarea class="form-control" id="Comentario" name="Comentario" placeholder="Digite su comentario(Maximo 70 carácteres)" maxlength="70" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Enviar comentario</button>
                             </form>
