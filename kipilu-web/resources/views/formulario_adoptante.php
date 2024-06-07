@@ -71,10 +71,6 @@
                 alertDiv.textContent = message;
 
                 form.appendChild(alertDiv);
-
-                setTimeout(() => {
-                    alertDiv.remove();
-                }, 3000);
             }
         });
     </script>
