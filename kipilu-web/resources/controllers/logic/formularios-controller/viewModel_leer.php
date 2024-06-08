@@ -15,13 +15,13 @@ class FormsViewModel {
     private $api;
 
     public function __construct() {
-        $this->api = new ApiKipilu('https://kipilubackendrepository-2.onrender.com/api/');
+        $this->api = new ApiKipilu('https://kipilubackendrepository-3.onrender.com/api/');
     }
 
     public function fetchForms() {
         try {
             // Hacer una solicitud GET a la API para obtener los formularios
-            $response = file_get_contents('https://kipilubackendrepository-2.onrender.com/api/formularios');
+            $response = file_get_contents('https://kipilubackendrepository-3.onrender.com/api/formularios');
             
             // Decodificar la respuesta JSON
             $formsData = json_decode($response, true);

@@ -59,7 +59,7 @@ class AdoptantesViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'https://kipilubackendrepository-2.onrender.com/api';
+    $apiUrl = 'https://kipilubackendrepository-3.onrender.com/api';
 
     // Crear una instancia del ViewModel de Adoptantes
     $adoptantesViewModel = new AdoptantesViewModel($apiUrl);

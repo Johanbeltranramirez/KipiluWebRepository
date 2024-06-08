@@ -11,7 +11,7 @@ class ApiKipilu {
 
 // Crear una instancia de la clase ApiKipilu con la URL base de la API
 
-$api = new ApiKipilu('https://kipilubackendrepository-2.onrender.com/api');
+$api = new ApiKipilu('https://kipilubackendrepository-3.onrender.com/api');
 
 
 ?>

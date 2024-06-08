@@ -47,7 +47,7 @@ $message = null;
 if (isset($_GET['adoptante_id'])) {
     $adoptanteId = $_GET['adoptante_id'];
 
-    $viewModel = new AdoptanteSearchViewModel('https://kipilubackendrepository-2.onrender.com/api/');
+    $viewModel = new AdoptanteSearchViewModel('https://kipilubackendrepository-3.onrender.com/api/');
     $adoptanteData = $viewModel->fetchAdoptante($adoptanteId);
 
     if ($adoptanteData) {

@@ -82,7 +82,7 @@ function validateTextDes(input) {
                 <option>Selecciona una raza</option>
                 <?php
                 require_once 'logic/animales-controller/viewModel_leer.php';
-                $viewModel = new AnimalsViewModel('https://kipilubackendrepository-2.onrender.com/api');
+                $viewModel = new AnimalsViewModel('https://kipilubackendrepository-3.onrender.com/api');
                 $razas = $viewModel->fetchRazas();
                 foreach ($razas as $raza) {
                     echo '<option value="' . $raza['ID_Raza'] . '">' . $raza['Nombre_Raza'] . '</option>';

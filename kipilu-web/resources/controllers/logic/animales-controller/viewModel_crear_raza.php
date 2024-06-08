@@ -58,7 +58,7 @@ class RazasViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'https://kipilubackendrepository-2.onrender.com/api'; // Reemplaza 'puerto' con el puerto de tu API
+    $apiUrl = 'https://kipilubackendrepository-3.onrender.com/api'; // Reemplaza 'puerto' con el puerto de tu API
 
     // Crear una instancia del ViewModel de Razas
     $razasViewModel = new RazasViewModel($apiUrl);

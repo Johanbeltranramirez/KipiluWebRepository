@@ -47,7 +47,7 @@
     if (isset($_GET['administrador_id'])) {
         $administradorId = $_GET['administrador_id'];
 
-        $viewModel = new AdministradorSearchViewModel('https://kipilubackendrepository-2.onrender.com/api/');
+        $viewModel = new AdministradorSearchViewModel('https://kipilubackendrepository-3.onrender.com/api/');
         $administradorData = $viewModel->fetchAdministrador($administradorId);
 
         if ($administradorData) {

@@ -11,7 +11,7 @@ class CommentsViewModel {
     public function __construct() {
         // Definimos la URL base de la API
 
-        $this->apiBaseUrl = 'https://kipilubackendrepository-2.onrender.com/api/';
+        $this->apiBaseUrl = 'https://kipilubackendrepository-3.onrender.com/api/';
 
     }
 

@@ -53,7 +53,7 @@
                 'text' => 'Por favor, ingrese un ID de animal para realizar la búsqueda.'
             ];
         } else {
-            $viewModel = new AnimalSearchViewModel('https://kipilubackendrepository-2.onrender.com/api/');
+            $viewModel = new AnimalSearchViewModel('https://kipilubackendrepository-3.onrender.com/api/');
             $animalData = $viewModel->fetchAnimal($animalId);
 
             // Arrays de mapeo para los nombres
