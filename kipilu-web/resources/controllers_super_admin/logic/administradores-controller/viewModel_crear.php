@@ -56,7 +56,7 @@ class AdministradoresViewModel {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
-    $apiUrl = 'https://kipilubackendrepository-3.onrender.com'; // Reemplaza con la URL correcta de tu API
+    $apiUrl = 'https://kipilubackendrepository-3.onrender.com/api'; // Reemplaza con la URL correcta de tu API
 
     // Crear una instancia del ViewModel de Administradores
     $AdministradoresViewModel = new AdministradoresViewModel($apiUrl);
