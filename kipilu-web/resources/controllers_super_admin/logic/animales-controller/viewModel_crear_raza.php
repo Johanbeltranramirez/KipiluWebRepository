@@ -1,32 +1,32 @@
 <?php
 
-class Animal {
-    public $Nombre_Animal;
-    public $Razas;
-    public $Sexo;
-    public $Foto;
-    public $Descripcion;
-    public $Especie_Animal;
-    public $Estado_Animal;
+class Raza {
+    public $ID_Raza;
+    public $Nombre_Raza;
 }
 
-class AnimalesViewModel {
+class RazasViewModel {
     private $apiUrl;
 
     public function __construct($apiUrl) {
         $this->apiUrl = $apiUrl;
     }
 
-    public function createAnimal($animalData) {
+    public function createRaza($nombreRaza) {
         try {
+            // Datos a enviar para crear la raza
+            $data = array(
+                'Nombre_Raza' => $nombreRaza
+            );
+
             // Inicializar cURL
             $curl = curl_init();
 
             // Configurar opciones de cURL
-            curl_setopt($curl, CURLOPT_URL, $this->apiUrl . '/animales/create');
+            curl_setopt($curl, CURLOPT_URL, $this->apiUrl . '/razas/create');
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_POST, true);
-            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($animalData));
+            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
 
             // Ejecutar la solicitud cURL
             $response = curl_exec($curl);
@@ -37,20 +37,20 @@ class AnimalesViewModel {
             }
 
             // Decodificar la respuesta JSON
-            $animalData = json_decode($response, true);
+            $razaData = json_decode($response, true);
 
             // Cerrar la sesión cURL
             curl_close($curl);
 
-            // Verificar si se creó correctamente el animal
-            if (isset($animalData['success']) && $animalData['success'] === true) {
-                return true; // Animal creado correctamente
+            // Verificar si se creó correctamente la raza
+            if (isset($razaData['success']) && $razaData['success'] === true) {
+                return true; // Raza creada correctamente
             } else {
-                return false; // Error al crear el animal
+                return false; // Error al crear la raza
             }
         } catch (Exception $e) {
             echo 'ERROR: ' . $e->getMessage();
-            return false; // Error al crear el animal
+            return false; // Error al crear la raza
         }
     }
 }
@@ -60,22 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // URL de la API
     $apiUrl = 'https://kipilubackendrepository-3.onrender.com/api'; // Reemplaza 'puerto' con el puerto de tu API
 
-    // Crear una instancia del ViewModel de Animales
-    $animalesViewModel = new AnimalesViewModel($apiUrl);
+    // Crear una instancia del ViewModel de Razas
+    $razasViewModel = new RazasViewModel($apiUrl);
 
-    // Obtener los datos del animal del formulario
-    $animalData = array(
-        'Nombre_Animal' => $_POST["Nombre_Animal"],
-        'Razas' => $_POST["Razas"],
-        'Sexo' => $_POST["Sexo"],
-        'Foto' => $_POST["Foto"],
-        'Descripcion' => $_POST["Descripcion"],
-        'Especie_Animal' => $_POST["Especie_Animal"],
-        'Estado_Animal' => $_POST["Estado_Animal"]
-    );
+    // Obtener el nombre de la raza del formulario
+    $nombreRaza = $_POST["nombreRaza"];
 
-    // Crear el nuevo animal y obtener el resultado
-    $resultado = $animalesViewModel->createAnimal($animalData);
+    // Crear la nueva raza y obtener el resultado
+    $resultado = $razasViewModel->createRaza($nombreRaza);
 
     // Devolver el resultado al formulario
     echo json_encode(array("success" => $resultado));
