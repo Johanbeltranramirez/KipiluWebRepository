@@ -60,7 +60,7 @@ class AnimalsViewModel {
     public function fetchRazas() {
         try {
             // Hacer una solicitud GET a la API para obtener las razas
-            $response = file_get_contents('http://192.168.1.7:3000/api/razas');
+            $response = file_get_contents('https://kipilubackendrepository-3.onrender.com/api/razas');
 
             
             // Decodificar la respuesta JSON
