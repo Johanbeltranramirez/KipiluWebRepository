@@ -1,7 +1,7 @@
 <?php
 require_once '../logic/adoptantes-controller/viewModel_Editar.php';
 
-$viewModel = new AdoptanteEditViewModel('http://192.168.1.7:3000/api/');
+$viewModel = new AdoptanteEditViewModel('https://kipilubackendrepository-2.onrender.com/api/');
 $adoptante = null; // Inicializamos la variable $adoptante
 $message = null;
 
