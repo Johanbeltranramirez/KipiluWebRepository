@@ -44,7 +44,7 @@
         <!-- Botones -->
         <div class="btn-group">
             <button type="button" class="btn btn-outline-secondary">FILPO</button>
-            <button type="button" class="btn btn-outline-secondary">MONELLA</button>
+            <button type="button" class="btn btn-outline-secondary">MONELLO</button>
             <button type="button" class="btn btn-outline-secondary">NEQUI</button>
             <button type="button" class="btn btn-outline-secondary">DAVIPLATA</button>
         </div>
