@@ -65,7 +65,7 @@
 
 <div class="container mt-5">
     <h1 class="text-center">Agregar Nueva Raza</h1>
-    <form id="razaForm" action="logic/animales-controller/viewModel_crear_raza.php" method="POST" class="custom-form">
+    <form id="razaForm" action="../logic/animales-controller/viewModel_crear_raza.php" method="POST" class="custom-form">
         <div class="form-group">
             <label for="nombreRaza">Nombre de la raza:</label>
             <input type="text" name="nombreRaza" class="form-control" required maxlength="20" oninput="validateText(this)">
