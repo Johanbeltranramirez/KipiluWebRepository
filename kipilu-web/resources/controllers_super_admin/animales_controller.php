@@ -19,7 +19,7 @@
 <body>
 
 <!--Nav(navegacion)-->
-<?php include '../reutilize/menu_controllers.php'; ?>
+<?php include '../reutilize/menu_controllers_super_admin.php'; ?>
 <!--Cierre Nav(navegacion)-->
 
 <div class="container">
