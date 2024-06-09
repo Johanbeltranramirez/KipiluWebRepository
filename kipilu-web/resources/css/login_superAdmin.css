@@ -1,134 +1,141 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('../../assets/img/login-admin/login_SA.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end; /* Alinea el contenedor al final (derecha) */
-    align-items: center; /* Centra el contenido verticalmente */
-    padding-right: 15%; /* Espaciado desde la derecha según sea necesario */
-  }
-  
-  .login-container {
-    background: linear-gradient(to right, #e6f1f1, #afedf3cc, #fdea95e7, #f9a073);
-    padding-block: 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: #000000;
-    width: 500px; /* Ancho fijo para el contenedor */
-  }
-  
-  form {
-    max-width: 315px;
-    margin: 0 auto;
-    padding-block: 10px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 15px; /* Ajusta el redondeo de los campos de entrada */
-    padding-left: 30px; /* Espacio para iconos */
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 15px; /* Ajusta el redondeo del botón de envío */
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #ff6b6b; /* Cambio de color al pasar el ratón */
-  }
-  
-  h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #000000;
-  }
+  font-family: Arial, sans-serif;
+  background-image: url('../../assets/img/login-admin/login_SA.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenedor al final (derecha) */
+  align-items: center; /* Centra el contenido verticalmente */
+  padding: 0 15%; /* Espaciado desde la derecha según sea necesario */
+}
 
-  
-  .error-message {
-    color: red;
-    margin-top: 10px;
-  }
-  
-  .input-container {
-    position: relative;
-  }
-  
-  .input-container i {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    color: #333;
-  }
-  
-  #ID_Administrador {
-    padding-left: 30px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 5px 50%;
-  }
-  
-  #Contrasena {
-    padding-left: 30px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 5px 50%;
-  }
-  
-  .btn-icon {
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 5px 50%;
-    padding-left: 30px;
-    cursor: pointer;
-  }
-  
-/* Estilos específicos para los botones de Admin y Super Admin */
-.btn-admin, .btn-super-admin {
-    display: inline-block;
-    width: 120px; 
-    padding: 10px;
-    margin-bottom: 15px;
-    color: #000000;
-    text-align: center;
-    border-radius: 15px;
-    text-decoration: none;
-  }
-  
-  .btn-admin {
-    background: linear-gradient(to right, #92f2fbcc, #bdfbfb);
-    margin-right: 10px; /* Espaciado a la derecha */
-  }
+.login-container {
+  background: linear-gradient(to right, #e6f1f1, #afedf3cc, #fdea95e7, #f9a073);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #000000;
+  width: 90%; /* Ancho máximo relativo */
+  max-width: 500px; /* Ancho máximo absoluto */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
 
-  .btn-admin:hover {
-    background: linear-gradient(to right,#bdfbfb,  #92f2fbcc);
-  }
+form {
+  max-width: 315px;
+  margin: 0 auto;
+}
 
-  .btn-super-admin {
-    background: linear-gradient(to right, #fdea95e7, #fdaa81);
-    margin-left: 55px;
-  }
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #ff6b6b;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #000000;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #333;
+}
+
+#ID_Administrador,
+#Contrasena,
+.btn-icon {
+  padding-left: 40px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+}
+
+/* Estilos para los botones de Admin y Super Admin */
+.btn-admin,
+.btn-super-admin {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #000000;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-admin {
+  background: linear-gradient(to right, #92f2fbcc, #bdfbfb);
+}
+
+.btn-admin:hover {
+  background: linear-gradient(to right, #bdfbfb, #92f2fbcc);
+  color: #fff;
+}
+
+.btn-super-admin {
+  background: linear-gradient(to right, #fdea95e7, #fdaa81);
+}
 
 .btn-super-admin:hover {
-    background: linear-gradient(to right,  #fdaa81, #fdea95e7);
+  background: linear-gradient(to right, #fdaa81, #fdea95e7);
+  color: #fff;
+}
+
+/* Media query para ajustes en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+    border-radius: 15px;
   }
 
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+  }
 
-
-  
+  .btn-admin,
+  .btn-super-admin {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+ 
