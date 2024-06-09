@@ -10,7 +10,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 if (response.success) {
-                    $('#result').html('<div class="alert alert-success">¡Gracias por comentar!, tu opinión nos importa ;3</div>');
+                    $('#result').html('<div class="alert alert-success">¡Gracias por comentar!, tu opinión nos importa 👻​</div>');
                     $('#commentForm')[0].reset(); // Resetear el formulario
                     loadComments(); // Recargar comentarios
                 } else {
