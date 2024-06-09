@@ -30,52 +30,44 @@ function validateText(input) {
 <?php include '../reutilize/menu.php'; ?>
 <!-- Cierre Nav (navegacion) -->
 
-<main>
-    <article class="caja">
+<main class="container" align="center">
+    <article class="row">
         <!-- Formulario de Comentarios -->
-        <section class="cajaderecha">
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <div class="form-container">
-                            <h1 class="text-center">COMENTARIOS</h1>
-                            <h5 class="text-center">Hola!</h5>
-                            <h5 class="text-center">Déjanos tu opinión</h5>
-                            <form id="commentForm">
-                                <div class="form-group">
-                                    <label for="Nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" required oninput="validateText(this)" >
-                                </div>
-                                <div class="form-group">
-                                    <label for="Apellido">Apellido:</label>
-                                    <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="25" required oninput="validateText(this)">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Comentario">Comentario:</label>
-                                    <textarea class="form-control" id="Comentario" name="Comentario" placeholder="Digite su comentario(Máximo de 70 carácteres)" maxlength="70" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block">Enviar comentario</button>
-                            </form>
-                            <div id="result" class="mt-3"></div>
-                        </div>
-
-                        <h2 class="mt-5 text-center">Poste de comentarios</h2>
-                        <hr style="border: 1px solid #A52020;">
-                        <ul id="commentsList" class="list-group Comentaristas-list show-Comentaristas">
-                            <!-- Aquí se cargarán los comentarios -->
-                        </ul>
-                        <button class="btn btn-primary btn-block show-comments">Mostrar Comentarios</button>
-                        <button class="btn btn-primary btn-block hide-comments">Ocultar Comentarios</button>
+        <section class="col-md-6 mt-5">
+            <div class="form-container">
+                <h1 class="text-center">COMENTARIOS</h1>
+                <h5 class="text-center">Hola!</h5>
+                <h5 class="text-center">Déjanos tu opinión</h5>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="Nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Digite un nombre" maxlength="25" required oninput="validateText(this)" >
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="Apellido">Apellido:</label>
+                        <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Digite un apellido" maxlength="25" required oninput="validateText(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Comentario">Comentario:</label>
+                        <textarea class="form-control" id="Comentario" name="Comentario" placeholder="Digite su comentario(Máximo de 70 carácteres)" maxlength="70" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar comentario</button>
+                </form>
+                <div id="result" class="mt-3"></div>
             </div>
+
+            <h2 class="mt-5 text-center">Poste de comentarios</h2>
+            <hr style="border: 1px solid #A52020;">
+            <ul id="commentsList" class="list-group Comentaristas-list show-Comentaristas">
+                <!-- Aquí se cargarán los comentarios -->
+            </ul>
+            <button class="btn btn-primary btn-block show-comments">Mostrar Comentarios</button>
+            <button class="btn btn-primary btn-block hide-comments">Ocultar Comentarios</button>
         </section>
 
         <!-- Historias de Exito -->
-        <section class="cajaizquierda">
-
+        <section class="col-md-6 mt-5">
             <?php include 'histories.php'; ?>
-
         </section>
     </article>
 </main>
