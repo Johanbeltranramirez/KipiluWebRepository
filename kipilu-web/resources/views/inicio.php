@@ -95,7 +95,6 @@
         <div class="row g-0">
             <div class="col-md-4">
                 <div class="card-img-container">
-                    <br>
                     <img src="../../assets/img/inicio/index4.jpeg" class="card-img-top img-fluid" alt="...">
                 </div>
             </div>
