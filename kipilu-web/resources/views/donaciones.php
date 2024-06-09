@@ -53,7 +53,7 @@
       <!-- Sección de donaciones de comida -->
       <section class="donaciones">
         <!-- Texto "DONACIÓN DE COMIDA" con línea continua -->
-        <h2 class="donacion-titulo">DONACIÓN DE COMIDA</h2>
+        <h2 class="donacion-titulo">DONACIÓN  COMIDA</h2>
         
         <!-- Rectángulo rojo con borde y fondo blanco -->
         <div class="rectangulo-rojo">
