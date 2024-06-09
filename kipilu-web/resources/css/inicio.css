@@ -27,6 +27,7 @@ body {
 .content-right {
     flex: 1;
     margin-bottom: 20px; /* Incrementar el margen inferior */
+    margin-left: 20px;
 }
 
 .content-text {
@@ -36,8 +37,7 @@ body {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .red-bullet {
