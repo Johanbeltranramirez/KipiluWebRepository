@@ -55,7 +55,7 @@
                         throw new Error('Error al enviar sus datos.');
                     }
 
-                    showAlert('success', 'Sus datos han sido registrados correctamente, por favor estar pendiente a su correo.');
+                    showAlert('success', 'Sus datos han sido registrados correctamente ​🥳​, por favor estar pendiente a su correo en un plazo de 7 días hábiles. Gracias<3');
 
                     // Limpiar el formulario después de crear el adoptante
                     form.reset();
