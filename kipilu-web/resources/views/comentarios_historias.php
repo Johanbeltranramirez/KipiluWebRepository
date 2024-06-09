@@ -37,7 +37,7 @@ function validateText(input) {
             <div class="form-container">
                 <h1 class="text-center">COMENTARIOS</h1>
                 <h5 class="text-center">Hola!</h5>
-                <h5 class="text-center">Déjanos tu opinión</h5>
+                <h5 class="text-center">Déjanos tu opinión con mucho respeto en este apartado 😉</h5>
                 <form id="commentForm">
                     <div class="form-group">
                         <label for="Nombre">Nombre:</label>
