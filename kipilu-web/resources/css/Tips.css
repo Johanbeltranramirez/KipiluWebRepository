@@ -39,6 +39,12 @@
     margin-top: 20px; 
 }
 
+.contenedor-externo {
+    display: flex;
+    justify-content: center;
+    padding: 0 100px;
+}
+
 .texto {
     flex-grow: 3; 
     text-align: justify; 
@@ -47,7 +53,7 @@
 
 .imagen {
     flex-shrink: 0; 
-    margin-left: 115px; 
+    margin-left: 50px; 
 }
 
 .texto p {
@@ -57,30 +63,33 @@ margin-bottom: 20px;
 .contenedor-externo {
 display: flex;
 justify-content: center; 
-padding: 0 100px; 
+padding: 0 35px; 
 }
 
 
 @media screen and (max-width: 768px) {
-.contact-us {
-max-width: 100%;
-margin-right: 0;
-}
-
-.imagen {
-margin-left: 0; 
-}
-
-.contenido1 {
-flex-direction: column; 
-align-items: flex-start; 
-}
-
-.titulo-letra {
-font-size: 30px; 
-}
-
-.texto {
-margin-left: 0;
-}
-}
+    :root {
+      --fontSize: 30; /* Reducir el tamaño de fuente base */
+    }
+  
+    .titulo {
+      margin-top: 5%; /* Utilizar un margen superior adaptable */
+    }
+  
+    .titulo-letra {
+      font-size: 2rem; /* Reducir el tamaño de fuente del título */
+    }
+  
+    .imagen {
+      margin-left: 17px; /* Eliminar el margen izquierdo en dispositivos móviles */
+    }
+  
+    .contenido1 {
+      flex-direction: column; /* Apilar el contenido verticalmente en dispositivos móviles */
+      align-items: flex-start; /* Alinear el contenido a la izquierda */
+    }
+  
+    .texto {
+      margin-left: 0; /* Eliminar el margen izquierdo del texto en dispositivos móviles */
+    }
+  }
