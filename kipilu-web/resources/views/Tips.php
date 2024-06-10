@@ -38,7 +38,7 @@
                         <a href="descargar.apk" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
                         <?php
 // Archivo a descargar
-$file ='';
+$file ='descargar.apk';
 
 // Verifica si el archivo existe
 if (file_exists($file)) {
