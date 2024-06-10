@@ -18,3 +18,4 @@
 {"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"karennikol"}}
 {"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"nicolvera"}}
 {"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"senaceet"}}
+{"success":true,"message":"Superadmin autenticado correctamente","data":{"ID_Superadmin":"Default01","Contrasena":"$2b$10$rtG7L6Q1qSRI5C9aQTUBT.kJ1S60dcL8w2lZ.3N0BjxXHK60G16ei"}}

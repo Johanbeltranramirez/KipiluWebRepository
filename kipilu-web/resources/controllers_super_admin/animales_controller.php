@@ -104,6 +104,7 @@
 <div class="botones">
     <a href="crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
     <a href="forms/crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
+    <a href="forms/eliminar_raza.php" class="btn btn-danger mb-2">Eliminar raza</a>
 </div>
 
 <?php
