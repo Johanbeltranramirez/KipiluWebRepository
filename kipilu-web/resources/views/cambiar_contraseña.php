@@ -119,8 +119,12 @@ function togglePasswordVisibility() {
         <input type="text" name="Telefono" class="form-control">
     </div>
     <div class="mb-1">
-        <label for="newPassword" class="form-label">Nueva contraseña</label>
-        <input type="password" name="newPassword" class="form-control" required>
+    <label for="Contrasena" class="form-label">Nueva Contraseña</label>
+                <div class="input-group">
+                    <input type="password" name="Contrasena" id="Contrasena" class="form-control"  required maxlength="20">
+                    <button class="btn btn-outline-secondary border-0" type="button" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye" id="password-toggle-icon"></i>
+                    </button>
     </div>
     <br>
         
