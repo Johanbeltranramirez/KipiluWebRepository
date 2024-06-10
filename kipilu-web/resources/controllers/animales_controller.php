@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - CRUD ANIMALES Leer Animales</title>
+    <title>KIPILU - CRUD ANIMALES</title>
     <script type="text/javascript">
         function confirmar() {
             return confirm('¿Estás seguro? Se eliminarán los datos.');
@@ -99,66 +99,68 @@
                 }, 3000);
             </script>
         </div>
-        <?php endif; ?>
-<br><br>
-<div class="botones">
-    <a href="crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
-    <a href="forms/crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
-</div>
+    <?php endif; ?>
 
-<?php
-require_once 'logic/animales-controller/viewModel_leer.php';
+    <br><br>
+    <div class="botones">
+        <a href="crear_animal.php" class="btn btn-success mb-2">Agregar animal</a>
+        <a href="forms/crear_raza.php" class="btn btn-success mb-2">Agregar raza</a>
+    </div>
 
-// Instancia del ViewModel de los animales
-$viewModel_Leer = new AnimalsViewModel();
+    <?php
+    require_once 'logic/animales-controller/viewModel_leer.php';
 
-// Obtener los animales
-$animals = $viewModel_Leer->fetchAnimals();
+    // Instancia del ViewModel de los animales
+    $viewModel_Leer = new AnimalsViewModel();
 
-// Arrays de mapeo para los nombres
-$especies = [1 => 'Canino', 2 => 'Felino'];
-$sexos = [1 => 'Hembra', 2 => 'Macho'];
-$estados = [1 => 'Adoptado', 2 => 'No adoptado', 3 => 'En proceso'];
+    // Obtener los animales
+    $animals = $viewModel_Leer->fetchAnimals();
 
-// Si hay animales, puedes mostrarlos en la vista
-if (!empty($animals)) {
-    echo '<table class="animal-table">';
-    echo '<thead>';
-    echo '<tr>';
-    echo '<th>ID_Animal</th>';
-    echo '<th>Nombre del Animal</th>';
-    echo '<th>Raza</th>';
-    echo '<th>Sexo</th>';
-    echo '<th>Foto</th>';
-    echo '<th>Descripción</th>';
-    echo '<th>Especie del Animal</th>';
-    echo '<th>Estado del Animal</th>';
-    echo '<th>Acciones</th>';
-    echo '</tr>';
-    echo '</thead>';
-    echo '<tbody>';
-    foreach ($animals as $animal) {
+    // Arrays de mapeo para los nombres
+    $especies = [1 => 'Canino', 2 => 'Felino'];
+    $sexos = [1 => 'Hembra', 2 => 'Macho'];
+    $estados = [1 => 'Adoptado', 2 => 'No adoptado', 3 => 'En proceso'];
+
+    // Si hay animales, puedes mostrarlos en la vista
+    if (!empty($animals)) {
+        echo '<table class="animal-table">';
+        echo '<thead>';
         echo '<tr>';
-        echo '<td>' . htmlspecialchars($animal->ID_Animal) . '</td>';
-        echo '<td>' . htmlspecialchars($animal->Nombre_Animal) . '</td>';
-        echo '<td>' . htmlspecialchars($animal->Raza) . '</td>';
-        echo '<td>' . htmlspecialchars($sexos[$animal->Sexo] ?? 'Desconocido') . '</td>';
-        echo '<td><img src="' . htmlspecialchars($animal->Foto) . '" alt="Foto de ' . htmlspecialchars($animal->Nombre_Animal) . '" style="max-width: 100px;"></td>';
-        echo '<td class="descripcion-cell">' . htmlspecialchars($animal->Descripcion) . '</td>';
-        echo '<td>' . htmlspecialchars($especies[$animal->Especie_Animal] ?? 'Desconocido') . '</td>';
-        echo '<td>' . htmlspecialchars($estados[$animal->Estado_Animal] ?? 'Desconocido') . '</td>';
-        echo '<td>';
-        echo '<a href="forms/editar_animal.php?id=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
-        echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
-        echo '</td>';
+        echo '<th>ID_Animal</th>';
+        echo '<th>Nombre del Animal</th>';
+        echo '<th>Raza</th>';
+        echo '<th>Sexo</th>';
+        echo '<th>Foto</th>';
+        echo '<th>Descripción</th>';
+        echo '<th>Especie del Animal</th>';
+        echo '<th>Estado del Animal</th>';
+        echo '<th>Acciones</th>';
         echo '</tr>';
+        echo '</thead>';
+        echo '<tbody>';
+        foreach ($animals as $animal) {
+            echo '<tr>';
+            echo '<td>' . htmlspecialchars($animal->ID_Animal) . '</td>';
+            echo '<td>' . htmlspecialchars($animal->Nombre_Animal) . '</td>';
+            echo '<td>' . htmlspecialchars($animal->Raza) . '</td>';
+            echo '<td>' . htmlspecialchars($sexos[$animal->Sexo] ?? 'Desconocido') . '</td>';
+            echo '<td><img src="' . htmlspecialchars($animal->Foto) . '" alt="Foto de ' . htmlspecialchars($animal->Nombre_Animal) . '" style="max-width: 100px;"></td>';
+            echo '<td class="descripcion-cell">' . htmlspecialchars($animal->Descripcion) . '</td>';
+            echo '<td>' . htmlspecialchars($especies[$animal->Especie_Animal] ?? 'Desconocido') . '</td>';
+            echo '<td>' . htmlspecialchars($estados[$animal->Estado_Animal] ?? 'Desconocido') . '</td>';
+            echo '<td>';
+            echo '<a href="forms/editar_animal.php?id=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-warning mb-2 w-100">Editar</a>';
+            echo '<a href="logic/animales-controller/viewModel_eliminar.php?animalId=' . htmlspecialchars($animal->ID_Animal) . '" class="btn btn-danger w-100" onclick="return confirmar();">Eliminar</a>';
+            echo '</td>';
+            echo '</tr>';
+        }
+        echo '</tbody>';
+        echo '</table>';
+    } else {
+        echo "<p class='text-center'>No se encontraron animales.</p>";
     }
-    echo '</tbody>';
-    echo '</table>';
-} else {
-    echo "<p class='text-center'>No se encontraron animales.</p>";
-}
-?>
+    ?>
+
 </div>
 <br>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

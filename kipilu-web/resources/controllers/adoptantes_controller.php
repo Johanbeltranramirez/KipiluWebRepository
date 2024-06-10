@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIPILU - CRUD ADOPTANTES Leer Adoptantes</title>
+    <title>KIPILU - CRUD ADOPTANTES</title>
     <script type="text/javascript">
         function confirmar() {
             return confirm('¿Estás seguro? Se eliminarán los datos.');
