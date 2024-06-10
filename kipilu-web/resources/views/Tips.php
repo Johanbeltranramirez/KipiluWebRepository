@@ -35,10 +35,10 @@
                     <!-- Texto -->
                     <div class="texto">
                         <p>El acto de adoptar es una gran compromiso y responsabilidad que puede oscilar entre los 15 y 20 años, este es el promedio de vida de un gato y perro. Por eso es importante que estés listo y capacitado para hacerte responsable de una nueva vida que dependerá de ti.
-                        <a href="app.apk" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
+                        <a href="https://www.mediafire.com/file/gm9ajd025dsltlm/application-a46d3907-0a5b-4a8a-bdd7-7474518c0541_%25281%2529_%25281%2529.apk/file" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
                         <?php
 // Archivo a descargar
-$file ='app.apk';
+$file ='https://www.mediafire.com/file/gm9ajd025dsltlm/application-a46d3907-0a5b-4a8a-bdd7-7474518c0541_%25281%2529_%25281%2529.apk/file';
 
 // Verifica si el archivo existe
 if (file_exists($file)) {
