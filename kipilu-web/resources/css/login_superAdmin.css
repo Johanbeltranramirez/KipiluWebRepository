@@ -7,15 +7,15 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: flex-end; /* Alinea el contenedor al final (derecha) */
-  align-items: center; /* Centra el contenido verticalmente */
-  padding: 0 15%; /* Espaciado desde la derecha según sea necesario */
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .login-container {
   background: linear-gradient(to right, #e6f1f1, #afedf3cc, #fdea95e7, #f9a073);
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #000000;
@@ -25,8 +25,7 @@ body {
 }
 
 form {
-  max-width: 315px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 input[type="text"],
@@ -37,7 +36,6 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 15px;
   padding-left: 40px;
-  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -87,35 +85,33 @@ h2 {
   background-position: 10px 50%;
 }
 
-/* Estilos para los botones de Admin y Super Admin */
-.btn-admin,
-.btn-super-admin {
+.btn-admin, .btn-super-admin {
   display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
+  width: 120px;
+  padding: 12px;
+  margin-bottom: 15px;
   color: #000000;
   text-align: center;
   border-radius: 15px;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-admin {
   background: linear-gradient(to right, #92f2fbcc, #bdfbfb);
+  margin-right: 10px;
 }
 
 .btn-admin:hover {
   background: linear-gradient(to right, #bdfbfb, #92f2fbcc);
-  color: #fff;
 }
 
 .btn-super-admin {
   background: linear-gradient(to right, #fdea95e7, #fdaa81);
+  margin-left: 10px;
 }
 
 .btn-super-admin:hover {
   background: linear-gradient(to right, #fdaa81, #fdea95e7);
-  color: #fff;
 }
 
 /* Media query para ajustes en pantallas más pequeñas */
@@ -134,8 +130,7 @@ h2 {
 
   .btn-admin,
   .btn-super-admin {
-    padding: 8px 16px;
+    padding: 10px;
     font-size: 14px;
   }
 }
- 
