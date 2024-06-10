@@ -35,7 +35,7 @@
                     <!-- Texto -->
                     <div class="texto">
                         <p>El acto de adoptar es una gran compromiso y responsabilidad que puede oscilar entre los 15 y 20 años, este es el promedio de vida de un gato y perro. Por eso es importante que estés listo y capacitado para hacerte responsable de una nueva vida que dependerá de ti.
-                        <a href="descargar.php" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
+                        <a href="descargar.apk" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
                         <?php
 // Archivo a descargar
 $file ='';
