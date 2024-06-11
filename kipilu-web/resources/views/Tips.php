@@ -67,7 +67,7 @@
                     <!-- Texto -->
                     <div class="texto">
                         <p><b>Si tu decisión es sí y te sientes listo para recibir un nuevo integrante en la familia, estos son los pasos a seguir:</b></p>
-                        <p>🐾Debes llenar el formulario de adopción en su totalidad, este formulario se encuentra en la parte del catálogo, cuando le das "click" en el botón "Iniciar adopción" que está en cada información del animal.</p>
+                        <p>🐾Debes llenar el formulario de adopción en su totalidad, este formulario se encuentra en la parte del catálogo, cuando le das "click" en el botón "Formulario de Adopción" que está en cada información del animal.</p>
                         <p>🐾Si tu formulario es aprobado te contactaremos por medio de correo para programar una entrevista virtual de adopción, en donde tendremos una charla de tenencia responsable y esperamos conocerte más a fondo; al igual que ver el espacio donde viviría el animal.</p>
                         <p>🐾Los adoptantes deben asumir los gastos básicos como los son: esterilización, vacunas y desparasitación.</p>
                     </div>
