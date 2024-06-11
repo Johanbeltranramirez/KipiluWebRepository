@@ -42,7 +42,7 @@
                 </p>
                  <br>
                 <p>
-                    En caso de que vayas a adoptar, ten en cuenta que si decides donar alimentos, debes enviarlos por medio de Picap a la dirección Calle 89C sur #7-14 Este. Si prefieres hacer una donación monetaria, la cantidad sugerida es de $100.000, pero puedes donar cualquier cantidad a partir de $10.000 en adelante. ¡Tu apoyo es invaluable para nuestra causa!
+                    SI tu decisión es donar, ya sea en alimentos o dinero, es lo que realmente importa y es invaluable para nuestra causa. Si decides donar alimentos, envíalos por medio de Picap a la dirección Calle 89C sur #7-14 Este. Si prefieres hacer una donación monetaria, puedes aportar cualquier cantidad a partir de $10.000 en adelante. ¡Gracias por tu apoyo!
                 </p>
                 
             </div>
