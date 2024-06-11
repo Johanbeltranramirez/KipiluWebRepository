@@ -36,34 +36,6 @@
                     <div class="texto">
                         <p>El acto de adoptar es una gran compromiso y responsabilidad que puede oscilar entre los 15 y 20 años, este es el promedio de vida de un gato y perro. Por eso es importante que estés listo y capacitado para hacerte responsable de una nueva vida que dependerá de ti.
                         <a href="Tips.php" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
-                        <?php
-// Archivo a descargar
-$file ='Tips.php';
-
-// Verifica si el archivo existe
-if (file_exists($file)) {
-    // Define los encabezados
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="' . basename($file) . '"');
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . filesize($file));
-    
-    // Limpia el buffer de salida
-    ob_clean();
-    flush();
-    
-    // Lee el archivo y lo envía al output buffer
-    readfile($file);
-    exit;
-} else {
-    // Muestra un mensaje de error si el archivo no existe
-    echo "El archivo no existe.";
-}
-?>
-
                         <p>Antes de hacer esto, un hecho que debes analizar es el espacio que dispones en tu casa, el tiempo que puedes dedicarle para educarlo, acompañarlo, darle la actividad física y cuidados que necesite.</p>
                         <p>Comienza por revisar los costos de alimentación, atención veterinaria, elementos para su adaptación en casa y precios de estadía cuando estés fuera de casa.</p>
                     </div>
