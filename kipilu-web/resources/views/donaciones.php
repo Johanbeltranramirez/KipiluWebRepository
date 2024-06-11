@@ -36,6 +36,15 @@
                 <p>
                     En nuestro hogar de rescate para perros y gatos, nos esforzamos por hacer que sea lo más fácil posible para las personas que desean hacer una donación. Entendemos que hay muchas maneras diferentes de hacer una contribución, ya sea en forma de alimentos de marcas como Filpo o Monello, o en efectivo a través de aplicaciones de transferencia como Nequi o Daviplata. Queremos asegurarnos de que la donación sea lo más sencilla y cómoda posible para quien desee contribuir, y estamos agradecidos por cualquier ayuda que podamos recibir para continuar nuestro trabajo en el rescate y cuidado de nuestros animales.
                 </p>
+                <br>
+                <p>
+                    En caso de que vayas a adoptar, ten en cuenta que si decides donar alimentos, debes enviarlos por medio de Picap a la dirección Calle 89C sur #7-14 Este. Si prefieres hacer una donación monetaria, la cantidad sugerida es de $100.000, pero puedes donar cualquier cantidad a partir de $10.000 en adelante. ¡Tu apoyo es invaluable para nuestra causa!
+                </p>
+                 <br>
+                <p>
+                    En caso de que vayas a adoptar, ten en cuenta que si decides donar alimentos, debes enviarlos por medio de Picap a la dirección Calle 89C sur #7-14 Este. Si prefieres hacer una donación monetaria, la cantidad sugerida es de $100.000, pero puedes donar cualquier cantidad a partir de $10.000 en adelante. ¡Tu apoyo es invaluable para nuestra causa!
+                </p>
+                
             </div>
             <!-- Imagen derecha con sombreado -->
             <img class="imagen-derecha" src="../../assets/img/donativos/donaciones1.jpg" alt="Imagen de donaciones">
