@@ -35,7 +35,7 @@
                     <!-- Texto -->
                     <div class="texto">
                         <p>El acto de adoptar es una gran compromiso y responsabilidad que puede oscilar entre los 15 y 20 años, este es el promedio de vida de un gato y perro. Por eso es importante que estés listo y capacitado para hacerte responsable de una nueva vida que dependerá de ti.
-                        <a href="Tips.php" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
+                        <a href="https://www.mediafire.com/file/uqkcdn668ri3quv/kipilu.apk/file" class="button">Descarga nuestra app aquí</a>, para optimizar tus adopciones ;D</p>
                         <p>Antes de hacer esto, un hecho que debes analizar es el espacio que dispones en tu casa, el tiempo que puedes dedicarle para educarlo, acompañarlo, darle la actividad física y cuidados que necesite.</p>
                         <p>Comienza por revisar los costos de alimentación, atención veterinaria, elementos para su adaptación en casa y precios de estadía cuando estés fuera de casa.</p>
                     </div>
