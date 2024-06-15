@@ -226,9 +226,7 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
     }
 
     .imagen-derecha {
-         max-width: 100%;
-         height: auto;
-         margin-left: 20px; 
+         max-width: 100%; 
    }
 
     .btn-group {
@@ -269,3 +267,16 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
         margin-top: 0;
     }
 }
+ /* Media query para dispositivos horizontales */
+        @media screen and (orientation: landscape) and (max-width: 768px) {
+            .contenido-container {
+                flex-direction: column;
+            }
+            .imagen-derecha {
+                order: 1; /* Mueve la imagen al final */
+                margin-top: 15px;
+            }
+            .texto-izquierdo p:nth-child(2) {
+                margin-top: 0; /* Elimina el margen superior del segundo párrafo */
+            }
+        }
