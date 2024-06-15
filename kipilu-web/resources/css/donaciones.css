@@ -226,8 +226,10 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
     }
 
     .imagen-derecha {
-        max-width: 100%;
-    }
+         max-width: 100%;
+         height: auto;
+         margin-left: 20px; 
+   }
 
     .btn-group {
         flex-direction: column;
