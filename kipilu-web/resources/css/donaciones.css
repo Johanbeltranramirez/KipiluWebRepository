@@ -275,8 +275,5 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
             .imagen-derecha {
                 order: 1; /* Mueve la imagen al final */
                 margin-top: 15px;
-            }
-            .texto-izquierdo p:nth-child(2) {
-                margin-top: 0; /* Elimina el margen superior del segundo párrafo */
-            }
+           
         }
