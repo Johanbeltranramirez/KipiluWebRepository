@@ -1,5 +1,5 @@
 /* Estilos para la portada gatos*/
-.portadaf {
+.portadac {
     position: relative;
     height: 73vh;
     background-image: url('../img/animales/portadaf.jpg'); 
@@ -14,7 +14,7 @@
 }
 
 .contenido {
-    background :linear-gradient(to right, #4fc7c7, #77bcd7cc, #5edbb9e7, #cbe4fd);
+    background :linear-gradient(to right, #c98139, #f13737cc, #eb7754e7, #cf8058);
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -114,11 +114,10 @@ ul li {
     margin-top: auto;
   }
 
-
   /* Media queries para hacer la portada responsive */
 @media screen and (max-width: 768px) {
 
-    .portadaf{
+    .portadac{
         height: 80vh; /* Reducir la altura en dispositivos móviles */
         background-size: cover; /* Asegurar que la imagen cubra todo el contenedor */
         border-radius: 5px;
