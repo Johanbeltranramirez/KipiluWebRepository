@@ -21,7 +21,7 @@ class AnimalsViewModel {
             $response = @file_get_contents($url, false, $context);
 
             if ($response === false) {
-                throw new Exception('No se puede eliminar el animal porque está asociado a uno o más formularios.');
+                throw new Exception('No se puede eliminar el animal.');
             }
 
             $responseData = json_decode($response, true);
