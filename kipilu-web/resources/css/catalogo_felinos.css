@@ -114,3 +114,48 @@ ul li {
     margin-top: auto;
   }
 
+
+  /* Media queries para hacer la portada responsive */
+@media screen and (max-width: 768px) {
+
+    .portadaf{
+        height: 80vh; /* Reducir la altura en dispositivos móviles */
+        background-size: cover; /* Asegurar que la imagen cubra todo el contenedor */
+        border-radius: 5px;
+    }
+
+    .contenido {
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%; /* Ajustar el ancho del contenido */
+        max-width: 90%;
+        box-sizing: border-box; /* Asegura que el padding no expanda el contenedor */
+    }
+
+    .texto h1 {
+        font-size: 24px; /* Reducir el tamaño de fuente del título */
+        margin-bottom: 10px;
+    }
+
+    .texto p {
+        font-size: 14px; /* Reducir el tamaño de fuente del texto */
+        margin-bottom: 20px;
+    }
+
+    .opciones h2 {
+        font-size: 18px; /* Reducir el tamaño de fuente de los subtítulos */
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        font-size: 14px; /* Reducir el tamaño de fuente de los elementos de la lista */
+    }
+
+    .card .card-img-top {
+        height: 150px; /* Reducir la altura de la imagen de la tarjeta */
+    }
+
+    .card-body {
+        padding: 10px; /* Reducir el padding del cuerpo de la tarjeta */
+    }
+}
