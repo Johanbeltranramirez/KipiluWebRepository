@@ -144,4 +144,27 @@ p {
         padding: 10px; /* Reducir el padding en dispositivos móviles */
         width: 90%; /* Ajustar el ancho en dispositivos móviles */
     }
+
+    /* Ajustes para que las cartas queden centradas en dispositivos móviles */
+    .image-text {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card {
+        max-width: 100%; /* Asegurarse de que la carta no exceda el ancho del contenedor */
+    }
+
+    .card-img-container {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .card-img-container img {
+        max-width: 100%;
+        height: auto; /* Hacer la imagen responsive */
+    }
 }
