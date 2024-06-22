@@ -60,7 +60,7 @@ function togglePasswordVisibility() {
             <h2 style="text-align: center;">Iniciar Sesión</h2><br>
             <div class="input-container">
                 <label for="ID_Administrador" style="color: #000000;">ID Administrador:</label>
-                <input type="text" name="ID_Administrador" id="ID_Administrador" placeholder="Número de cédula" required  maxlength="10" oninput="validateAlphaNumeric(this)">
+                <input type="text" name="ID_Administrador" id="ID_Administrador" placeholder="Digite su número de cédula" required  maxlength="10" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                             <label for="Contrasena" class="form-label">Contraseña</label>
