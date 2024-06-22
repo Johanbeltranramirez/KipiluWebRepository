@@ -115,16 +115,21 @@ ul li {
   }
 
 
-/* Media queries para hacer la portada responsive */
+  /* Media queries para hacer la portada responsive */
 @media screen and (max-width: 768px) {
-    .portadac {
+
+    .portadac{
         height: 80vh; /* Reducir la altura en dispositivos móviles */
+        background-size: cover; /* Asegurar que la imagen cubra todo el contenedor */
+        border-radius: 5px;
     }
 
     .contenido {
         padding: 10px;
+        border-radius: 5px;
         width: 90%; /* Ajustar el ancho del contenido */
         max-width: 90%;
+        box-sizing: border-box; /* Asegura que el padding no expanda el contenedor */
     }
 
     .texto h1 {
@@ -134,7 +139,7 @@ ul li {
 
     .texto p {
         font-size: 14px; /* Reducir el tamaño de fuente del texto */
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .opciones h2 {
@@ -152,44 +157,5 @@ ul li {
 
     .card-body {
         padding: 10px; /* Reducir el padding del cuerpo de la tarjeta */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .portadac {
-        height: 70vh; /* Reducir aún más la altura en dispositivos muy pequeños */
-    }
-
-    .contenido {
-        padding: 5px;
-        width: 95%; /* Ajustar el ancho del contenido */
-        max-width: 95%;
-    }
-
-    .texto h1 {
-        font-size: 20px; /* Reducir el tamaño de fuente del título */
-        margin-bottom: 8px;
-    }
-
-    .texto p {
-        font-size: 12px; /* Reducir el tamaño de fuente del texto */
-        margin-bottom: 10px;
-    }
-
-    .opciones h2 {
-        font-size: 16px; /* Reducir el tamaño de fuente de los subtítulos */
-        margin-bottom: 4px;
-    }
-
-    ul li {
-        font-size: 12px; /* Reducir el tamaño de fuente de los elementos de la lista */
-    }
-
-    .card .card-img-top {
-        height: 120px; /* Reducir la altura de la imagen de la tarjeta */
-    }
-
-    .card-body {
-        padding: 5px; /* Reducir el padding del cuerpo de la tarjeta */
     }
 }
