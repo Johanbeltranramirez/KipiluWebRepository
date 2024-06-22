@@ -68,28 +68,32 @@ padding: 0 35px;
 
 
 @media screen and (max-width: 768px) {
-    :root {
+  :root {
       --fontSize: 30; /* Reducir el tamaño de fuente base */
-    }
-  
-    .titulo {
-      margin-top: 5%; /* Utilizar un margen superior adaptable */
-    }
-  
-    .titulo-letra {
-      font-size: 2rem; /* Reducir el tamaño de fuente del título */
-    }
-  
-    .imagen {
-      margin-left: 17px; /* Eliminar el margen izquierdo en dispositivos móviles */
-    }
-  
-    .contenido1 {
-      flex-direction: column; /* Apilar el contenido verticalmente en dispositivos móviles */
-      align-items: flex-start; /* Alinear el contenido a la izquierda */
-    }
-  
-    .texto {
-      margin-left: 0; /* Eliminar el margen izquierdo del texto en dispositivos móviles */
-    }
   }
+
+  .titulo {
+      margin-top: 5%; /* Utilizar un margen superior adaptable */
+  }
+
+  .titulo-letra {
+      font-size: 2rem; /* Reducir el tamaño de fuente del título */
+  }
+
+  .contenido1 {
+      flex-direction: column; /* Apilar el contenido verticalmente en dispositivos móviles */
+      align-items: center; /* Centrar el contenido en dispositivos móviles */
+  }
+
+  .texto {
+      margin-left: 0; /* Eliminar el margen izquierdo del texto en dispositivos móviles */
+      text-align: justify; /* Centrar el texto */
+  }
+
+  .imagen {
+      margin: 20px 0; /* Añadir margen superior e inferior para la imagen */
+      align-self: center; /* Asegurar que la imagen esté centrada */
+      width: 100%; /* Hacer la imagen responsive */
+      max-width: 300px; /* Limitar el tamaño máximo de la imagen */
+  }
+}
