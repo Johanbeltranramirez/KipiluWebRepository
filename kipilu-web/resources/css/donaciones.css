@@ -146,18 +146,11 @@ left: -5px; /* Ajusta la posición del cuadro */
 width: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
 height: calc(100% + 10px); /* Ajusta el tamaño del cuadro */
 border: 5px solid transparent;
-border-image: linear-gradient(45deg, #ff8a00, #e52e71) 1;
+border-image: linear-gradient(45deg, #f8c68c, #f890b6) 1;
 transition: transform 0.3s ease;
 z-index: -1;
 }
 
-.imagen:hover img {
-transform: scale(1.1); /* Aumenta un poco el tamaño de la imagen al hacer hover */
-}
-
-.imagen:hover::before {
-transform: rotate(10deg); /* Rota ligeramente el cuadro al hacer hover */
-}
 
 
 .numero-contacto {
@@ -207,6 +200,8 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
 .list-group-item .ms-2 {
     margin-left: 0;
 }
+
+
 
 @media (max-width: 768px) {
     .caja {
@@ -266,6 +261,7 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
     .btn-monetario:last-child {
         margin-top: 0;
     }
+    
 }
  /* Media query para dispositivos horizontales */
         @media screen and (orientation: landscape) and (max-width: 768px) {
@@ -274,6 +270,7 @@ background: linear-gradient(45deg, #ff8a00, #e52e71); /* Establece el degradado 
             }
             .imagen-derecha {
                 order: 1; /* Mueve la imagen al final */
-                margin-top: 15px;
-           
-        }
+                margin-top: 10px;
+            }
+            
+}

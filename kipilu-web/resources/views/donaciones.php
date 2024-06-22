@@ -49,16 +49,7 @@
             <!-- Imagen derecha con sombreado -->
             <img class="imagen-derecha" src="../../assets/img/donativos/donaciones1.jpg" alt="Imagen de donaciones">
         </div>
-
-        <!-- Botones -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-outline-secondary">FILPO</button>
-            <button type="button" class="btn btn-outline-secondary">MONELLO</button>
-            <button type="button" class="btn btn-outline-secondary">NEQUI</button>
-            <button type="button" class="btn btn-outline-secondary">DAVIPLATA</button>
-        </div>
-    </div>
-
+        
       <!-- Sección de donaciones de comida -->
       <section class="donaciones">
         <!-- Texto "DONACIÓN DE COMIDA" con línea continua -->
@@ -96,7 +87,7 @@
                     <img src="../../assets/img/donativos/QR_DAVIPLATA.PNG" alt="Imagen 1">
                     <br>
                     <br>
-                    <div class="numero-contacto">Daviplata:3153683603</div>
+                    <div class="numero-contacto">Daviplata:315368360</div>
                   </div>
                 
                 <!-- Imagen 2 -->
