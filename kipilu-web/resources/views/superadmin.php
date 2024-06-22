@@ -127,7 +127,7 @@ function togglePasswordVisibility() {
             <h2 style="text-align: center;">Iniciar Sesión Super Admin</h2><br>
             <div class="input-container">
                 <label for="ID_Superadmin" style="color: #000000;">ID Super Admin:</label>
-                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Ingrese su ID" maxlength="10" oninput="validateAlphaNumeric(this)">
+                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Digite su número de cédula" maxlength="10" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                 <label for="Contrasena" class="form-label">Contraseña</label>
