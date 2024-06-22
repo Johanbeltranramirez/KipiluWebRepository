@@ -122,10 +122,32 @@ body {
   margin-top: 20px;
 }
 
-/* Media queries para hacerlo responsive */
-@media screen and (max-width: 768px) {
-  .contact-us {
-  max-width: 100%;
-  margin-right: 0;
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .contact-us, .social-media {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
+
+  .contact-us h2, .social-media h2 {
+    font-size: 24px;
+    margin-right: 3;
+  }
+
+  .social-media {
+    justify-content: flex-start; /* Mantiene los iconos en línea en pantallas pequeñas */
+    flex-wrap: nowrap; /* Evita que los iconos se envuelvan en una nueva línea */
+  }
+
+  .social-media-icon {
+    font-size: 28px;
+    margin-right: 10px;
+    margin-bottom: 0; /* Asegura que no haya margen inferior */
+  }
+}
