@@ -86,7 +86,7 @@ function validateTextDes(input) {
 
 function validateAlphaNumeric(input) {
   // Elimina cualquier carácter que no sea letra o número
-  input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+  input.value = input.value.replace(/[^0-9]/g, '');
 }
 </script>
 
@@ -96,7 +96,7 @@ function validateAlphaNumeric(input) {
     <form id="administradorForm" method="POST" class="custom-form">
         <div class="form-group">
             <label for="ID_Administrador">Cédula:</label>
-            <input type="text" name="ID_Administrador" class="form-control" placeholder="Ejp:CC123456789 " required  maxlength="12" oninput="validateAlphaNumeric(this)">
+            <input type="text" name="ID_Administrador" class="form-control" placeholder="Número de cédula" required  maxlength="10" oninput="validateAlphaNumeric(this)">
         </div>
         <div class="form-group">
             <label for="P_Nombre">Primer Nombre:</label>
@@ -117,7 +117,7 @@ function validateAlphaNumeric(input) {
         <div class="form-group">
             <label for="Contrasena">Contraseña:</label>
             <div class="input-group">
-                <input type="password" name="Contrasena" id="password" class="form-control" placeholder="Digite su contraseña" required maxlength="20" oninput="validateAlphaNumeric(this)">
+                <input type="password" name="Contrasena" id="password" class="form-control" placeholder="Digite su contraseña" required maxlength="20">
                 <button class="btn btn-outline-secondary border-0" type="button" onclick="togglePasswordVisibility()">
                                     <i class="fas fa-eye" id="password-toggle-icon"></i>
                                 </button>
