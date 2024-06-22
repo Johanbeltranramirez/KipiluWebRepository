@@ -97,6 +97,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <script>
+function validateAlphaNumeric(input) {
+  // Elimina cualquier carácter que no sea letra o número
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
+</script>
+
+<script>
 function togglePasswordVisibility() {
     const passwordField = document.getElementById("Contrasena");
     const passwordToggleIcon = document.getElementById("password-toggle-icon");
@@ -120,7 +127,7 @@ function togglePasswordVisibility() {
             <h2 style="text-align: center;">Iniciar Sesión Super Admin</h2><br>
             <div class="input-container">
                 <label for="ID_Superadmin" style="color: #000000;">ID Super Admin:</label>
-                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Ingrese su ID" required maxlength="20">
+                <input type="text" name="ID_Superadmin" id="ID_Superadmin" placeholder="Ingrese su ID" maxlength="10" oninput="validateAlphaNumeric(this)">
             </div>
             <div class="mb-1">
                 <label for="Contrasena" class="form-label">Contraseña</label>
